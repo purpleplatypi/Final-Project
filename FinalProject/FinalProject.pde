@@ -6,7 +6,7 @@ void setup(){
 }
 
 void draw(){
-  //start screen
+  startScreen();
   //instructions page
   //character page
   //game screen
