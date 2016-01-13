@@ -1,4 +1,5 @@
 //declare variables
+
 Level1 l1;
 void setup(){
   size(1200,800);
