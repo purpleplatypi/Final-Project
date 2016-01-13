@@ -1,4 +1,5 @@
 //declare variables
+
 int mode = 0;
 
 void setup(){
