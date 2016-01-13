@@ -1,11 +1,8 @@
 //declare variables
-<<<<<<< HEAD
 Level1 l1;
-=======
 
 int mode = 0;
 
->>>>>>> refs/remotes/origin/development
 void setup(){
   size(1200,800);
   //initialize variables
