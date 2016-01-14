@@ -15,3 +15,25 @@ void draw(){
   //game screen
   //game over screen
 }
+
+void keyPressed() {
+  if (keyCode == LEFT) {
+    l1.left = true;
+  }
+  if (keyCode == RIGHT) {
+    l1.right = true;
+  }
+  if (keyCode == UP) {
+    l1.jumping =true;
+  }
+}
+
+void keyReleased() {
+
+  if (keyCode == LEFT) {
+    l1.left = false;
+  }
+  if (keyCode == RIGHT) {
+    l1.right = false;
+  }
+}

@@ -4,16 +4,27 @@ class Level1 {
   float speed, x, y, jumpSpeed;
   float origJumpSpeed ;
   float gravity=1;
+  float diam, diam1, diam2, diam3, diam4;
+  float x1, x2, y2, y1;
 
   Level1() {  
     x=0;
     speed=5;
-    y=750;
+    y=770;
     jumpSpeed=-15;
     origJumpSpeed=jumpSpeed;
+    diam=30;
+    diam1=200;
+    diam2=5;
+    diam3=200;
+    diam4=5;
+    x1=600;
+    x2=300;
+    y1=730;
+    y2=695;
   }
   void display() {
-    rect(x, y, 30, 30);
+    rect(x, y, diam, diam);
   }
 
   void move() {
@@ -21,52 +32,43 @@ class Level1 {
     if (left) {    // uses boolean true or false statement to move left paddle up if the left key is pressed
       x = x - speed;
     }
+
     if (right) {
       x = x + speed;  // uses boolean true or false statement to move right if the right key is pressed
     }
     if (jumping) {
       jumpSpeed += gravity;
       y += jumpSpeed;
-      if (y > 750) {
-        y = 750;
+      if (y > 770) {
+        y = 770;
         jumpSpeed = origJumpSpeed;
         jumping = false;
         jumpSpeed = origJumpSpeed;
       }
     }
   }
-
-  void checkKeys() {
-    if (keyPressed && keyCode == LEFT) {
-      left = true;
-    } else {
-      left = false;
-    }
-    if (keyPressed && keyCode == RIGHT) {
-      right = true;
-    } else {
-      right = false;
-    }
-    if (keyPressed && keyCode == UP) {
-      jumping =true;
-    }
+  void platforms() {
+    rect(x1, y1, diam1, diam2);
+    rect(x2, y2, diam3, diam4);
   }
 
-
-  //void keyReleased() {
-
-  //  if (keyCode == LEFT) {
-  //    left = false;
-  //  }
-  //  if (keyCode == RIGHT) {
-  //    right = false;
-  //  }
-  //}
-
-
-  void restrictmario() {
-    if (x - speed < -100) {
+  void restrict() {
+    if (x - speed < 0) {
       x = x + speed;
+    }
+    if (x+speed+diam>width) {
+      x=x-speed;
+    }
+    if (x+diam>x1) {
+      while (y>y1-diam) {
+        y=y1-diam;
+        jumpSpeed += gravity;
+        y += jumpSpeed;
+        y = 700;
+        jumpSpeed = origJumpSpeed;
+        jumping = false;
+        jumpSpeed = origJumpSpeed;
+      }
     }
   }
 }
