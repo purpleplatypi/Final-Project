@@ -24,7 +24,7 @@ class Level1 {
     y2=695;
   }
   void display() {
-    fill(0);
+    fill(255);
     rect(x, y, diam, diam);
   }
 
