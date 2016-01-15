@@ -1,12 +1,10 @@
-class PlayerAnimations {
+class animation {
   //declare variables
   //PImage 
   //make a constructor
-  PlayerAnimations() {
+  animation() {
   }
   //write methods
   void display() {
-  }
-  void punch(){
   }
 }
