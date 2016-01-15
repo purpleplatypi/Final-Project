@@ -1,5 +1,5 @@
 void game() {
-  if (mode==5) {
+ // if (mode==5) {
     /**************
      display players
      if keypressed
@@ -16,5 +16,5 @@ void game() {
     //l1.checkKeys()
     l1.restrict();
     l1.platforms();
-  }
+//  }
 }
