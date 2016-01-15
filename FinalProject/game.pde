@@ -19,4 +19,5 @@ void game() {
   p1.display();
   p2.display();
   //  }
+  a.p1controls();
 }
