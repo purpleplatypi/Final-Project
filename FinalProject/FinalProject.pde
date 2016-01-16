@@ -1,43 +1,45 @@
 //declare variables
-
-Level1 l1;
-
+player a;
+platform p1, p2;
 int mode = 0;
+// note: modes will be changed due to location once the pages are formatted
 
-void setup(){
-  size(1200,800);
+void setup() {
+  size(1200, 800);
   //initialize variables
-  l1= new Level1();
+  a = new player(0, 770);
+  p1 = new platform(600, 730, 200, 5);
+  p2 = new platform(100, 695, 200, 5);
 }
 
-void draw(){
-  background(0);
-  startScreen();
-  game();
-  //instructions page
-  //character page
-  //game screen
-  //game over screen
+void draw() {
+    startScreen();
+    instructions();
+    bios();
+    characters();
+    levels();
+    game();
+    //game over screen
 }
 
 void keyPressed() {
   if (keyCode == LEFT) {
-    l1.left = true;
+    a.left = true;
   }
   if (keyCode == RIGHT) {
-    l1.right = true;
+    a.right = true;
   }
   if (keyCode == UP) {
-    l1.jumping =true;
+    a.jumping =true;
   }
 }
 
 void keyReleased() {
 
   if (keyCode == LEFT) {
-    l1.left = false;
+    a.left = false;
   }
   if (keyCode == RIGHT) {
-    l1.right = false;
+    a.right = false;
   }
 }
