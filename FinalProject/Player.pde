@@ -59,7 +59,8 @@ class player {
         jumping = false;
         vel.y = origJumpSpeed;
       } else if (thing.loc.x - 5 == loc.x + l || loc.x == thing.loc.x + thing.size.x + 5) {
-        loc.y = 770;
+        vel.y = -origJumpSpeed;
+        jumping = true;
       }
     }
   }
