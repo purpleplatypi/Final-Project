@@ -11,6 +11,7 @@ void game() {
    if on top of platforms
    land on it
    ******************/
+  background(0);
   a.display();
   a.move();
   a.restrict();
