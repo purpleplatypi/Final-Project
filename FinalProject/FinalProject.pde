@@ -1,9 +1,8 @@
 //declare variables
-
 player a;
 platform p1, p2;
-
 int mode = 0;
+// note: modes will be changed due to location once the pages are formatted
 
 void setup() {
   size(1200, 800);
@@ -14,13 +13,13 @@ void setup() {
 }
 
 void draw() {
-  background(0);
-  startScreen();
-  game();
-  //instructions page
-  //character page
-  //game screen
-  //game over screen
+    startScreen();
+    instructions();
+    bios();
+    characters();
+    levels();
+    game();
+    //game over screen
 }
 
 void keyPressed() {
