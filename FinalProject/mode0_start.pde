@@ -8,3 +8,4 @@ void startScreen() {
       mode = 1;
     }
   }
+}

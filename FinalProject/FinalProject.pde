@@ -14,7 +14,7 @@ void setup() {
 
 void draw() {
     startScreen();
-    instruction();
+    instructions();
     bios();
     characters();
     levels();
