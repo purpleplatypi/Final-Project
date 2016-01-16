@@ -1,5 +1,5 @@
 void game() {
- // if (mode==5) {
+  if (mode==5) {
     /**************
      display players
      if keypressed
@@ -11,10 +11,13 @@ void game() {
      if on top of platforms
      land on it
      ******************/
-    l1.display();
-    l1.move();
-    //l1.checkKeys()
-    l1.restrict();
-    l1.platforms();
-//  }
+    background(0);
+    a.display();
+    a.move();
+    a.restrict();
+    a.platformControls(p1);
+    a.platformControls(p2);
+    p1.display();
+    p2.display();
+  }
 }
