@@ -1,6 +1,6 @@
 class player {
   //declare variables
-  boolean left, right, jumping;
+  boolean left, right, jumping, falling;
   PVector loc, vel, g;
   int l, w;
   float origJumpSpeed ;
@@ -50,16 +50,16 @@ class player {
     }
   }
 
-  void p1controls() {
-    if (loc.y + w <= p1.loc.y) {
-      if (p1.loc.x < loc.x && loc.x + l < p1.loc.x + p1.size.x) {
+  void platformControls (platform thing) {
+    if (loc.y + w <= thing.loc.y) {
+      if (thing.loc.x < loc.x && loc.x + l < thing.loc.x + thing.size.x) {
         vel.y += g.y;
         loc.y += vel.y;
-        loc.y = p1.loc.y - w;
+        loc.y = thing.loc.y - w;
         jumping = false;
         vel.y = origJumpSpeed;
-      } else if (loc.y == p1.loc.y-w) {
-        vel.y = origJumpSpeed;
+      } else if (thing.loc.x - 5 == loc.x + l || loc.x == thing.loc.x + thing.size.x + 5) {
+        loc.y = 770;
       }
     }
   }

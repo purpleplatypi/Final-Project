@@ -13,11 +13,8 @@ void game() {
    ******************/
   a.display();
   a.move();
-  //l1.checkKeys()
   a.restrict();
-  // l1.platforms();
+  a.platformControls(p1);
   p1.display();
   p2.display();
-  //  }
-  a.p1controls();
 }
