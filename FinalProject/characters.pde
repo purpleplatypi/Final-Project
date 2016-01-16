@@ -20,6 +20,11 @@ class hitbox {
 }
   
 void characters(){
+<<<<<<< HEAD
  
   
+=======
+  if (mode==3){
+  }
+>>>>>>> refs/remotes/origin/development
 }
