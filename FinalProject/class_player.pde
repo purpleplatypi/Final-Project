@@ -37,6 +37,7 @@ class player {
         loc.y = ground;
         vel.y = origJumpSpeed;
         jumping = false;
+        vel.y = origJumpSpeed;
       }
     }
   }
@@ -51,13 +52,16 @@ class player {
   }
 
   void platformControls (platform thing) {
-    if (loc.y + w <= thing.loc.y) {
-      if (thing.loc.x < loc.x && loc.x + l < thing.loc.x + thing.size.x) {
-        vel.y += g.y;
-        loc.y += vel.y;
-        loc.y = thing.loc.y - w;
-        jumping = false;
-        vel.y = origJumpSpeed;
+    if (jumping) {
+      if (thing.loc.x < loc.x + l && loc.x + l < thing.loc.x + thing.size.x) {
+        while (loc.y + w > thing.loc.y) {
+          vel.y += g.y;
+          loc.y += vel.y;
+          loc.y = thing.loc.y - w;
+          vel.y = origJumpSpeed;
+          jumping = false;
+          vel.y = origJumpSpeed;
+        }
       }
     }
     if (loc.y + w == thing.loc.y) {
