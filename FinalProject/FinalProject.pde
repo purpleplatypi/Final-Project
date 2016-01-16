@@ -10,7 +10,7 @@ void setup() {
   //initialize variables
   a = new player(0, 770);
   p1 = new platform(600, 730, 200, 5);
-  p2 = new platform(300, 695, 200, 5);
+  p2 = new platform(100, 695, 200, 5);
 }
 
 void draw() {
