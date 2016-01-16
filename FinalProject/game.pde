@@ -15,6 +15,7 @@ void game() {
   a.move();
   a.restrict();
   a.platformControls(p1);
+  a.platformControls(p2);
   p1.display();
   p2.display();
 }

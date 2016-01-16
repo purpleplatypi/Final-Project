@@ -2,7 +2,7 @@ class player {
   //declare variables
   boolean left, right, jumping, falling;
   PVector loc, vel, g;
-  int l, w;
+  int l, w, ground;
   float origJumpSpeed ;
 
   //make constructor
@@ -10,6 +10,7 @@ class player {
     loc = new PVector(x, y);
     vel = new PVector(5, -15);
     g = new PVector(0, 1);
+    ground = 770;
     l=30;
     w=30;
     origJumpSpeed=-15;
@@ -32,11 +33,10 @@ class player {
     if (jumping) {
       vel.add(g);
       loc.y += vel.y;
-      if (loc.y > 770) {
-        loc.y = 770;
+      if (loc.y > ground) {
+        loc.y = ground;
         vel.y = origJumpSpeed;
         jumping = false;
-        vel.y = origJumpSpeed;
       }
     }
   }
@@ -58,8 +58,11 @@ class player {
         loc.y = thing.loc.y - w;
         jumping = false;
         vel.y = origJumpSpeed;
-      } else if (thing.loc.x - 5 == loc.x + l || loc.x == thing.loc.x + thing.size.x + 5) {
-        vel.y = -origJumpSpeed;
+      }
+    }
+    if (loc.y + w == thing.loc.y) {
+      if (thing.loc.x - 5 == loc.x + l || loc.x == thing.loc.x + thing.size.x + 5) {
+        vel.y = 0;
         jumping = true;
       }
     }
