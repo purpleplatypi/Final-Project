@@ -14,13 +14,24 @@ void setup() {
 }
 
 void draw() {
-  background(0);
-  startScreen();
-  game();
-  //instructions page
-  //character page
-  //game screen
-  //game over screen
+  if (mode == 0) {
+    startScreen();
+  }
+  if (mode == 1) {
+    game();
+  }
+  if (mode == 2) {
+    //instructions page
+  }
+  if (mode == 3) {
+    //character page
+  }
+  if (mode == 4) {
+    //game screen
+  }
+  if ( mode == 5) {
+    //game over screen
+  }
 }
 
 void keyPressed() {
