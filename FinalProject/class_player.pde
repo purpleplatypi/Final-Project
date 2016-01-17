@@ -44,10 +44,10 @@ class player {
 
   void restrict() {
     if (loc.x - vel.x < 0) {
-      loc.x = loc.x + vel.x;
+      loc.x += vel.x;
     }
     if (loc.x + vel.x + l > width) {
-      loc.x=loc.x-vel.x;
+      loc.x -= vel.x;
     }
   }
 
