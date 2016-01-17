@@ -39,15 +39,6 @@ class hitbox {
   }
   void health() {
 
-    //boolean isInContactWith (Catcher thing) { 
-    //  if (thing.loc.dist(loc) < thing.diam/2+diam) { //if the distace between hitbox and (whatever it hitting hitbox) is the less than or equal to diam
-    //    heath = heath -1; //reduce health bar
-    //    println("hit"); //print hit
-    //    return true;
-    //  } else {
-    //    return false;
-    //    //}
-    //  }
-    //}
+
   }
 }
