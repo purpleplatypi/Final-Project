@@ -41,6 +41,13 @@ class player {
       }
     }
   }
+  boolean isInContactWith(punch thing) { 
+    if (thing.loc.y + thing.diam <= loc.y + w && thing.loc.y >= loc.y && thing.loc.x + thing.diam >= loc.x && loc.x + l >= thing.loc.x) { //if the distace between hitbox and (whatever it hitting hitbox) is the less than or equal to diam
+        return true;
+    } else {
+      return false;
+    }
+  }
 
   void restrict() {
     if (loc.x - vel.x < 0) {

@@ -1,6 +1,7 @@
 //declare variables
 player a;
 platform p1, p2;
+punch b;
 int mode = 0;
 PImage start,sansi,bio;
 // note: modes will be changed due to location once the pages are formatted
@@ -12,11 +13,20 @@ void setup() {
   sansi = loadImage("sansi.jpg");
   bio= loadImage("bio.jpg");
   a = new player(0, 770);
+  b = new punch();
   p1 = new platform(600, 730, 200, 5);
   p2 = new platform(100, 695, 200, 5);
 }
 
 void draw() {
+<<<<<<< HEAD
+  startScreen();
+  instructions();
+  bios();
+  characters();
+  levels();
+  game();
+=======
   if (mode==0) {
     startScreen();
   }
@@ -47,8 +57,10 @@ if(mode==3){
   characters();
   levels();
  // game();
+>>>>>>> refs/remotes/origin/development
   //game over screen
 }
+
 
 void keyPressed() {
   if (keyCode == LEFT) {
