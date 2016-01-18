@@ -39,6 +39,5 @@ class hitbox {
   }
   void health() {
 
-
   }
 }
