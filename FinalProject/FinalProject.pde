@@ -19,14 +19,12 @@ void setup() {
 }
 
 void draw() {
-<<<<<<< HEAD
   startScreen();
   instructions();
   bios();
   characters();
   levels();
   game();
-=======
   if (mode==0) {
     startScreen();
   }
@@ -57,7 +55,6 @@ if(mode==3){
   characters();
   levels();
  // game();
->>>>>>> refs/remotes/origin/development
   //game over screen
 }
 

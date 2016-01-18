@@ -1,4 +1,4 @@
-class hitbox {
+class punch {
 //declare variables
   PVector loc;
   int diam;
@@ -6,7 +6,7 @@ class hitbox {
   boolean thekeyleft, thekeyright, thekeyup, thekeydown; //boolean the keys
 
 //make constructor
-  hitbox() {
+  punch() {
     //location needs to be redetermined
     loc = new PVector(random (width), random(height));     //location of hitbox
     diam = 50;     //size
