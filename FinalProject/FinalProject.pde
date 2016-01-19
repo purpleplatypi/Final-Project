@@ -51,7 +51,7 @@ void draw() {
   if (mousePressed && mouseX >450 && mouseX < 750 && mouseY > 350 && mouseY < 450 && mode==0) {  //start button
     mode=1;
   }
-  if (mode==1) {
+  if (mode==1) {  //game
     /**************
      display players
      if keypressed
@@ -88,7 +88,7 @@ void draw() {
   if (mousePressed && mouseX >450 && mouseX < 750 && mouseY > 475 && mouseY < 575 && mode==0) { // instructions button
     mode=2;
   }
-  if (mode==2) {
+  if (mode==2) {  //display instructions
     background(255);
     fill(0);
     textSize(50);
@@ -114,6 +114,11 @@ void draw() {
   if (mode==3) {
     background(255);
     rect(150, 150, 200, 200);
+    rect(400, 150, 200, 200);
+    rect(650, 150, 200, 200);
+    rect(150, 400, 200, 200);
+    rect(400, 400, 200, 200);
+    rect(650, 400, 200, 200);
     image(sansi, 50, 50, 200, 200);
     fill(255);
     rect(100, 725, 100, 50);
@@ -126,7 +131,7 @@ void draw() {
     mode=0;
   }
 
-  if (mousePressed && mouseX >50 && mouseX < 250 && mouseY > 50 && mouseY < 250 && mode==3) {
+  if (mousePressed && mouseX >50 && mouseX < 250 && mouseY > 50 && mouseY < 250 && mode==3) { //sansis bio
     mode=4;
   }
   if (mode==4) {
