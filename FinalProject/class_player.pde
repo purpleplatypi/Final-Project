@@ -41,6 +41,14 @@ class player {
       }
     }
   }
+  
+  boolean isInContactWith(punch thing) { 
+    if (thing.loc.y + thing.diam <= loc.y + w && thing.loc.y >= loc.y && thing.loc.x + thing.diam >= loc.x && loc.x + l >= thing.loc.x) { //if the distace between hitbox and (whatever it hitting hitbox) is the less than or equal to diam
+        return true;
+    } else {
+      return false;
+    }
+  }
 
   void restrict() {
     if (loc.x - vel.x < 0) {
@@ -55,10 +63,10 @@ class player {
     if (jumping) {
       if (thing.loc.x < loc.x + l && loc.x + l < thing.loc.x + thing.size.x) {
         while (loc.y + w > thing.loc.y) {
-          vel.y += g.y;
+         vel.y += g.y;
           loc.y += vel.y;
           loc.y = thing.loc.y - w;
-          vel.y = origJumpSpeed;
+         vel.y = origJumpSpeed;
           jumping = false;
           vel.y = origJumpSpeed;
         }
