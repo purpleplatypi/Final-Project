@@ -56,12 +56,7 @@ void draw() {
   if (mousePressed && mouseX >450 && mouseX < 750 && mouseY > 350 && mouseY < 450 && mode==0) {  //start button
     mode=1;
   }
-<<<<<<< HEAD
-  if (mode==1) {
-
-=======
   if (mode==1) {  //game
->>>>>>> refs/remotes/origin/development
     /**************
      display players
      if keypressed
@@ -182,7 +177,7 @@ void draw() {
     fill(255);
     text("Mr.N", 50, 525);
     text("Peter Nowakowski,", 150, 525);
-    text("was a world renowned cheif before he was fired for incessently correcting his", 50, 575);
+    text("was a world renowned cheif before he was fired for incessantly correcting his", 50, 575);
     text("customer's grammer. Mr.Nowakowski is skilled in the martial arts as well as the ", 50, 625);
     text("ancient tradition of MLA formatting", 50, 675);
     rect(100, 725, 100, 50);
@@ -205,8 +200,8 @@ void draw() {
     fill(255);
     text("Mrs. Valley: ", 50, 525);
     text("Maryann Valley", 200, 525);
-    text("has been teaching kickboxing since she was 6 and the height ogf 3 feet. Her firey", 50, 575);
-    text("personality and loud voice are enough to make even the bravest of advisarys tremble", 50, 625);
+    text("has been teaching kickboxing since she was 6 and the height of 3 feet. Her firey", 50, 575);
+    text("personality and loud voice are enough to make even the bravest of advisaries tremble", 50, 625);
     text("in fear. At two inches above the height of a legal midget. Valley is a lethal enemy", 50, 675);
     rect(100, 725, 100, 50);
     textMode(CENTER);
