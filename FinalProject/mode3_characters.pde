@@ -1,5 +1,5 @@
 void characters() {
-  if (mode==3) {
+  if (cmode==1) {
     background(255);
     textSize(25);
     image(bio, 0, 0, 1200, 800);
@@ -10,7 +10,9 @@ void characters() {
     text("a family buisness back during prohibition, He has a very particular set of 'skills'", 50, 150);
     text("that make him a formiddable foe.... and even a more intresting teacher....", 50, 200);
   }
-  if (mousePressed) {
-    mode = 4;
+  if (cmode == 2) {
+        textSize(25);
+    image(bio, 0, 0, 1200, 800);
+    text("TECHER @...", 50, 50);
   }
 }

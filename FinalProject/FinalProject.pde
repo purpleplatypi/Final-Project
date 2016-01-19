@@ -4,6 +4,7 @@ platform a, b;
 punch punch1, punch2;
 health h1, h2;
 int mode = 0;
+int cmode = 0;
 PImage start, sansi, bio;
 // note: modes will be changed due to location once the pages are formatted
 
@@ -24,13 +25,23 @@ void setup() {
 }
 
 void draw() {
+
+  if (mousePressed && mouseX >= 1150 && mouseX <= width && mouseY >= 750 && mouseY <= height) {
+    println("EXIT WORKS");
+    mode=0;
+    cmode= 0;
+  }
+
+
+  println(mode);
   startScreen();
-  instructions();
+  //instructions();
   bios();
   characters();
-  levels();
-  game();
-  end();
+  //levels();
+  //game();
+  //end();
+  rect(1175, 774, 50, 50);
 }
 
 
@@ -72,7 +83,7 @@ void keyReleased() {
   if (keyCode == DOWN) {
     punch1.punch = false;
   }
-     if (key == 'a' || key == 'A') {
+  if (key == 'a' || key == 'A') {
     p2.left = false;
   }
   if (key == 'd' || key == 'D') {
