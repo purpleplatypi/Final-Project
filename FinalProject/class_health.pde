@@ -18,5 +18,5 @@ void draw() {
   textSize(35);
   textAlign(CENTER);
   text("CHOOSE YOUR PLAYER", 500, 100);
-  fill(0);
+  text("Sanservino", 196, 400);
 }
