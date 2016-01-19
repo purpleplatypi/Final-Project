@@ -20,8 +20,8 @@ void game() {
     p1.display();
     p2.display();
     b.display();
-    if (a.isInContactWith(b)) {      //check to see if the raindrop is in contact with the point represented by the PVector called mouse
-      println("hit");
-    }
+    //if (a.isInContactWith(b)) {      //check to see if the raindrop is in contact with the point represented by the PVector called mouse
+    //  println("hit");
+    //}
   }
 }
