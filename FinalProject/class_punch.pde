@@ -1,43 +1,31 @@
-class hitbox {
-//declare variables
-  PVector loc;
+class punch {
+  //declare variables
+  PVector loc, vel;
   int diam;
-  int health= 300;
-  boolean thekeyleft, thekeyright, thekeyup, thekeydown; //boolean the keys
+  boolean punch;
 
-//make constructor
-  hitbox() {
-    //location needs to be redetermined
-    loc = new PVector(random (width), random(height));     //location of hitbox
-    diam = 50;     //size
+  //make constructor
+  punch() {
+    loc = new PVector();
+    vel = new PVector(10, 0);
+    diam = 10;     //size
   }
 
   void display() { //displaying hitbox
     fill(255);
     noStroke();
     ellipse(loc.x, loc.y, diam, diam);
-    rect(loc.x, loc.y + diam*1.05, health, 5);
   }
 
-  void move() {
-    if (thekeyleft) {     //if the key for to move left is showing true, move left. 
-      loc.x = loc.x-.1;
-      println("moveleft");     //printing moveleft to check
+  void update(player player) {
+    if (punch) {
+      if (player.right) {
+        loc.add(vel);
+      } else if (player.left) {
+        loc.sub(vel);
+      }
+    } else {
+      loc.set(player.loc.x + player.l  - diam/2, player.loc.y + player.w/2);
     }
-    if (thekeyright) {     //if the key for to move right is showing true, move right.  
-      loc.x = loc.x+.1;
-      println("moveright");
-    }
-    if (thekeyup) {     //if the key for to move up is showing true, move up. 
-      loc.y = loc.y-.1;
-      println("moveup");
-    }
-    if (thekeydown) {     //if the key for to move down is showing true, move down. 
-      loc.y = loc.y+.1;
-      println("movedown");
-    }
-  }
-  void health() {
-
   }
 }
