@@ -72,7 +72,7 @@ void keyReleased() {
   if (keyCode == DOWN) {
     punch1.punch = false;
   }
-     if (key == 'a' || key == 'A') {
+  if (key == 'a' || key == 'A') {
     p2.left = false;
   }
   if (key == 'd' || key == 'D') {
