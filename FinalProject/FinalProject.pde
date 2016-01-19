@@ -14,9 +14,11 @@ void setup() {
   sansi = loadImage("sansi.jpg");
   bio= loadImage("bio.jpg");
   p1 = new player(0, 770);
-  //p2 = new player(width - 30, 770);
+  p2 = new player(width - 30, 770);
   punch1 = new punch();
+  punch2 = new punch();
   h1 = new health();
+  h2 = new health();
   a = new platform(600, 730, 200, 5);
   b = new platform(500, 500, 200, 5);
 }
@@ -45,6 +47,18 @@ void keyPressed() {
   if (keyCode == DOWN) {
     punch1.punch = true;
   }
+  if (key == 'a' || key == 'A') {
+    p2.left = true;
+  }
+  if (key == 'd' || key == 'D') {
+    p2.right = true;
+  }
+  if (key == 'w' || key == 'W') {
+    p2.jumping =true;
+  }
+  if (key == 's' || key == 'S') {
+    punch2.punch = true;
+  }
 }
 
 void keyReleased() {
@@ -57,5 +71,14 @@ void keyReleased() {
   }
   if (keyCode == DOWN) {
     punch1.punch = false;
+  }
+     if (key == 'a' || key == 'A') {
+    p2.left = false;
+  }
+  if (key == 'd' || key == 'D') {
+    p2.right = false;
+  }
+  if (key == 's' || key == 'S') {
+    punch2.punch = false;
   }
 }

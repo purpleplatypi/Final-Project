@@ -3,12 +3,10 @@ class punch {
   PVector loc, vel;
   int diam;
   boolean punch;
-  // boolean thekeyleft, thekeyright, thekeyup, thekeydown; //boolean the keys
 
   //make constructor
   punch() {
-    //location needs to be redetermined
-    loc = new PVector();     //location of hitbox
+    loc = new PVector();
     vel = new PVector(10, 0);
     diam = 10;     //size
   }
@@ -21,28 +19,13 @@ class punch {
 
   void update(player player) {
     if (punch) {
-      loc.add(vel);
-    } else{
+      if (player.right) {
+        loc.add(vel);
+      } else if (player.left) {
+        loc.sub(vel);
+      }
+    } else {
       loc.set(player.loc.x + player.l  - diam/2, player.loc.y + player.w/2);
     }
   }
-
-  //void move() {
-  //  if (thekeyleft) {     //if the key for to move left is showing true, move left. 
-  //    loc.x = loc.x-.1;
-  //    println("moveleft");     //printing moveleft to check
-  //  }
-  //  if (thekeyright) {     //if the key for to move right is showing true, move right.  
-  //    loc.x = loc.x+.1;
-  //    println("moveright");
-  //  }
-  //  if (thekeyup) {     //if the key for to move up is showing true, move up. 
-  //    loc.y = loc.y-.1;
-  //    println("moveup");
-  //  }
-  //  if (thekeydown) {     //if the key for to move down is showing true, move down. 
-  //    loc.y = loc.y+.1;
-  //    println("movedown");
-  //  }
-  //}
 }
