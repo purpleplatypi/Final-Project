@@ -1,9 +1,10 @@
 //declare variables
-player a;
-platform p1, p2;
-punch b;
+player p1, p2;
+platform a, b;
+punch punch1, punch2;
+health h1, h2;
 int mode = 0;
-PImage start,sansi,bio;
+PImage start, sansi, bio;
 // note: modes will be changed due to location once the pages are formatted
 
 void setup() {
@@ -12,10 +13,14 @@ void setup() {
   start= loadImage("start.png");
   sansi = loadImage("sansi.jpg");
   bio= loadImage("bio.jpg");
-  a = new player(0, 770);
-  b = new punch();
-  p1 = new platform(600, 730, 200, 5);
-  p2 = new platform(100, 695, 200, 5);
+  p1 = new player(0, 770);
+  p2 = new player(width - 30, 770);
+  punch1 = new punch();
+  punch2 = new punch();
+  h1 = new health();
+  h2 = new health();
+  a = new platform(600, 730, 200, 5);
+  b = new platform(500, 500, 200, 5);
 }
 
 void draw() {
@@ -25,58 +30,55 @@ void draw() {
   characters();
   levels();
   game();
-  if (mode==0) {
-    startScreen();
-  }
-  if (mousePressed && mouseX >450 && mouseX < 750 && mouseY > 350 && mouseY < 450 ) {
-    mode=2;
-  }
-
- // instructions();
-if(mode==2){
-  bios();
-}
-if(mousePressed && mouseX >50 && mouseX < 250 && mouseY > 50 && mouseY < 250 ){
-  mode=3;
-}
-
-if(mode==3){
-  background(255);
-  textSize(25);
-  image(bio,0,0,1200,800);
-  fill(255);
-  text("Sansi...",50,50);
-  text("Jason Sanservinio,",150,50);
-  text("Otherwise known and the 'family man' hails from the Sanservino house, which started",50,100);
-  text("a family buisness back during prohibition, He has a very particular set of 'skills'",50,150);
-  text("that make him a formiddable foe.... and even a more intresting teacher....",50,200);
-}
-
-  characters();
-  levels();
- // game();
-  //game over screen
+  end();
 }
 
 
 void keyPressed() {
   if (keyCode == LEFT) {
-    a.left = true;
+    p1.left = true;
   }
   if (keyCode == RIGHT) {
-    a.right = true;
+    p1.right = true;
   }
   if (keyCode == UP) {
-    a.jumping =true;
+    p1.jumping =true;
+  }
+  if (keyCode == DOWN) {
+    punch1.punch = true;
+  }
+  if (key == 'a' || key == 'A') {
+    p2.left = true;
+  }
+  if (key == 'd' || key == 'D') {
+    p2.right = true;
+  }
+  if (key == 'w' || key == 'W') {
+    p2.jumping =true;
+  }
+  if (key == 's' || key == 'S') {
+    punch2.punch = true;
   }
 }
 
 void keyReleased() {
 
   if (keyCode == LEFT) {
-    a.left = false;
+    p1.left = false;
   }
   if (keyCode == RIGHT) {
-    a.right = false;
+    p1.right = false;
+  }
+  if (keyCode == DOWN) {
+    punch1.punch = false;
+  }
+     if (key == 'a' || key == 'A') {
+    p2.left = false;
+  }
+  if (key == 'd' || key == 'D') {
+    p2.right = false;
+  }
+  if (key == 's' || key == 'S') {
+    punch2.punch = false;
   }
 }
