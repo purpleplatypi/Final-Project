@@ -60,21 +60,21 @@ class player {
     }
   }
 
-  void platformControls (platform thing) {
+  void platformControls (platform platform) {
     if (jumping) {
-      if (thing.loc.x < loc.x + l && loc.x + l < thing.loc.x + thing.size.x) {
-        while (loc.y + w > thing.loc.y) {
+      if (platform.loc.x < loc.x + l && loc.x + l < platform.loc.x + platform.size.x) {
+        while (loc.y + w > platform.loc.y) {
           vel.y += g.y;
           loc.y += vel.y;
-          loc.y = thing.loc.y - w;
+          loc.y = platform.loc.y - w;
           vel.y = origJumpSpeed;
           jumping = false;
           vel.y = origJumpSpeed;
         }
       }
     }
-    if (loc.y + w == thing.loc.y) {
-      if (thing.loc.x - 5 == loc.x + l || loc.x == thing.loc.x + thing.size.x + 5) {
+    if (loc.y + w == platform.loc.y) {
+      if (platform.loc.x - 5 == loc.x + l || loc.x == platform.loc.x + platform.size.x + 5) {
         vel.y = 0;
         jumping = true;
       }

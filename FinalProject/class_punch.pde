@@ -1,13 +1,15 @@
 class punch {
-//declare variables
-  PVector loc;
+  //declare variables
+  PVector loc, vel;
   int diam;
-  boolean thekeyleft, thekeyright, thekeyup, thekeydown; //boolean the keys
+  boolean punch;
+  // boolean thekeyleft, thekeyright, thekeyup, thekeydown; //boolean the keys
 
-//make constructor
+  //make constructor
   punch() {
     //location needs to be redetermined
     loc = new PVector();     //location of hitbox
+    vel = new PVector(10, 0);
     diam = 10;     //size
   }
 
@@ -16,9 +18,13 @@ class punch {
     noStroke();
     ellipse(loc.x, loc.y, diam, diam);
   }
-  
-  void update(player player){
-    loc.set(player.loc.x + player.l  - diam/2, player.loc.y + player.w/2);
+
+  void update(player player) {
+    if (punch) {
+      loc.add(vel);
+    } else{
+      loc.set(player.loc.x + player.l  - diam/2, player.loc.y + player.w/2);
+    }
   }
 
   //void move() {

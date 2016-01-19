@@ -12,7 +12,7 @@ class health {
     rect(loc.x, loc.y, health, 5);
   }
   
-  void update(player health){
-    loc.set(health.loc.x, health.loc.y - 10);
+  void update(player player){
+    loc.set(player.loc.x, player.loc.y - 10);
   }
 }

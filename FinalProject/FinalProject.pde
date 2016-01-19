@@ -42,6 +42,9 @@ void keyPressed() {
   if (keyCode == UP) {
     p1.jumping =true;
   }
+  if (keyCode == DOWN) {
+    punch1.punch = true;
+  }
 }
 
 void keyReleased() {
@@ -51,5 +54,8 @@ void keyReleased() {
   }
   if (keyCode == RIGHT) {
     p1.right = false;
+  }
+  if (keyCode == DOWN) {
+    punch1.punch = false;
   }
 }
