@@ -20,6 +20,7 @@ class player {
 
   void display() {
     fill(255);
+    rectMode(CORNER);
     rect(loc.x, loc.y, l, w);
   }
 
@@ -65,7 +66,7 @@ class player {
         while (loc.y + w > thing.loc.y) {
           vel.y += g.y;
           loc.y += vel.y;
-          //loc.y = thing.loc.y - w;
+          loc.y = thing.loc.y - w;
           vel.y = origJumpSpeed;
           jumping = false;
           vel.y = origJumpSpeed;

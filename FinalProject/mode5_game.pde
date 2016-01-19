@@ -12,14 +12,17 @@ void game() {
      land on it
      ******************/
     background(0);
-    a.display();
-    a.move();
-    a.restrict();
-    a.platformControls(p1);
-    a.platformControls(p2);
     p1.display();
-    p2.display();
+    p1.move();
+    p1.restrict();
+    p1.platformControls(a);
+    p1.platformControls(b);
+    a.display();
     b.display();
+    punch1.display();
+    punch1.update(p1);
+    h1.display();
+    h1.update(p1);
     //if (a.isInContactWith(b)) {      //check to see if the raindrop is in contact with the point represented by the PVector called mouse
     //  println("hit");
     //}

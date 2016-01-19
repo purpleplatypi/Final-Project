@@ -1,7 +1,8 @@
 //declare variables
-player a;
-platform p1, p2;
-punch b;
+player p1, p2;
+platform a, b;
+punch punch1, punch2;
+health h1, h2;
 int mode = 0;
 PImage start, sansi, bio;
 // note: modes will be changed due to location once the pages are formatted
@@ -12,10 +13,12 @@ void setup() {
   start= loadImage("start.png");
   sansi = loadImage("sansi.jpg");
   bio= loadImage("bio.jpg");
-  a = new player(0, 770);
-  b = new punch();
-  p1 = new platform(600, 730, 200, 5);
-  p2 = new platform(500, 500, 200, 5);
+  p1 = new player(0, 770);
+  //p2 = new player(width - 30, 770);
+  punch1 = new punch();
+  h1 = new health();
+  a = new platform(600, 730, 200, 5);
+  b = new platform(500, 500, 200, 5);
 }
 
 void draw() {
@@ -31,22 +34,22 @@ void draw() {
 
 void keyPressed() {
   if (keyCode == LEFT) {
-    a.left = true;
+    p1.left = true;
   }
   if (keyCode == RIGHT) {
-    a.right = true;
+    p1.right = true;
   }
   if (keyCode == UP) {
-    a.jumping =true;
+    p1.jumping =true;
   }
 }
 
 void keyReleased() {
 
   if (keyCode == LEFT) {
-    a.left = false;
+    p1.left = false;
   }
   if (keyCode == RIGHT) {
-    a.right = false;
+    p1.right = false;
   }
 }

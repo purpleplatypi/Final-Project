@@ -17,8 +17,8 @@ class punch {
     ellipse(loc.x, loc.y, diam, diam);
   }
   
-  void update(player punch){
-    loc.set(punch.loc.x , punch.loc.y);
+  void update(player player){
+    loc.set(player.loc.x + player.l  - diam/2, player.loc.y + player.w/2);
   }
 
   //void move() {
