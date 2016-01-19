@@ -18,8 +18,8 @@ class player {
 
   //write methods
 
-  void display() {
-    fill(255);
+  void display(float r, float g, float b) {
+    fill(r,g,b);
     rectMode(CORNER);
     rect(loc.x, loc.y, l, w);
   }

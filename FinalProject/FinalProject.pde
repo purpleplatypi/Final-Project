@@ -17,8 +17,8 @@ void setup() {
   p2 = new player(width - 30, 770);
   punch1 = new punch();
   punch2 = new punch();
-  h1 = new health();
-  h2 = new health();
+  h1 = new health(50, 75);
+  h2 = new health(950, 75);
   a = new platform(600, 730, 200, 5);
   b = new platform(500, 500, 200, 5);
 }
@@ -52,6 +52,7 @@ void draw() {
     mode=1;
   }
   if (mode==1) {
+
     /**************
      display players
      if keypressed
@@ -64,12 +65,16 @@ void draw() {
      land on it
      ******************/
     background(0);
-    p1.display();
+    fill(255);
+    textSize(50);
+    text("Player 1", 50, 50);
+    text("Player 2", 950, 50);
+    p1.display(0, 0, 255);
     p1.move();
     p1.restrict();
     p1.platformControls(a);
     p1.platformControls(b);
-    p2.display();
+    p2.display(0, 255, 0);
     p2.move();
     p2.restrict();
     p2.platformControls(a);
@@ -79,11 +84,9 @@ void draw() {
     punch1.display();
     punch1.update(p1);
     h1.display();
-    h1.update(p1);
     punch2.display();
     punch2.update(p2);
     h2.display();
-    h2.update(p2);
   }
   if (mousePressed && mouseX >450 && mouseX < 750 && mouseY > 475 && mouseY < 575 && mode==0) { // instructions button
     mode=2;
@@ -152,50 +155,49 @@ void draw() {
 
 
 void keyPressed() {
-  if (keyCode == LEFT) {
+  if (key == 'a' || key == 'A') {
     p1.left = true;
   }
-  if (keyCode == RIGHT) {
+  if (key == 'd' || key == 'D') {
     p1.right = true;
   }
-  if (keyCode == UP) {
+  if (key == 'w' || key == 'W') {
     p1.jumping =true;
   }
-  if (keyCode == DOWN) {
+  if (key == 's' || key == 'S') {
     punch1.punch = true;
   }
-  if (key == 'a' || key == 'A') {
+  if (keyCode == LEFT) {
     p2.left = true;
   }
-  if (key == 'd' || key == 'D') {
+  if (keyCode == RIGHT) {
     p2.right = true;
   }
-  if (key == 'w' || key == 'W') {
+  if (keyCode == UP) {
     p2.jumping =true;
   }
-  if (key == 's' || key == 'S') {
+  if (keyCode == DOWN) {
     punch2.punch = true;
   }
 }
 
 void keyReleased() {
-
-  if (keyCode == LEFT) {
+  if (key == 'a' || key == 'A') {
     p1.left = false;
   }
-  if (keyCode == RIGHT) {
+  if (key == 'd' || key == 'D') {
     p1.right = false;
   }
-  if (keyCode == DOWN) {
+  if (key == 's' || key == 'S') {
     punch1.punch = false;
   }
-  if (key == 'a' || key == 'A') {
+  if (keyCode == LEFT) {
     p2.left = false;
   }
-  if (key == 'd' || key == 'D') {
+  if (keyCode == RIGHT) {
     p2.right = false;
   }
-  if (key == 's' || key == 'S') {
+  if (keyCode == DOWN) {
     punch2.punch = false;
   }
 }

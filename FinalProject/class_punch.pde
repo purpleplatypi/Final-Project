@@ -25,7 +25,7 @@ class punch {
         loc.sub(vel);
       }
     } else {
-      loc.set(player.loc.x + player.l  - diam/2, player.loc.y + player.w/2);
+      loc.set(player.loc.x + player.l/2, player.loc.y + player.w/2);
     }
   }
 }
