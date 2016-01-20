@@ -5,7 +5,7 @@ punch punch1, punch2;
 health h1, h2;
 int mode = 0;
 
-PImage backing, sun;
+PImage backing, sun, lockerroom;
 boolean esc;
 
 PImage start, sansi, bio, mrN, valley, monroy, mcmeniman, liu, gamebackground, andy;
@@ -27,6 +27,7 @@ void setup() {
   gamebackground= loadImage("gamebackground.jpg");
   liu= loadImage("liu.JPG");
   sun = loadImage("sunrise.png");
+  lockerroom = loadImage("lockerroom.jpg");
   p1 = new player(0, 770);
   p2 = new player(width - 30, 770);
   punch1 = new punch();
@@ -44,7 +45,7 @@ void draw() {
     rectMode(CENTER);
     image(sun, 0, 0, width, height);
     image(andy, 0, height-300, 300, 300);
-    image(start, 50,50, 1100, 300);
+    image(start, 50, 50, 1100, 300);
     fill(255);
     rect(width/2, height/2, 300, 100);
     textMode(CENTER);
@@ -113,7 +114,8 @@ void draw() {
   }
   if (mode==2) {  //display instructions
     background(255);
-    fill(0);
+    image(lockerroom, 0,0, width, height);
+    fill(255);
     textSize(50);
     text("Player 1", 100, 100);
     text("Player 2", 900, 100);
@@ -121,6 +123,7 @@ void draw() {
     text("Use arrow keys to move", 100, 150);
     text("Use A,W,D to move", 900, 150);
     text("hit z to return to homepage", width/2, height-50);
+    text("GOAL: Eliminate the opposition...at all costs!", width/3, height/1.5);
     fill(255);
     rect(100, 725, 100, 50);
     textMode(CENTER);
