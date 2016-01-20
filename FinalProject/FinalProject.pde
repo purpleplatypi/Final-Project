@@ -59,6 +59,7 @@ void draw() {
   }
   if (mode==1) {
     background(255);
+
     image(sansi, 50, 50, 200, 200);
     image(mrN, 350, 50, 200, 200);
     image(valley, 650, 50, 200, 200);
@@ -187,7 +188,9 @@ void draw() {
      if on top of platforms
      land on it
      ******************/
-    background(200);
+
+
+    //background(200);
     //image(gamebackground,0,0,1200,800);
     fill(255);
     textSize(50);
@@ -211,7 +214,7 @@ void draw() {
     punch2.display();
     punch2.update(p2);
     h2.display();
-      
+
     //if (p1.jumping && p1.loc.y >a.loc.y && p1.loc.x +30 > a.loc.x && p1.loc.x + 30 < a.loc.x + 200) {
     //  p1.vel.add(p1.g);
     //  p1.loc.y += p1.vel.y;
@@ -239,7 +242,7 @@ void draw() {
 
 
 
-  
+
   if (mousePressed && mouseX >450 && mouseX < 750 && mouseY > 475 && mouseY < 575 && mode==0) { // instructions button
     mode=2;
   }
