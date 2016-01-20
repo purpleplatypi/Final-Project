@@ -190,7 +190,7 @@ void draw() {
      ******************/
 
 
-    //background(200);
+    background(200);
     //image(gamebackground,0,0,1200,800);
     fill(255);
     textSize(50);
