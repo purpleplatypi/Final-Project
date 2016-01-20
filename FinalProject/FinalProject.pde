@@ -4,12 +4,7 @@ platform a, b;////
 punch punch1, punch2;
 health h1, h2;
 int mode = 0;
-<<<<<<< HEAD
-PImage start, sansi, bio, mrN, valley, monroy, mcmeniman, liu,gamebackground;
-=======
-int cmode = 0;
-PImage start, sansi, bio;
->>>>>>> origin/Yousuf
+PImage start, sansi, bio, mrN, valley, monroy, mcmeniman, liu, gamebackground;
 // note: modes will be changed due to location once the pages are formatted
 
 void setup() {
@@ -35,7 +30,6 @@ void setup() {
 }
 
 void draw() {
-<<<<<<< HEAD
   if (mode==0) {     
     background(255);
     image(start, 0, 0);
@@ -89,8 +83,8 @@ void draw() {
     p2.display(0, 255, 0);
     p2.move();
     p2.restrict();
-   p2.platformControls(a);
-   p2.platformControls(b);
+    p2.platformControls(a);
+    p2.platformControls(b);
     a.display();
     b.display();
     punch1.display();
@@ -294,25 +288,6 @@ void draw() {
   if (mousePressed && mouseX >50 && mouseX < 150  && mouseY > 700 && mouseY < 750  && mode==9) {  //back button for Mr.McMeniman's bio
     mode=3;
   }
-=======
-
-  if (mousePressed && mouseX >= 1150 && mouseX <= width && mouseY >= 750 && mouseY <= height) {
-    println("EXIT WORKS");
-    mode=0;
-    cmode= 0;
-  }
-
-
-  println(mode);
-  startScreen();
-  //instructions();
-  bios();
-  characters();
-  //levels();
-  //game();
-  //end();
-  rect(1175, 774, 50, 50);
->>>>>>> origin/Yousuf
 }
 
 
@@ -353,11 +328,7 @@ void keyReleased() {
   if (key == 's' || key == 'S') {
     punch1.punch = false;
   }
-<<<<<<< HEAD
   if (keyCode == LEFT) {
-=======
-  if (key == 'a' || key == 'A') {
->>>>>>> origin/Yousuf
     p2.left = false;
   }
   if (keyCode == RIGHT) {
