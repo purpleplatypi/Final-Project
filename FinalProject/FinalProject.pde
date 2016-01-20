@@ -1,10 +1,10 @@
-//declare variables
-player p1, p2;
-platform a, b;
+//declare variables///
+player p1, p2;///
+platform a, b;////
 punch punch1, punch2;
 health h1, h2;
 int mode = 0;
-PImage start, sansi, bio, mrN, valley, monroy, mcmeniman, liu;
+PImage start, sansi, bio, mrN, valley, monroy, mcmeniman, liu,gamebackground;
 // note: modes will be changed due to location once the pages are formatted
 
 void setup() {
@@ -17,6 +17,7 @@ void setup() {
   valley=loadImage("valley.jpg");
   monroy= loadImage("monroy.jpg");
   mcmeniman= loadImage("mcmeniman.jpg");
+  gamebackground= loadImage("gamebackground.jpg");
   liu= loadImage("liu.JPG");
   p1 = new player(0, 770);
   p2 = new player(width - 30, 770);
@@ -68,7 +69,8 @@ void draw() {
      if on top of platforms
      land on it
      ******************/
-    background(0);
+    background(200);
+    //image(gamebackground,0,0,1200,800);
     p1.display();
     p1.move();
     p1.restrict();
@@ -77,8 +79,8 @@ void draw() {
     p2.display();
     p2.move();
     p2.restrict();
-    p2.platformControls(a);
-    p2.platformControls(b);
+   p2.platformControls(a);
+   p2.platformControls(b);
     a.display();
     b.display();
     punch1.display();
@@ -89,8 +91,33 @@ void draw() {
     punch2.update(p2);
     h2.display();
     h2.update(p2);
+    if(p1.jumping && p1.loc.y >a.loc.y && p1.loc.x +30 > a.loc.x && p1.loc.x + 30 < a.loc.x + 200){
+      p1.vel.add(p1.g);
+     p1.loc.y += p1.vel.y;
+     if ( p1.loc.y > a.loc.y - 30) {
+       p1.loc.y= a.loc.y - 30;
+       p1.vel.y = p1.origJumpSpeed;
+       p1.jumping = false;
+       p1.vel.y = p1.origJumpSpeed;
+     } 
+      
+    }
+    if (p1.jumping) {
+      p1.vel.add(p1.g);
+      p1.loc.y += p1.vel.y;
+      if (p1.loc.y > p1.ground) {
+        p1.loc.y = p1.ground;
+       p1. vel.y = p1.origJumpSpeed;
+        p1.jumping = false;
+        p1.vel.y = p1.origJumpSpeed;
+      }
+    }
+    if(p1.vel.y > a.loc.y){
+      p1.ground = a.loc.y;
+    }
   }
-  if (mousePressed && mouseX >450 && mouseX < 750 && mouseY > 475 && mouseY < 575 && mode==0) { // instructions button
+  
+    if (mousePressed && mouseX >450 && mouseX < 750 && mouseY > 475 && mouseY < 575 && mode==0) { // instructions button
     mode=2;
   }
   if (mode==2) {  //display instructions
