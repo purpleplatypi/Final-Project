@@ -4,12 +4,16 @@ platform a, b;////
 punch punch1, punch2;
 health h1, h2;
 int mode = 0;
+<<<<<<< HEAD
 
 PImage backing, sun, lockerroom;
 boolean esc;
 
 PImage start, sansi, bio, mrN, valley, monroy, mcmeniman, liu, gamebackground, andy;
 
+=======
+PImage start, sansi, bio, mrN, valley, monroy, mcmeniman, liu, gamebackground;
+>>>>>>> refs/remotes/origin/development
 // note: modes will be changed due to location once the pages are formatted
 
 void setup() {
@@ -69,7 +73,126 @@ void draw() {
   if (mousePressed && mouseX >450 && mouseX < 750 && mouseY > 350 && mouseY < 450 && mode==0) {  //start button
     mode=1;
   }
-  if (mode==1) {  //game
+  if (mode==1) {
+    background(255);
+
+    image(sansi, 50, 50, 200, 200);
+    image(mrN, 350, 50, 200, 200);
+    image(valley, 650, 50, 200, 200);
+    image(liu, 950, 50, 200, 200);  
+    image(monroy, 50, 300, 200, 200);
+    image(mcmeniman, 950, 300, 200, 200);
+    fill(255);
+    rect(600, 725, 100, 50);
+    fill(0);
+    textMode(CENTER);
+    textSize(50);
+    text("P1 Pick your Character", 400, 400);
+    textMode(CENTER);
+    textSize(30);
+    fill(0);
+    text("Back", 565, 730);
+  }
+  if (mousePressed && mouseX >550 && mouseX < 650  && mouseY > 700 && mouseY < 750  && mode==1) {  //back button for bios   --i moved it bc if you held down the mouse on the back button for a bio it took you back to title screen since the back button was in the same spot for both screens--eric
+    mode=0;
+  }
+  //********* Mr. Sanservino's Stuff **********//
+  if (mousePressed && mouseX >50 && mouseX < 250 && mouseY > 50 && mouseY < 250 && mode==1) { //sansis charcter button P1
+    p1.c= color(0, 255, 0);
+    mode=10;
+  } 
+  //***** MR N'S STUFF **********/
+  if (mousePressed && mouseX >350 && mouseX < 550 && mouseY > 50 && mouseY < 250 && mode==1) { //MR.N's character button  P1
+    p1.c= color(255, 0, 0);
+    mode=10;
+  }
+
+  //***************** Mrs. Valley's Stuff *****************//
+  if (mousePressed && mouseX >650 && mouseX < 850 && mouseY > 50 && mouseY < 250 && mode==1) { //Mrs. Valley character button P1
+    p1.c= color(0, 255, 255);
+    mode=10;
+  }  
+  //************** Mr.Liu's Stuff ******************//
+  if (mousePressed && mouseX >950 && mouseX < 1150 && mouseY > 50 && mouseY < 250 && mode==1) { //Mr.Liu's  charatcer button P1
+    p1.c= color(255, 255, 0);
+    mode=10;
+  }  
+  //************************ Mrs. Monroy's Stuff ****************************/
+  if (mousePressed && mouseX >50 && mouseX < 250 && mouseY > 300 && mouseY < 500 && mode==1) { //Mrs. Monroy's character button P1
+    p1.c= color(255);
+    mode=10;
+  }  
+  //**************** Mr.McMeniman's Stuff *********************//
+  if (mousePressed && mouseX >950 && mouseX < 1150 && mouseY > 300 && mouseY < 500 && mode==1) { //Mr.McMeniman's character button P1
+    p1.c= color(0, 0, 0);
+    mode=10;
+  }
+  if (mode==10) {
+    background(255);
+    fill(255);
+    rect(width/2, height-275, 300, 100);      ///----buffer between p1 charcter choice and p2 character choice bc bug
+    textMode(CENTER);
+    textSize(70);
+    fill(0);
+    text("P2 Pick", width/2-140, height-250);
+  }
+  if (mousePressed && mouseX >450 && mouseX < 750 && mouseY > 475 && mouseY < 575 && mode==10) { // button to pick p2
+    mode=11;
+  }
+  if (mode==11) {
+    background(255);
+    image(sansi, 50, 50, 200, 200);
+    image(mrN, 350, 50, 200, 200);
+    image(valley, 650, 50, 200, 200);
+    image(liu, 950, 50, 200, 200);  
+    image(monroy, 50, 300, 200, 200);
+    image(mcmeniman, 950, 300, 200, 200);
+    fill(255);
+    rect(1000, 725, 100, 50);
+    fill(0);
+    textMode(CENTER);
+    textSize(50);
+    text("Pick your Character P2 ", 400, 400);
+    textMode(CENTER);
+    textSize(30);
+    fill(0);
+    text("Back", 965, 730);
+  }
+  if (mousePressed && mouseX >950 && mouseX < 1050  && mouseY > 700 && mouseY < 750  && mode==11) {  //back button for bios   --i moved it bc if you held down the mouse on the back button for a bio it took you back to title screen since the back button was in the same spot for both screens--eric
+    mode=1;
+  }
+  //********* Mr. Sanservino's Stuff **********//
+  if (mousePressed && mouseX >50 && mouseX < 250 && mouseY > 50 && mouseY < 250 && mode==11) { //sansis character button for P2
+    p2.c= color(0, 255, 0);
+    mode=12;
+  } 
+  //***** MR N'S STUFF **********/
+  if (mousePressed && mouseX >350 && mouseX < 550 && mouseY > 50 && mouseY < 250 && mode==11) { //MR.N's character button for P2
+    p2.c= color(255, 0, 0);
+    mode=12;
+  }
+
+  //***************** Mrs. Valley's Stuff *****************//
+  if (mousePressed && mouseX >650 && mouseX < 850 && mouseY > 50 && mouseY < 250 && mode==11) { //Mrs. Valley character button for P2
+    p2.c= color(0, 255, 255);
+    mode=12;
+  }  
+  //************** Mr.Liu's Stuff ******************//
+  if (mousePressed && mouseX >950 && mouseX < 1150 && mouseY > 50 && mouseY < 250 && mode==11) { //Mr.Liu's  character button for P2
+    p2.c= color(255, 255, 0);
+    mode=12;
+  }  
+  //************************ Mrs. Monroy's Stuff ****************************/
+  if (mousePressed && mouseX >50 && mouseX < 250 && mouseY > 300 && mouseY < 500 && mode==11) { //Mrs. Monroy's character button for P2
+    p2.c= color(255);
+    mode=12;
+  }  
+  //**************** Mr.McMeniman's Stuff *********************//
+  if (mousePressed && mouseX >950 && mouseX < 1150 && mouseY > 300 && mouseY < 500 && mode==11) { //Mr.McMeniman's character button for P2
+    p2.c= color(0, 0, 0);
+    mode=12;
+  }
+  if (mode==12) {  //game
     /**************
      display players
      if keypressed
@@ -81,18 +204,20 @@ void draw() {
      if on top of platforms
      land on it
      ******************/
-    background(200);
+
+
+    //background(200);
     //image(gamebackground,0,0,1200,800);
     fill(255);
     textSize(50);
     text("Player 1", 50, 50);
     text("Player 2", 950, 50);
-    p1.display(0, 0, 255);
+    p1.display();
     p1.move();
     p1.restrict();
     p1.platformControls(a);
     p1.platformControls(b);
-    p2.display(0, 255, 0);
+    p2.display();
     p2.move();
     p2.restrict();
     p2.platformControls(a);
@@ -105,10 +230,35 @@ void draw() {
     punch2.display();
     punch2.update(p2);
     h2.display();
-    if (p1.loc.dist(p2.loc) <= p1.l) {
-      print("in contact ");
-    }
-  }
+
+    //if (p1.jumping && p1.loc.y >a.loc.y && p1.loc.x +30 > a.loc.x && p1.loc.x + 30 < a.loc.x + 200) {
+    //  p1.vel.add(p1.g);
+    //  p1.loc.y += p1.vel.y;
+    //  if ( p1.loc.y > a.loc.y - 30) {
+    //    p1.loc.y= a.loc.y - 30;
+    //    p1.vel.y = p1.origJumpSpeed;        //me trying to fix jumping glitch -eric -didnt work :(
+    //    p1.jumping = false;
+    //    p1.vel.y = p1.origJumpSpeed;
+    //  }
+    //}
+    //if (p1.jumping) {
+    //  p1.vel.add(p1.g);
+    //  p1.loc.y += p1.vel.y;
+    //  if (p1.loc.y > p1.ground) {
+    //    p1.loc.y = p1.ground;
+    //    p1. vel.y = p1.origJumpSpeed;
+    //    p1.jumping = false;
+    //    p1.vel.y = p1.origJumpSpeed;
+    //  }
+    //}
+    //if (p1.vel.y > a.loc.y) {
+    //  p1.ground = a.loc.y;
+    //}
+  } //
+
+
+
+
   if (mousePressed && mouseX >450 && mouseX < 750 && mouseY > 475 && mouseY < 575 && mode==0) { // instructions button
     mode=2;
   }
