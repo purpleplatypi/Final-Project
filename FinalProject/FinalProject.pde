@@ -195,13 +195,7 @@ void draw() {
      if on top of platforms
      land on it
      ******************/
-<<<<<<< HEAD
-
-
     background(200);
-=======
-    //background(200);
->>>>>>> origin/development
     //image(gamebackground,0,0,1200,800);
     fill(255);
     textSize(50);
@@ -231,7 +225,7 @@ void draw() {
   }
   if (mode==2) {  //display instructions
     background(255);
-    image(lockerroom, 0,0, width, height);
+    image(lockerroom, 0, 0, width, height);
     fill(255);
     textSize(50);
     text("Player 1", 100, 100);
