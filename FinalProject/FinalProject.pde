@@ -6,7 +6,7 @@ health h1, h2;
 int mode = 0;
 PImage backing, sun, lockerroom;
 boolean esc;
-PImage start, sansi, bio, mrN, valley, monroy, mcmeniman, liu, gamebackground;
+PImage start, sansi, bio, mrN, valley, monroy, mcmeniman, liu, gamebackground,andy;
 // note: modes will be changed due to location once the pages are formatted
 
 void setup() {
@@ -24,6 +24,7 @@ void setup() {
   liu= loadImage("liu.JPG");
   sun = loadImage("sunrise.png");
   lockerroom = loadImage("lockerroom.jpg");
+  andy =loadImage("angryandy.png");
   p1 = new player(0, 770);
   p2 = new player(width - 30, 770);
   punch1 = new punch();
@@ -39,7 +40,7 @@ void draw() {
     background(255);    
     rectMode(CENTER);
     image(sun, 0, 0, width, height);
-    //zimage(andy, 0, height-400, 400, 400);
+    image(andy, 0, height-400, 400, 400);
     image(start, 50, 50, 1100, 300);
     fill(255);
     //rect(width/2, height/2, 300, 100);
