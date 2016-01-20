@@ -3,11 +3,16 @@ player p1, p2;///
 platform a, b;////
 punch punch1, punch2;
 health h1, h2;
+animation a1, a2;
 int mode = 0;
 PImage backing, sun, lockerroom;
 boolean esc;
+<<<<<<< HEAD
 PImage start, sansi, bio, mrN, valley, monroy, mcmeniman, liu, gamebackground,andy;
 // note: modes will be changed due to location once the pages are formatted
+=======
+PImage start, sansi, bio, mrN, valley, monroy, mcmenamin, liu, gamebackground;
+>>>>>>> refs/remotes/origin/development
 
 void setup() {
   size(1200, 800);
@@ -19,23 +24,31 @@ void setup() {
   bio= loadImage("bio.jpg");
   valley=loadImage("valleynatior.png");
   monroy= loadImage("monroy.jpg");
-  mcmeniman= loadImage("macman.png");
+  mcmenamin= loadImage("macman.png");
   gamebackground= loadImage("gamebackground.jpg");
   liu= loadImage("liu.JPG");
   sun = loadImage("sunrise.png");
   lockerroom = loadImage("lockerroom.jpg");
+<<<<<<< HEAD
   andy =loadImage("angryandy.png");
   p1 = new player(0, 770);
   p2 = new player(width - 30, 770);
+=======
+  p1 = new player(0, 593);
+  p2 = new player(width - 103, 593);
+>>>>>>> refs/remotes/origin/development
   punch1 = new punch();
   punch2 = new punch();
   h1 = new health(50, 75);
   h2 = new health(950, 75);
-  a = new platform(600, 730, 200, 5);
-  b = new platform(500, 500, 200, 5);
+  a1 = new animation ("frame", 10, ".png");
+  a2 = new animation ("frame", 10, ".png");
+  a = new platform(100, 593, 200, 5);
+  b = new platform(500, 593, 200, 5);
 }
 
 void draw() {
+<<<<<<< HEAD
   if (mode==0) {
     background(255);    
     rectMode(CENTER);
@@ -412,6 +425,14 @@ void draw() {
   }
 
 
+=======
+  startScreen();
+  characters();
+  instructions();
+  bios();
+  game();
+  
+>>>>>>> refs/remotes/origin/development
   if (esc) { //IF Z IS PRESSED THIS IS THE WAY TO GET BACK TO THE HOME SCREEN FROM ANYWHERE!!! 
     mode = 0;
   }
