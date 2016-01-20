@@ -4,7 +4,8 @@ platform a, b;
 punch punch1, punch2;
 health h1, h2;
 int mode = 0;
-PImage start, sansi, bio;
+PImage start, sansi, bio, valley, andy, MrN, MrM, backing;
+boolean esc;
 // note: modes will be changed due to location once the pages are formatted
 
 void setup() {
@@ -12,6 +13,12 @@ void setup() {
   //initialize variables
   start= loadImage("start.png");
   sansi = loadImage("sansi.jpg");
+  valley= loadImage("valleynatior.png");
+  andy= loadImage("angryandy.png");
+  MrN = loadImage("MR.ChefN.png");
+  MrM = loadImage("macman.png");
+  backing = loadImage("epicback.jpg");
+
   bio= loadImage("bio.jpg");
   p1 = new player(0, 770);
   p2 = new player(width - 30, 770);
@@ -24,8 +31,9 @@ void setup() {
 }
 
 void draw() {
-  if (mode==0) {     
+  if (mode==0) {
     background(255);
+    image(andy, 0, height-300, 300, 300);
     image(start, 0, 0);
     rectMode(CENTER);
     fill(255);
@@ -97,6 +105,7 @@ void draw() {
     textSize(20);
     text("Use arrow keys to move", 100, 150);
     text("Use A,W,D to move", 900, 150);
+    text("hit z to return to homepage", width/2, height-50);
     fill(255);
     rect(100, 725, 100, 50);
     textMode(CENTER);
@@ -113,8 +122,12 @@ void draw() {
   }
   if (mode==3) {
     background(255);
+    image(backing, 0, 0, width, height);
     rect(150, 150, 200, 200);
     image(sansi, 50, 50, 200, 200);
+    image(valley, 250, 50, 200, 200);
+    image(MrN, 450, 50, 200, 200);
+    image(MrM, 650, 50, 200, 200);    
     fill(255);
     rect(100, 725, 100, 50);
     textMode(CENTER);
@@ -136,7 +149,7 @@ void draw() {
     fill(255);
     text("Sansi...", 50, 50);
     text("Jason Sanservinio,", 150, 50);
-    text("Otherwise known and the 'family man' hails from the Sanservino house, which started", 50, 100);
+    text("Otherwise known as the 'family man' hails from the Sanservino house, which started", 50, 100);
     text("a family buisness back during prohibition, He has a very particular set of 'skills'", 50, 150);
     text("that make him a formiddable foe.... and even a more intresting teacher....", 50, 200);
     rect(100, 725, 100, 50);
@@ -147,6 +160,77 @@ void draw() {
   }
   if (mousePressed && mouseX >50 && mouseX < 150  && mouseY > 700 && mouseY < 750  && mode==4) {  //back button
     mode=3;
+  }
+
+  if (mousePressed && mouseX >250 && mouseX < 450 && mouseY > 50 && mouseY < 250 && mode==3) {
+    mode=5;
+  }
+
+  if (mode==5) {
+    background(255);
+    textSize(25);
+    image(bio, 0, 0, 1200, 800);
+    fill(255);
+    text("Mrs. Valley...", 40, 50);
+    text("Has been teaching kickboxing since the age of six and the height of three feet.", 40, 100);
+    text("These skills, combined with her loud voice and fiery attiude can make even the bravest", 40, 150);
+    text("of men tremble. At two inches above the height of the legal midget, Mrs. Valley is a deadly foe.", 40, 200);
+    rect(100, 725, 100, 50);
+    textMode(CENTER);
+    textSize(30);
+    fill(0);
+    text("Back", 65, 730);
+  }
+  if (mousePressed && mouseX >50 && mouseX < 150  && mouseY > 700 && mouseY < 750  && mode==5) {  //back button
+    mode=3;
+  }
+
+  if (mousePressed && mouseX >450 && mouseX < 650 && mouseY > 50 && mouseY < 250 && mode==3) {
+    mode=6;
+  }
+  if (mode==6) {
+    background(255);
+    textSize(25);
+    image(bio, 0, 0, 1200, 800);
+    fill(255);
+    text("Mr. N...", 40, 50);
+    text("Peter Nowakoski was orgininally a world reknowed chef, until he was fired for", 40, 100);
+    text("constantly correcting his customers' grammer. Now he teaches freashman English and", 40, 150);
+    text("Is trained numerous martial arts including the ancient tradition of MLA formatting.", 40, 200);
+    rect(100, 725, 100, 50);
+    textMode(CENTER);
+    textSize(30);
+    fill(0);
+    text("Back", 65, 730);
+  }
+  if (mousePressed && mouseX >50 && mouseX < 150  && mouseY > 700 && mouseY < 750  && mode==6) {  //back button
+    mode=3;
+  }
+
+  if (mousePressed && mouseX >650 && mouseX < 850 && mouseY > 50 && mouseY < 250 && mode==3) {
+    mode=7;
+  }
+  if (mode==7) {
+    background(255);
+    textSize(25);
+    image(bio, 0, 0, 1200, 800);
+    fill(255);
+    text("Mr. M...", 40, 50);
+    text("Joseph McMenamin spent his early days in a world (not really) famous band the", 40, 100);
+    text("Jambulance. He left the group shortly after all the other members were incapacitaed due", 40, 150);
+    text("to unknown circumstances. He currently teaches history and wields a mititary-grade gavel", 40, 200);
+    text("affectionately named the Omnipotence of Justice", 40, 250);
+    rect(100, 725, 100, 50);
+    textMode(CENTER);
+    textSize(30);
+    fill(0);
+    text("Back", 65, 730);
+  }
+  if (mousePressed && mouseX >50 && mouseX < 150  && mouseY > 700 && mouseY < 750  && mode==7) {  //back button
+    mode=3;
+  }
+  if (esc) { //IF Z IS PRESSED THIS IS THE WAY TO GET BACK TO THE HOME SCREEN FROM ANYWHERE!!! 
+    mode = 0;
   }
 }
 
@@ -176,6 +260,9 @@ void keyPressed() {
   if (key == 's' || key == 'S') {
     punch2.punch = true;
   }
+  if (key == 'z') {
+    esc = true;
+  }
 }
 
 void keyReleased() {
@@ -197,5 +284,8 @@ void keyReleased() {
   }
   if (key == 's' || key == 'S') {
     punch2.punch = false;
+  }
+  if (key == 'z') {
+    esc = false;
   }
 }
