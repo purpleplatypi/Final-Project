@@ -219,6 +219,12 @@ void draw() {
     punch2.display();
     punch2.update(p2);
     h2.display();
+    if (punch1.isInContactWith(p2)){
+      p2.bounceBack = true;
+    }
+    if (punch2.isInContactWith(p1)){
+      p1.bounceBack = true;
+    }
   }
   if (mousePressed && mouseX >450 && mouseX < 750 && mouseY > 475 && mouseY < 575 && mode==0) { // instructions button
     mode=2;
