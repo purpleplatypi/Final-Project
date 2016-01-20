@@ -2,7 +2,7 @@ class player {
   //declare variables
   boolean left, right, jumping, falling, facingright;
   PVector loc, vel, g;
-  int l, w, ground;
+  float l, w, ground;
   float origJumpSpeed ;
 
   //make constructor
@@ -63,18 +63,21 @@ class player {
   }
 
   void platformControls (platform platform) {
-    if (jumping) {
-      if (platform.loc.x < loc.x + l && loc.x + l < platform.loc.x + platform.size.x) {
-        while (loc.y + w > platform.loc.y) {
-          vel.y += g.y;
-          loc.y += vel.y;
-          loc.y = platform.loc.y - w;
-          vel.y = origJumpSpeed;
-          jumping = false;
-          vel.y = origJumpSpeed;
-        }
-      }
-    }
+    //if (jumping && platform.loc.x < loc.x + l && loc.x + l < platform.loc.x + platform.size.x && loc.y + w > platform.loc.y) {
+    //  vel.add(g);
+    //  loc.y += vel.y;
+    //  if ( loc.y > platform.loc.y - w) {
+    //    loc.y= platform.loc.y - w;
+    //    vel.y = origJumpSpeed;
+    //    jumping = false;
+    //    vel.y = origJumpSpeed;
+    //  }
+    //}
+  
+    
+
+
+
     if (loc.y + w == platform.loc.y) {
       if (platform.loc.x - 5 == loc.x + l || loc.x == platform.loc.x + platform.size.x + 5) {
         vel.y = 0;
