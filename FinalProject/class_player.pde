@@ -69,7 +69,7 @@ class player {
   }
 
   void platformControls (platform platform) {
-    if (jumping && platform.loc.x < loc.x + l && loc.x + l < platform.loc.x + platform.size.x && loc.y + w > platform.loc.y) {
+    if (jumping && vel.y > 0 && platform.loc.x < loc.x + l && loc.x + l < platform.loc.x + platform.size.x && loc.y + w > platform.loc.y && loc.y + w < platform.loc.y + platform.size.y) {
      vel.add(g);
      loc.y += vel.y;
      if ( loc.y > platform.loc.y - w) {
