@@ -4,16 +4,9 @@ platform a, b;////
 punch punch1, punch2;
 health h1, h2;
 int mode = 0;
-<<<<<<< HEAD
-
 PImage backing, sun, lockerroom;
 boolean esc;
-
-PImage start, sansi, bio, mrN, valley, monroy, mcmeniman, liu, gamebackground, andy;
-
-=======
 PImage start, sansi, bio, mrN, valley, monroy, mcmeniman, liu, gamebackground;
->>>>>>> refs/remotes/origin/development
 // note: modes will be changed due to location once the pages are formatted
 
 void setup() {
@@ -21,7 +14,6 @@ void setup() {
   //initialize variables
   start= loadImage("start.png");
   sansi = loadImage("sansi.jpg");
-  andy= loadImage("angryandy.png");
   backing = loadImage("epicback.jpg");
   mrN= loadImage ("MR.ChefN.png");
   bio= loadImage("bio.jpg");
@@ -44,11 +36,10 @@ void setup() {
 
 void draw() {
   if (mode==0) {
-
     background(255);    
     rectMode(CENTER);
     image(sun, 0, 0, width, height);
-    image(andy, 0, height-400, 400, 400);
+    //zimage(andy, 0, height-400, 400, 400);
     image(start, 50, 50, 1100, 300);
     fill(255);
     //rect(width/2, height/2, 300, 100);
@@ -204,8 +195,6 @@ void draw() {
      if on top of platforms
      land on it
      ******************/
-
-
     //background(200);
     //image(gamebackground,0,0,1200,800);
     fill(255);
@@ -230,35 +219,7 @@ void draw() {
     punch2.display();
     punch2.update(p2);
     h2.display();
-
-    //if (p1.jumping && p1.loc.y >a.loc.y && p1.loc.x +30 > a.loc.x && p1.loc.x + 30 < a.loc.x + 200) {
-    //  p1.vel.add(p1.g);
-    //  p1.loc.y += p1.vel.y;
-    //  if ( p1.loc.y > a.loc.y - 30) {
-    //    p1.loc.y= a.loc.y - 30;
-    //    p1.vel.y = p1.origJumpSpeed;        //me trying to fix jumping glitch -eric -didnt work :(
-    //    p1.jumping = false;
-    //    p1.vel.y = p1.origJumpSpeed;
-    //  }
-    //}
-    //if (p1.jumping) {
-    //  p1.vel.add(p1.g);
-    //  p1.loc.y += p1.vel.y;
-    //  if (p1.loc.y > p1.ground) {
-    //    p1.loc.y = p1.ground;
-    //    p1. vel.y = p1.origJumpSpeed;
-    //    p1.jumping = false;
-    //    p1.vel.y = p1.origJumpSpeed;
-    //  }
-    //}
-    //if (p1.vel.y > a.loc.y) {
-    //  p1.ground = a.loc.y;
-    //}
-  } //
-
-
-
-
+  }
   if (mousePressed && mouseX >450 && mouseX < 750 && mouseY > 475 && mouseY < 575 && mode==0) { // instructions button
     mode=2;
   }
@@ -284,28 +245,19 @@ void draw() {
   if (mousePressed && mouseX >50 && mouseX < 150  && mouseY > 700 && mouseY < 750  && mode==2) {  //back button for instructions
     mode=0;
   }
-
   if (mousePressed && mouseX >450 && mouseX < 750 && mouseY > 600 && mouseY < 700 && mode==0) {  //bio button
     mode=3;
   }
   if (mode==3) {
     background(255);
-
     image(backing, 0, 0, width, height);
     rect(150, 150, 200, 200);
-    //rect(150, 150, 200, 200);//sansi
-    //rect(400, 150, 200, 200);//mr.n
-    //rect(650, 150, 200, 200);//valley
-    //rect(150, 400, 200, 200);//liu
-    //rect(400, 400, 200, 200);// monry
-    //rect(650, 400, 200, 200);//mcmeniman
     image(sansi, 50, 50, 200, 200);
     image(mrN, 300, 50, 200, 200);
     image(valley, 550, 50, 200, 200);
     image(liu, 50, 300, 200, 200);  
     image(monroy, 300, 300, 200, 200);
     image(mcmeniman, 550, 300, 200, 200);
-
     fill(255);
     rect(600, 725, 100, 50);
     textMode(CENTER);
@@ -325,8 +277,6 @@ void draw() {
     textSize(25);
     image(bio, 0, 0, 1200, 800);
     fill(255);
-
-
     text("Sansi...", 50, 525);
     text("Jason Sanservinio,", 150, 525);
     text("Otherwise known and the 'family man' hails from the Sanservino house, which started", 50, 575);
@@ -341,7 +291,6 @@ void draw() {
   if (mousePressed && mouseX >50 && mouseX < 150  && mouseY > 700 && mouseY < 750  && mode==4) {  //back button for sansis bio
     mode=3;
   }
-
   //***** MR N'S STUFF **********/
   if (mousePressed && mouseX >300 && mouseX < 500 && mouseY > 50 && mouseY < 250 && mode==3) { //MR.N's bio button
     mode=5;
