@@ -7,7 +7,7 @@ animation a1, a2;
 int mode = 0;
 PImage backing, sun, lockerroom;
 boolean esc;
-PImage start, sansi, bio, mrN, valley, monroy, mcmenamin, liu, gamebackground;
+PImage start, sansi, bio, mrN, valley, monroy, mcmenamin, liu, gamebackground,andy;
 
 void setup() {
   size(1200, 800);
@@ -24,6 +24,7 @@ void setup() {
   liu= loadImage("liu.JPG");
   sun = loadImage("sunrise.png");
   lockerroom = loadImage("lockerroom.jpg");
+  andy =loadImage("angryandy.png");
   p1 = new player(0, 593);
   p2 = new player(width - 103, 593);
   punch1 = new punch();
@@ -42,7 +43,6 @@ void draw() {
   instructions();
   bios();
   game();
-  
   if (esc) { //IF Z IS PRESSED THIS IS THE WAY TO GET BACK TO THE HOME SCREEN FROM ANYWHERE!!! 
     mode = 0;
   }

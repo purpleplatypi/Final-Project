@@ -6,8 +6,6 @@ class player {
   float origJumpSpeed ;
   color c;
 
-
-
   //make constructor
   player(int x, int y) {  
     loc = new PVector(x, y);
