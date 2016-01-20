@@ -9,7 +9,7 @@ class platform {
   }
 
   void display() {
-    fill(255);
+    fill(0);
     rectMode(CORNER);
     rect(loc.x, loc.y, size.x, size.y);
   }
