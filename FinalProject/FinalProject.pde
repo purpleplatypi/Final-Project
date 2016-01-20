@@ -23,8 +23,8 @@ void setup() {
   p2 = new player(width - 30, 770);
   punch1 = new punch();
   punch2 = new punch();
-  h1 = new health();
-  h2 = new health();
+  h1 = new health(50, 75);
+  h2 = new health(950, 75);
   a = new platform(600, 730, 200, 5);
   b = new platform(500, 500, 200, 5);
 }
@@ -189,12 +189,16 @@ void draw() {
      ******************/
     background(200);
     //image(gamebackground,0,0,1200,800);
-    p1.display();
+    fill(255);
+    textSize(50);
+    text("Player 1", 50, 50);
+    text("Player 2", 950, 50);
+    p1.display(0, 0, 255);
     p1.move();
     p1.restrict();
     p1.platformControls(a);
     p1.platformControls(b);
-    p2.display();
+    p2.display(0, 255, 0);
     p2.move();
     p2.restrict();
     p2.platformControls(a);
@@ -204,10 +208,10 @@ void draw() {
     punch1.display();
     punch1.update(p1);
     h1.display();
-    h1.update(p1);
     punch2.display();
     punch2.update(p2);
     h2.display();
+<<<<<<< HEAD
     h2.update(p2);
     if (p1.jumping && p1.loc.y >a.loc.y && p1.loc.x +30 > a.loc.x && p1.loc.x + 30 < a.loc.x + 200) {
       p1.vel.add(p1.g);
@@ -235,6 +239,12 @@ void draw() {
   } 
 
 
+=======
+    if (p1.loc.dist(p2.loc) <= p1.l) {
+      print("in contact ");
+    }
+  }
+>>>>>>> origin/Carl
   if (mousePressed && mouseX >450 && mouseX < 750 && mouseY > 475 && mouseY < 575 && mode==0) { // instructions button
     mode=2;
   }
@@ -320,7 +330,7 @@ void draw() {
     fill(255);
     text("Mr.N", 50, 525);
     text("Peter Nowakowski,", 150, 525);
-    text("was a world renowned cheif before he was fired for incessently correcting his", 50, 575);
+    text("was a world renowned cheif before he was fired for incessantly correcting his", 50, 575);
     text("customer's grammer. Mr.Nowakowski is skilled in the martial arts as well as the ", 50, 625);
     text("ancient tradition of MLA formatting", 50, 675);
     rect(100, 725, 100, 50);
@@ -343,8 +353,8 @@ void draw() {
     fill(255);
     text("Mrs. Valley: ", 50, 525);
     text("Maryann Valley", 200, 525);
-    text("has been teaching kickboxing since she was 6 and the height ogf 3 feet. Her firey", 50, 575);
-    text("personality and loud voice are enough to make even the bravest of advisarys tremble", 50, 625);
+    text("has been teaching kickboxing since she was 6 and the height of 3 feet. Her firey", 50, 575);
+    text("personality and loud voice are enough to make even the bravest of advisaries tremble", 50, 625);
     text("in fear. At two inches above the height of a legal midget. Valley is a lethal enemy", 50, 675);
     rect(100, 725, 100, 50);
     textMode(CENTER);
@@ -430,50 +440,49 @@ void draw() {
 
 
 void keyPressed() {
-  if (keyCode == LEFT) {
+  if (key == 'a' || key == 'A') {
     p1.left = true;
   }
-  if (keyCode == RIGHT) {
+  if (key == 'd' || key == 'D') {
     p1.right = true;
   }
-  if (keyCode == UP) {
+  if (key == 'w' || key == 'W') {
     p1.jumping =true;
   }
-  if (keyCode == DOWN) {
+  if (key == 's' || key == 'S') {
     punch1.punch = true;
   }
-  if (key == 'a' || key == 'A') {
+  if (keyCode == LEFT) {
     p2.left = true;
   }
-  if (key == 'd' || key == 'D') {
+  if (keyCode == RIGHT) {
     p2.right = true;
   }
-  if (key == 'w' || key == 'W') {
+  if (keyCode == UP) {
     p2.jumping =true;
   }
-  if (key == 's' || key == 'S') {
+  if (keyCode == DOWN) {
     punch2.punch = true;
   }
 }
 
 void keyReleased() {
-
-  if (keyCode == LEFT) {
+  if (key == 'a' || key == 'A') {
     p1.left = false;
   }
-  if (keyCode == RIGHT) {
+  if (key == 'd' || key == 'D') {
     p1.right = false;
   }
-  if (keyCode == DOWN) {
+  if (key == 's' || key == 'S') {
     punch1.punch = false;
   }
-  if (key == 'a' || key == 'A') {
+  if (keyCode == LEFT) {
     p2.left = false;
   }
-  if (key == 'd' || key == 'D') {
+  if (keyCode == RIGHT) {
     p2.right = false;
   }
-  if (key == 's' || key == 'S') {
+  if (keyCode == DOWN) {
     punch2.punch = false;
   }
 }
