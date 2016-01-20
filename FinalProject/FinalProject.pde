@@ -193,12 +193,12 @@ void draw() {
     textSize(50);
     text("Player 1", 50, 50);
     text("Player 2", 950, 50);
-    p1.display(0, 0, 255);
+    p1.display();
     p1.move();
     p1.restrict();
     p1.platformControls(a);
     p1.platformControls(b);
-    p2.display(0, 255, 0);
+    p2.display();
     p2.move();
     p2.restrict();
     p2.platformControls(a);
@@ -211,40 +211,35 @@ void draw() {
     punch2.display();
     punch2.update(p2);
     h2.display();
-<<<<<<< HEAD
-    h2.update(p2);
-    if (p1.jumping && p1.loc.y >a.loc.y && p1.loc.x +30 > a.loc.x && p1.loc.x + 30 < a.loc.x + 200) {
-      p1.vel.add(p1.g);
-      p1.loc.y += p1.vel.y;
-      if ( p1.loc.y > a.loc.y - 30) {
-        p1.loc.y= a.loc.y - 30;
-        p1.vel.y = p1.origJumpSpeed;
-        p1.jumping = false;
-        p1.vel.y = p1.origJumpSpeed;
-      }
-    }
-    if (p1.jumping) {
-      p1.vel.add(p1.g);
-      p1.loc.y += p1.vel.y;
-      if (p1.loc.y > p1.ground) {
-        p1.loc.y = p1.ground;
-        p1. vel.y = p1.origJumpSpeed;
-        p1.jumping = false;
-        p1.vel.y = p1.origJumpSpeed;
-      }
-    }
-    if (p1.vel.y > a.loc.y) {
-      p1.ground = a.loc.y;
-    }
-  } 
+      
+    //if (p1.jumping && p1.loc.y >a.loc.y && p1.loc.x +30 > a.loc.x && p1.loc.x + 30 < a.loc.x + 200) {
+    //  p1.vel.add(p1.g);
+    //  p1.loc.y += p1.vel.y;
+    //  if ( p1.loc.y > a.loc.y - 30) {
+    //    p1.loc.y= a.loc.y - 30;
+    //    p1.vel.y = p1.origJumpSpeed;        //me trying to fix jumping glitch -eric -didnt work :(
+    //    p1.jumping = false;
+    //    p1.vel.y = p1.origJumpSpeed;
+    //  }
+    //}
+    //if (p1.jumping) {
+    //  p1.vel.add(p1.g);
+    //  p1.loc.y += p1.vel.y;
+    //  if (p1.loc.y > p1.ground) {
+    //    p1.loc.y = p1.ground;
+    //    p1. vel.y = p1.origJumpSpeed;
+    //    p1.jumping = false;
+    //    p1.vel.y = p1.origJumpSpeed;
+    //  }
+    //}
+    //if (p1.vel.y > a.loc.y) {
+    //  p1.ground = a.loc.y;
+    //}
+  } //
 
 
-=======
-    if (p1.loc.dist(p2.loc) <= p1.l) {
-      print("in contact ");
-    }
-  }
->>>>>>> origin/Carl
+
+  
   if (mousePressed && mouseX >450 && mouseX < 750 && mouseY > 475 && mouseY < 575 && mode==0) { // instructions button
     mode=2;
   }

@@ -22,13 +22,10 @@ class player {
 
   //write methods
 
-<<<<<<< HEAD
+
   void display() {
     fill(c);
-=======
-  void display(float r, float g, float b) {
-    fill(r, g, b);
->>>>>>> origin/Carl
+
     rectMode(CORNER);
     rect(loc.x, loc.y, l, w);
   }
