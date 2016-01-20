@@ -4,6 +4,9 @@ class player {
   PVector loc, vel, g;
   float l, w, ground;
   float origJumpSpeed ;
+  color c;
+  
+  
 
   //make constructor
   player(int x, int y) {  
@@ -14,12 +17,13 @@ class player {
     l=30;
     w=30;
     origJumpSpeed=-15;
+    c = color(0, 0, 0);
   }
 
   //write methods
 
   void display() {
-    fill(255);
+    fill(c);
     rectMode(CORNER);
     rect(loc.x, loc.y, l, w);
   }
