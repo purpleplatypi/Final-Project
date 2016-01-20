@@ -4,6 +4,9 @@ class player {
   PVector loc, vel, g;
   float l, w, ground;
   float origJumpSpeed ;
+  color c;
+  
+  
 
   //make constructor
   player(int x, int y) {  
@@ -14,12 +17,15 @@ class player {
     l=30;
     w=30;
     origJumpSpeed=-15;
+    c = color(0, 0, 0);
   }
 
   //write methods
 
-  void display(float r, float g, float b) {
-    fill(r, g, b);
+
+  void display() {
+    fill(c);
+
     rectMode(CORNER);
     rect(loc.x, loc.y, l, w);
   }
@@ -63,7 +69,7 @@ class player {
   }
 
   void platformControls (platform platform) {
-    if (jumping && platform.loc.x < loc.x + l && loc.x + l < platform.loc.x + platform.size.x && loc.y + w > platform.loc.y) {
+    if (jumping && vel.y > 0 && platform.loc.x < loc.x + l && loc.x + l < platform.loc.x + platform.size.x && loc.y + w > platform.loc.y && loc.y + w < platform.loc.y + platform.size.y) {
      vel.add(g);
      loc.y += vel.y;
      if ( loc.y > platform.loc.y - w) {
