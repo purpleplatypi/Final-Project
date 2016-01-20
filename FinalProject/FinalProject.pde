@@ -4,11 +4,8 @@ platform a, b;////
 punch punch1, punch2;
 health h1, h2;
 int mode = 0;
-<<<<<<< HEAD
-=======
 PImage backing, sun, lockerroom;
 boolean esc;
->>>>>>> refs/remotes/origin/development
 PImage start, sansi, bio, mrN, valley, monroy, mcmeniman, liu, gamebackground;
 // note: modes will be changed due to location once the pages are formatted
 
