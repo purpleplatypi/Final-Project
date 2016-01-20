@@ -5,7 +5,7 @@ punch punch1, punch2;
 health h1, h2;
 int mode = 0;
 
-PImage backing;
+PImage backing, sun;
 boolean esc;
 
 PImage start, sansi, bio, mrN, valley, monroy, mcmeniman, liu, gamebackground, andy;
@@ -26,6 +26,7 @@ void setup() {
   mcmeniman= loadImage("macman.png");
   gamebackground= loadImage("gamebackground.jpg");
   liu= loadImage("liu.JPG");
+  sun = loadImage("sunrise.png");
   p1 = new player(0, 770);
   p2 = new player(width - 30, 770);
   punch1 = new punch();
@@ -38,10 +39,12 @@ void setup() {
 
 void draw() {
   if (mode==0) {
-    background(255);
-    image(andy, 0, height-300, 300, 300);
-    image(start, 0, 0);
+
+    background(255);    
     rectMode(CENTER);
+    image(sun, 0, 0, width, height);
+    image(andy, 0, height-300, 300, 300);
+    image(start, 50,50, 1100, 300);
     fill(255);
     rect(width/2, height/2, 300, 100);
     textMode(CENTER);
@@ -198,7 +201,7 @@ void draw() {
     text("Mr.N", 50, 525);
     text("Peter Nowakowski,", 150, 525);
     text("was a world renowned cheif before he was fired for incessantly correcting his", 50, 575);
-    text("customer's grammer. Mr.Nowakowski is skilled in the martial arts as well as the ", 50, 625);
+    text("customer's grammar. Mr.Nowakowski is skilled in the martial arts as well as the ", 50, 625);
     text("ancient tradition of MLA formatting", 50, 675);
     rect(100, 725, 100, 50);
     textMode(CENTER);
@@ -292,7 +295,7 @@ void draw() {
     text("Joseph MecMeniman,", 250, 475);
     text("was the lead singer of his world (not really) renowned band the 'JAMBULANCE' until", 50, 525);
     text("the other members were permentantly incapacitated due to unknown causes. Ever since", 50, 575);
-    text("his gutar slinging days McMeniman has become a teacher of history and weilds", 50, 625);
+    text("his guitar slinging days McMeniman has become a teacher of history and weilds a", 50, 625);
     text("militaray-grade gavel affectionately named the OMNIPITANCE OF JUSTICE", 50, 675);
 
     rect(100, 725, 100, 50);
@@ -305,7 +308,7 @@ void draw() {
     mode=3;
   }
 
- 
+
   if (esc) { //IF Z IS PRESSED THIS IS THE WAY TO GET BACK TO THE HOME SCREEN FROM ANYWHERE!!! 
     mode = 0;
   }
