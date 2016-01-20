@@ -1,6 +1,6 @@
 class player {
   //declare variables
-  boolean left, right, jumping, falling;
+  boolean left, right, jumping, falling, facingright;
   PVector loc, vel, g;
   int l, w, ground;
   float origJumpSpeed ;
@@ -19,7 +19,7 @@ class player {
   //write methods
 
   void display(float r, float g, float b) {
-    fill(r,g,b);
+    fill(r, g, b);
     rectMode(CORNER);
     rect(loc.x, loc.y, l, w);
   }
@@ -27,9 +27,11 @@ class player {
   void move() {
     if (left) {    // uses boolean true or false statement to move left paddle up if the left key is pressed
       loc.x -= vel.x;
+      facingright = false;
     }
     if (right) {
       loc.x += vel.x;  // uses boolean true or false statement to move right if the right key is pressed
+      facingright = true;
     }
     if (jumping) {
       vel.add(g);

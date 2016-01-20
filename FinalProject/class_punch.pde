@@ -12,17 +12,20 @@ class punch {
   }
 
   void display() { //displaying hitbox
-    fill(255);
+    //fill(255);
     noStroke();
     ellipse(loc.x, loc.y, diam, diam);
   }
 
   void update(player player) {
     if (punch) {
-      if (player.right) {
+      if (player.facingright) {
         loc.add(vel);
-      } else if (player.left) {
+      } else {
         loc.sub(vel);
+      }
+      if (frameCount%5 ==0){
+        punch = false;
       }
     } else {
       loc.set(player.loc.x + player.l/2, player.loc.y + player.w/2);

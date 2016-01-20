@@ -91,6 +91,9 @@ void draw() {
     punch2.display();
     punch2.update(p2);
     h2.display();
+    if (p1.loc.dist(p2.loc) <= p1.l) {
+      print("in contact ");
+    }
   }
   if (mousePressed && mouseX >450 && mouseX < 750 && mouseY > 475 && mouseY < 575 && mode==0) { // instructions button
     mode=2;
