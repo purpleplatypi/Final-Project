@@ -1,6 +1,6 @@
 //declare variables///
 player p1, p2;///
-platform a, b;////
+platform a, b, c;////
 punch punch1, punch2;
 health h1, h2;
 int mode = 0;
@@ -30,8 +30,9 @@ void setup() {
   punch2 = new punch();
   h1 = new health(50, 75);
   h2 = new health(950, 75);
-  a = new platform(600, 730, 200, 5);
-  b = new platform(500, 500, 200, 5);
+  a = new platform(300, 720, 800, 10);
+  b = new platform(400, 625, 400, 10);
+  c = new platform(0, 720, 200, 10);
 }
 
 void draw() {
@@ -195,11 +196,7 @@ void draw() {
      if on top of platforms
      land on it
      ******************/
-<<<<<<< HEAD
 
-
-=======
->>>>>>> refs/remotes/origin/development
     background(200);
     //image(gamebackground,0,0,1200,800);
     fill(255);
@@ -211,13 +208,16 @@ void draw() {
     p1.restrict();
     p1.platformControls(a);
     p1.platformControls(b);
+    p1.platformControls(c);
     p2.display();
     p2.move();
     p2.restrict();
     p2.platformControls(a);
     p2.platformControls(b);
+    p2.platformControls(c);
     a.display();
     b.display();
+    c.display();
     punch1.display();
     punch1.update(p1);
     h1.display();
