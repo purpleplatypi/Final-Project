@@ -11,12 +11,12 @@ class player {
   //make constructor
   player(int x, int y) {  
     loc = new PVector(x, y);
-    vel = new PVector(5, -15);
+    vel = new PVector(5, -30);
     g = new PVector(0, 1);
-    ground = 770;
-    l=30;
-    w=30;
-    origJumpSpeed=-15;
+    ground = 593;
+    l=103;
+    w=207;
+    origJumpSpeed=-30;
     c = color(0, 0, 0);
   }
 
@@ -24,8 +24,8 @@ class player {
 
 
   void display() {
-    fill(c);
-
+    //fill(c);
+    noFill();
     rectMode(CORNER);
     rect(loc.x, loc.y, l, w);
   }

@@ -28,7 +28,7 @@ class punch {
         punch = false;
       }
     } else {
-      loc.set(player.loc.x + player.l/2, player.loc.y + player.w/2);
+      loc.set(player.loc.x + player.l*2/3, player.loc.y + player.w* 2/5);
     }
   }
   boolean isInContactWith(player player) { 

@@ -3,6 +3,7 @@ player p1, p2;///
 platform a, b;////
 punch punch1, punch2;
 health h1, h2;
+animation a1, a2;
 int mode = 0;
 PImage backing, sun, lockerroom;
 boolean esc;
@@ -24,14 +25,16 @@ void setup() {
   liu= loadImage("liu.JPG");
   sun = loadImage("sunrise.png");
   lockerroom = loadImage("lockerroom.jpg");
-  p1 = new player(0, 770);
-  p2 = new player(width - 30, 770);
+  p1 = new player(0, 593);
+  p2 = new player(width - 103, 593);
   punch1 = new punch();
   punch2 = new punch();
   h1 = new health(50, 75);
   h2 = new health(950, 75);
-  a = new platform(600, 730, 200, 5);
-  b = new platform(500, 500, 200, 5);
+  a1 = new animation ("frame", 10, ".png");
+  a2 = new animation ("frame", 10, ".png");
+  a = new platform(100, 593 , 200, 5);
+  b = new platform(500, 593, 200, 5);
 }
 
 void draw() {
@@ -39,7 +42,7 @@ void draw() {
     background(255);    
     rectMode(CENTER);
     image(sun, 0, 0, width, height);
-    //zimage(andy, 0, height-400, 400, 400);
+    //image(andy, 0, height-400, 400, 400);
     image(start, 50, 50, 1100, 300);
     fill(255);
     //rect(width/2, height/2, 300, 100);
@@ -201,6 +204,8 @@ void draw() {
     textSize(50);
     text("Player 1", 50, 50);
     text("Player 2", 950, 50);
+    a1.display(p1);
+    a2.display(p2);
     p1.display();
     p1.move();
     p1.restrict();
