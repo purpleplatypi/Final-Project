@@ -21,8 +21,6 @@ class player {
   }
 
   //write methods
-
-
   void display() {
     //fill(c);
     noFill();
