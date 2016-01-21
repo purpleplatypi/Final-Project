@@ -7,7 +7,7 @@ animation a1, a2;
 int mode = 0;
 PImage backing, sun, lockerroom;
 boolean esc;
-PImage start, sansi, bio, mrN, valley, monroy, mcmenamin, liu, gamebackground,andy;
+PImage start, sansi, bio, mrN, valley, monroy, mcmenamin, liu, gamebackground,andy, liuback, MrNback, mcstage, valleyback;
 
 void setup() {
   size(1200, 800);
@@ -18,6 +18,7 @@ void setup() {
   mrN= loadImage ("MR.ChefN.png");
   bio= loadImage("bio.jpg");
   valley=loadImage("valleynatior.png");
+  valleyback
   monroy= loadImage("monroy.jpg");
   mcmenamin= loadImage("macman.png");
   gamebackground= loadImage("gamebackground.jpg");
