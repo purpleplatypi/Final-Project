@@ -7,11 +7,7 @@ animation a1, a2;
 int mode = 0;
 PImage backing, sun, lockerroom;
 boolean esc;
-<<<<<<< HEAD
-PImage start, sansi, bio, mrN, valley, monroy, mcmenamin, liu, gamebackground, andy;
-=======
 PImage start, sansi, bio, mrN, valley, monroy, mcmenamin, liu, gamebackground,andy, liuback, MrNback, mcstage, valleyback;
->>>>>>> refs/remotes/origin/development
 
 void setup() {
   size(1200, 800);
