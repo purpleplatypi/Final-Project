@@ -24,37 +24,37 @@ void characters() {
       //********* Mr. Sanservino's Stuff **********//
       if (mouseX >50 && mouseX < 250 && mouseY > 50 && mouseY < 250) { //sansis charcter button P1
         p1.c= color(0, 255, 0);
-        mode=11;
+        mode=12;
       } 
       //***** MR N'S STUFF **********/
       if (mouseX >350 && mouseX < 550 && mouseY > 50 && mouseY < 250) { //MR.N's character button  P1
         p1.c= color(255, 0, 0);
-        mode=11;
+        mode=12;
       }
       //***************** Mrs. Valley's Stuff *****************//
       if (mouseX >650 && mouseX < 850 && mouseY > 50 && mouseY < 250) { //Mrs. Valley character button P1
         p1.c= color(0, 255, 255);
-        mode=11;
+        mode=12;
       }  
       //************** Mr.Liu's Stuff ******************//
       if (mouseX >950 && mouseX < 1150 && mouseY > 50 && mouseY < 250) { //Mr.Liu's  charatcer button P1
         p1.c= color(255, 255, 0);
-        mode=11;
+        mode=12;
       }  
       //************************ Mrs. Monroy's Stuff ****************************/
       if (mouseX >50 && mouseX < 250 && mouseY > 300 && mouseY < 500) { //Mrs. Monroy's character button P1
         p1.c= color(255);
-        mode=11;
+        mode=12;
       }  
       //**************** Mr.mcmenamin's Stuff *********************//
       if (mouseX >950 && mouseX < 1150 && mouseY > 300 && mouseY < 500) { //Mr.mcmenamin's character button P1
         p1.c= color(0, 0, 0);
-        mode=11;
+        mode=12;
       }
     }
   }
   
-  if (mode==11) {
+  if (mode==12) {
     background(255);
     fill(255);
     rect(width/2, height-275, 300, 100);      ///----buffer between p1 charcter choice and p2 character choice bc bug
@@ -63,11 +63,11 @@ void characters() {
     fill(0);
     text("P2 Pick", width/2-140, height-250);
     if (mousePressed && mouseX >450 && mouseX < 750 && mouseY > 475 && mouseY < 575) { // button to pick p2
-      mode=12;
+      mode=13;
     }
   }
   
-  if (mode==12) {
+  if (mode==13) {
     background(255);
     image(sansi, 50, 50, 200, 200);
     image(mrN, 350, 50, 200, 200);
