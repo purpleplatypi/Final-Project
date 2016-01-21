@@ -49,6 +49,7 @@ void draw() {
   instructions();
   bios();
   game();
+  gameOver();
   if (esc) {     //IF Z IS PRESSED THIS IS THE WAY TO GET BACK TO THE HOME SCREEN FROM ANYWHERE!!! 
     mode = 0;
   }
