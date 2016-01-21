@@ -31,6 +31,7 @@ void game() {
     p2.platformControls(b);
     a.display();
     b.display();
+    c.display();
     punch1.display();
     punch1.update(p1);
     h1.display();
