@@ -3,8 +3,8 @@ void startScreen() {
     rectMode(CENTER);
     textMode(CENTER);
     image(sun, 0, 0, width, height);
-    //image(andy, 0, height-400, 400, 400);
-    image(start, 50, 50, 1100, 300);
+    image(andy, 0, height-400, 400, 400);
+    image(start, 50, 50, 1100, 400);
     textSize(70);
     fill(0);
     text("START", width/2-110, height/2+25);
