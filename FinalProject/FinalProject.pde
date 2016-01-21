@@ -1,6 +1,6 @@
 //declare variables///
-player p1, p2;///
-platform a, b, c;////
+player p1, p2;
+platform a, b, c, d, e, f, g, h, i, j, k, l;
 punch punch1, punch2;
 health h1, h2;
 animation a1, a2;
@@ -31,14 +31,16 @@ void setup() {
   punch1 = new punch();
   punch2 = new punch();
   h1 = new health(50, 75);
-  h2 = new health(950, 75);
-  a = new platform(300, 720, 800, 10);
-  b = new platform(400, 625, 400, 10);
-  c = new platform(0, 720, 200, 10);
+  h2 = new health(850, 75);
+  a = new platform(200, 600, 800, 10);
+  b = new platform(400, 450, 400, 10);
+  c = new platform(0, 350, 100, 10);
+  d = new platform(900, 350, 300, 10);
+  e = new platform(0, 150, 100, 10);
+  f = new platform(900, 150, 300, 10);
+  g = new platform(300, 275,400, 10); 
   a1 = new animation ("frame", 10, ".png");
   a2 = new animation ("frame", 10, ".png");
-  a = new platform(100, 593, 200, 5);
-  b = new platform(500, 593, 200, 5);
 }
 
 void draw() {
