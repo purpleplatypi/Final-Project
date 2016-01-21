@@ -49,7 +49,7 @@ void bios() {
   if (mode==5) {
     background(255);
     textSize(25);
-    image(bio, 0, 0, 1200, 800);
+    image(sansiback, 0, 0, 1200, 800);
     fill(255);
     text("Sansi...", 50, 525);
     text("Jason Sanservinio,", 150, 525);
@@ -69,7 +69,7 @@ void bios() {
   if (mode==6) {
     background(255);
     textSize(25);
-    image(bio, 0, 0, 1200, 800);
+    image(MrNback, 0, 0, 1200, 800);
     fill(255);
     text("Mr.N", 50, 525);
     text("Peter Nowakowski,", 150, 525);
@@ -89,7 +89,7 @@ void bios() {
   if (mode==7) {
     background(255);
     textSize(25);
-    image(bio, 0, 0, 1200, 800);
+    image(valleyback, 0, 0, 1200, 800);
     fill(255);
     text("Mrs. Valley: ", 50, 525);
     text("Maryann Valley", 200, 525);
@@ -109,7 +109,7 @@ void bios() {
   if (mode==8) {
     background(255);
     textSize(25);
-    image(bio, 0, 0, 1200, 800);
+    image(liuback, 0, 0, 1200, 800);
     fill(255);
     text("Mr.Liu", 50, 475);
     text("Rong Liu,", 150, 475);
@@ -150,7 +150,7 @@ void bios() {
   if (mode==10) {
     background(255);
     textSize(25);
-    image(bio, 0, 0, 1200, 800);
+    image(mcstage, 0, 0, 1200, 800);
     fill(255);
     text("Mr.mcmenamin:", 50, 475);
     text("Joseph MecMeniman,", 250, 475);
