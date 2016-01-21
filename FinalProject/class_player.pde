@@ -5,8 +5,7 @@ class player {
   float l, w, ground;
   float origJumpSpeed ;
   color c;
-
-
+  
   //make constructor
   player(int x, int y) {  
     loc = new PVector(x, y);
@@ -79,7 +78,6 @@ class player {
     if (loc.y + w == platform.loc.y) {
       if (platform.loc.x - 5 == loc.x + l || loc.x == platform.loc.x + platform.size.x + 5) {
         vel.y = 0;
-        
         jumping = true;
       }
     }
