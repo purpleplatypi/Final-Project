@@ -34,8 +34,8 @@ void setup() {
   a = new platform(300, 720, 800, 10);
   b = new platform(400, 625, 400, 10);
   c = new platform(0, 720, 200, 10);
-  a1 = new animation ("frame", 10, ".png");
-  a2 = new animation ("frame", 10, ".png");
+  a1 = new animation ();
+  a2 = new animation ();
   a = new platform(100, 593, 200, 5);
   b = new platform(500, 593, 200, 5);
 }
