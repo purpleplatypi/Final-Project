@@ -11,9 +11,9 @@ class player {
     loc = new PVector(x, y);
     vel = new PVector(5, -30);
     g = new PVector(0, 1);
-    ground = 593;
-    l=103;
-    w=207;
+    l=60;
+    w=160;
+    ground = height - w;
     origJumpSpeed=-30;
     c = color(0, 0, 0);
   }
