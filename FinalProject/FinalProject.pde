@@ -1,13 +1,13 @@
 //declare variables///
 player p1, p2;///
-platform a, b;////
+platform a, b, c;////
 punch punch1, punch2;
 health h1, h2;
 animation a1, a2;
 int mode = 0;
 PImage backing, sun, lockerroom;
 boolean esc;
-PImage start, sansi, bio, mrN, valley, monroy, mcmenamin, liu, gamebackground;
+PImage start, sansi, bio, mrN, valley, monroy, mcmenamin, liu, gamebackground,andy;
 
 void setup() {
   size(1200, 800);
@@ -24,12 +24,16 @@ void setup() {
   liu= loadImage("liu.JPG");
   sun = loadImage("sunrise.png");
   lockerroom = loadImage("lockerroom.jpg");
+  andy =loadImage("angryandy.png");
   p1 = new player(0, 593);
   p2 = new player(width - 103, 593);
   punch1 = new punch();
   punch2 = new punch();
   h1 = new health(50, 75);
   h2 = new health(950, 75);
+  a = new platform(300, 720, 800, 10);
+  b = new platform(400, 625, 400, 10);
+  c = new platform(0, 720, 200, 10);
   a1 = new animation ("frame", 10, ".png");
   a2 = new animation ("frame", 10, ".png");
   a = new platform(100, 593, 200, 5);
@@ -42,8 +46,7 @@ void draw() {
   instructions();
   bios();
   game();
-  
-  if (esc) { //IF Z IS PRESSED THIS IS THE WAY TO GET BACK TO THE HOME SCREEN FROM ANYWHERE!!! 
+  if (esc) {     //IF Z IS PRESSED THIS IS THE WAY TO GET BACK TO THE HOME SCREEN FROM ANYWHERE!!! 
     mode = 0;
   }
 }
