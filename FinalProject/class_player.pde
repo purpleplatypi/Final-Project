@@ -5,11 +5,7 @@ class player {
   float l, w, ground;
   float origJumpSpeed ;
   color c;
-<<<<<<< HEAD
 
-
-=======
->>>>>>> refs/remotes/origin/development
 
   //make constructor
   player(int x, int y) {  
@@ -70,19 +66,11 @@ class player {
   }
 
   void platformControls (platform platform) {
-<<<<<<< HEAD
-    if (jumping && vel.y > 0 && platform.loc.x < loc.x + l && loc.x  < platform.loc.x + platform.size.x && loc.y + w > platform.loc.y && loc.y + w < platform.loc.y + platform.size.y) {
-=======
     if (jumping && vel.y > 0 && platform.loc.x < loc.x + l && loc.x + l < platform.loc.x + platform.size.x && loc.y + w > platform.loc.y && loc.y + w < platform.loc.y + platform.size.y) {
->>>>>>> refs/remotes/origin/development
       vel.add(g);
       loc.y += vel.y;
       if ( loc.y > platform.loc.y - w) {
         loc.y= platform.loc.y - w;
-<<<<<<< HEAD
-       // ground= platform.loc.y - w;
-=======
->>>>>>> refs/remotes/origin/development
         vel.y = origJumpSpeed;
         jumping = false;
         vel.y = origJumpSpeed;
