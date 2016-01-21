@@ -12,9 +12,9 @@ class player {
     loc = new PVector(x, y);
     vel = new PVector(5, -30);
     g = new PVector(0, 1);
-    ground = 593;
-    l=103;
-    w=207;
+    l=60;
+    w=160;
+    ground = height - w;
     origJumpSpeed=-30;
     c = color(0, 0, 0);
   }
@@ -78,8 +78,7 @@ class player {
     }
     if (loc.y + w == platform.loc.y) {
       if (platform.loc.x - 5 == loc.x + l || loc.x == platform.loc.x + platform.size.x + 5) {
-        vel.y = 0;
-        
+        vel.y = 0;   
         jumping = true;
       }
     }

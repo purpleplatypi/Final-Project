@@ -24,17 +24,20 @@ class animation {
   }
   //write methods
   void display(player player) {
-    if (player.left) {
-      frame = (frame+1) % imageCount;
-      image(left[frame], player.loc.x, player.loc.y);
+    if (player.facingright) {
+      if (player.right ) {
+        frame = (frame+1) % imageCount;
+        image(right[frame], player.loc.x, player.loc.y);
+      } else {
+        image(stationaryright, player.loc.x, player.loc.y);
+      }
     } else {
-      image(stationaryleft, player.loc.x, player.loc.y);
-    }
-    if (player.right ) {
-      frame = (frame+1) % imageCount;
-      image(right[frame], player.loc.x, player.loc.y);
-    } else {
-      image(stationaryright, player.loc.x, player.loc.y);
+      if (player.left) {
+        frame = (frame+1) % imageCount;
+        image(left[frame], player.loc.x, player.loc.y);
+      } else {
+        image(stationaryleft, player.loc.x, player.loc.y);
+      }
     }
   }
 }

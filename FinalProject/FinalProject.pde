@@ -25,8 +25,8 @@ void setup() {
   sun = loadImage("sunrise.png");
   lockerroom = loadImage("lockerroom.jpg");
   andy =loadImage("angryandy.png");
-  p1 = new player(0, 593);
-  p2 = new player(width - 103, 593);
+  p1 = new player(0, height - 160);
+  p2 = new player(width - 60, height - 160);
   punch1 = new punch();
   punch2 = new punch();
   h1 = new health(50, 75);
