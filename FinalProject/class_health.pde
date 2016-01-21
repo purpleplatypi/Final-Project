@@ -27,5 +27,6 @@ class health {
     if(health<=0){
      mode=13; 
     }
+    
   }
 }
