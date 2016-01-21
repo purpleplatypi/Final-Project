@@ -18,7 +18,7 @@ void setup() {
   mrN= loadImage ("MR.ChefN.png");
   bio= loadImage("bio.jpg");
   valley=loadImage("valleynatior.png");
-  valleyback
+  valleyback=loadImage("valleynatior.jpg");
   monroy= loadImage("monroy.jpg");
   mcmenamin= loadImage("macman.png");
   gamebackground= loadImage("gamebackground.jpg");

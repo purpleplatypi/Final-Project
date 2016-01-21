@@ -5,11 +5,7 @@ class player {
   float l, w, ground;
   float origJumpSpeed ;
   color c;
-
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/development
+  
   //make constructor
   player(int x, int y) {  
     loc = new PVector(x, y);
