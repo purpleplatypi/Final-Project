@@ -7,7 +7,7 @@ animation a1, a2;
 int mode = 0;
 PImage backing, sun, lockerroom;
 boolean esc;
-PImage start, sansi, bio, mrN, valley, monroy, mcmenamin, liu, gamebackground,andy, liuback, MrNback, mcstage, valleyback;
+PImage start, sansi, bio, mrN, valley, monroy, mcmenamin, liu, gamebackground,andy, liuback, MrNback, mcstage, valleyback, sansiback;
 
 void setup() {
   size(1200, 800);
@@ -26,6 +26,10 @@ void setup() {
   sun = loadImage("sunrise.png");
   lockerroom = loadImage("lockerroom.jpg");
   andy =loadImage("angryandy.png");
+  sansiback = loadImage("jasonback.jpg");
+  liuback = loadImage("abramsliu.jpg");
+  MrNback = loadImage("MrNbar.jpg");
+  mcstage = loadImage("mcstage.jpg");
   p1 = new player(0, 593);
   p2 = new player(width - 103, 593);
   punch1 = new punch();
