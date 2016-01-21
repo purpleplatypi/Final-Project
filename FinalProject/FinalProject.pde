@@ -7,7 +7,7 @@ animation a1, a2;
 int mode = 0;
 PImage backing, sun, lockerroom;
 boolean esc;
-PImage start, sansi, bio, mrN, valley, monroy, mcmenamin, liu, gamebackground,andy, liuback, MrNback, mcstage, valleyback;
+PImage start, sansi, bio, mrN, valley, monroy, mcmenamin, liu, gamebackground, andy, liuback, MrNback, mcstage, valleyback, sansiback;
 
 void setup() {
   size(1200, 800);
@@ -25,9 +25,13 @@ void setup() {
   liu= loadImage("liu.JPG");
   sun = loadImage("sunrise.png");
   lockerroom = loadImage("lockerroom.jpg");
-  andy =loadImage("angryandy.png");
-  p1 = new player(0, 593);
-  p2 = new player(width - 103, 593);
+  andy =loadImage("angryandy.png");  
+  sansiback = loadImage("jasonback.jpg");
+  liuback = loadImage("abramsliu.jpg");
+  MrNback = loadImage("MrNbar.jpg");
+  mcstage = loadImage("mcstage.jpg");
+  p1 = new player(0, height - 160);
+  p2 = new player(width - 60, height - 160);
   punch1 = new punch();
   punch2 = new punch();
   h1 = new health(50, 75);
@@ -38,17 +42,18 @@ void setup() {
   d = new platform(900, 350, 300, 10);
   e = new platform(0, 150, 100, 10);
   f = new platform(900, 150, 300, 10);
-  g = new platform(300, 275,400, 10); 
-  a1 = new animation ("frame", 10, ".png");
-  a2 = new animation ("frame", 10, ".png");
+  g = new platform(300, 275, 400, 10); 
+  a1 = new animation ();
+  a2 = new animation ();
 }
 
-void draw() {
+  void draw() {
   startScreen();
   characters();
   instructions();
   bios();
   game();
+  gameOver();
   if (esc) {     //IF Z IS PRESSED THIS IS THE WAY TO GET BACK TO THE HOME SCREEN FROM ANYWHERE!!! 
     mode = 0;
   }

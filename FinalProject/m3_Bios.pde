@@ -18,27 +18,27 @@ void bios() {
     if (mousePressed) {
       //********* Mr. Sanservino's Stuff **********//
       if (mouseX >50 && mouseX < 250 && mouseY > 50 && mouseY < 250) { //sansis bio button
-        mode=5;
+        mode=6;
       }
       //***** MR N'S STUFF **********/
       if (mouseX >300 && mouseX < 500 && mouseY > 50 && mouseY < 250) { //MR.N's bio button
-        mode=6;
+        mode=7;
       }
       //***************** Mrs. Valley's Stuff *****************//
       if (mouseX >550 && mouseX < 750 && mouseY > 50 && mouseY < 250) { //Mrs. Valley bio button
-        mode=7;
+        mode=8;
       }
       //************** Mr.Liu's Stuff ******************//
       if (mouseX >50 && mouseX < 250 && mouseY > 300 && mouseY < 500) { //Mr.Liu's  bio button
-        mode=8;
+        mode=9;
       }
       //************************ Mrs. Monroy's Stuff ****************************/
       if (mouseX >300 && mouseX < 500 && mouseY > 300 && mouseY < 500) { //Mrs. Monroy's bio button
-        mode=9;
+        mode=10;
       }
       //**************** Mr.mcmenamin's Stuff *********************//
       if (mouseX >550 && mouseX < 750 && mouseY > 300 && mouseY < 500) { //Mr.mcmenamin's bio button
-        mode=10;
+        mode=11;
       }
     }
     if (mousePressed && mouseX >550 && mouseX < 650  && mouseY > 700 && mouseY < 750  && mode==3) { 
@@ -46,10 +46,10 @@ void bios() {
     }
   }
   
-  if (mode==5) {
+  if (mode==6) {
     background(255);
     textSize(25);
-    image(bio, 0, 0, 1200, 800);
+    image(sansiback, 0, 0, 1200, 800);
     fill(255);
     text("Sansi...", 50, 525);
     text("Jason Sanservinio,", 150, 525);
@@ -66,10 +66,10 @@ void bios() {
     }
   }
 
-  if (mode==6) {
+  if (mode==7) {
     background(255);
     textSize(25);
-    image(bio, 0, 0, 1200, 800);
+    image(MrNback, 0, 0, 1200, 800);
     fill(255);
     text("Mr.N", 50, 525);
     text("Peter Nowakowski,", 150, 525);
@@ -86,10 +86,10 @@ void bios() {
     }
   }
 
-  if (mode==7) {
+  if (mode==8) {
     background(255);
     textSize(25);
-    image(bio, 0, 0, 1200, 800);
+    image(valleyback, 0, 0, 1200, 800);
     fill(255);
     text("Mrs. Valley: ", 50, 525);
     text("Maryann Valley", 200, 525);
@@ -106,10 +106,10 @@ void bios() {
     }
   }
 
-  if (mode==8) {
+  if (mode==9) {
     background(255);
     textSize(25);
-    image(bio, 0, 0, 1200, 800);
+    image(liuback, 0, 0, 1200, 800);
     fill(255);
     text("Mr.Liu", 50, 475);
     text("Rong Liu,", 150, 475);
@@ -127,7 +127,7 @@ void bios() {
     }
   } 
 
-  if (mode==9) {
+  if (mode==10) {
     background(255);
     textSize(25);
     image(bio, 0, 0, 1200, 800);
@@ -147,10 +147,10 @@ void bios() {
     }
   }
 
-  if (mode==10) {
+  if (mode==11) {
     background(255);
     textSize(25);
-    image(bio, 0, 0, 1200, 800);
+    image(mcstage, 0, 0, 1200, 800);
     fill(255);
     text("Mr.mcmenamin:", 50, 475);
     text("Joseph MecMeniman,", 250, 475);
