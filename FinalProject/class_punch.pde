@@ -24,11 +24,18 @@ class punch {
       } else {
         loc.sub(vel);
       }
-      if (frameCount%5 ==0){
+      if (frameCount%3 ==0) {
         punch = false;
       }
     } else {
-      loc.set(player.loc.x + player.l/2, player.loc.y + player.w/2);
+      loc.set(player.loc.x + player.l*2/3, player.loc.y + player.w* 2/5);
+    }
+  }
+  boolean isInContactWith(player player) { 
+    if (loc.y +diam <= player.loc.y + player.w && loc.y >= player.loc.y && loc.x + diam >= player.loc.x && player.loc.x + player.l >= loc.x) {
+      return true;
+    } else {
+      return false;
     }
   }
 }
