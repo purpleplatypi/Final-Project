@@ -7,9 +7,13 @@ animation a1, a2;
 int mode = 0;
 PImage backing, sun, lockerroom;
 boolean esc;
-PImage start, sansi, bio, mrN, valley, monroy, mcmenamin, liu, gamebackground,andy, liuback, MrNback, mcstage, valleyback;
+PImage start, sansi, bio, mrN, valley, monroy, mcmenamin, liu, gamebackground, andy, liuback, MrNback, mcstage, valleyback;
+PFont font;
 
 void setup() {
+  font = createFont("Arial Rounded MT Bold", 48);
+  textFont(font);
+  textAlign(LEFT);
   size(1200, 800);
   //initialize variables
   start= loadImage("start.png");
