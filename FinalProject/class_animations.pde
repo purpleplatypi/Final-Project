@@ -30,7 +30,7 @@ class animation {
     } else {
       image(stationaryleft, player.loc.x, player.loc.y);
     }
-    if (player.right) {
+    if (player.right ) {
       frame = (frame+1) % imageCount;
       image(right[frame], player.loc.x, player.loc.y);
     } else {
