@@ -47,8 +47,8 @@ void setup() {
   b2 = 0;
   p1text = "P1 Click Here";
   p2text = "P2 Click Here";
-  p1 = new player(0, height - 160);
-  p2 = new player(width - 60, height - 160);
+  p1 = new player(0, height - 130);
+  p2 = new player(width - 60, height - 130);
   punch1 = new punch();
   punch2 = new punch();
   h1 = new health(50, 75);

@@ -1,18 +1,19 @@
 class punch {
   //declare variables
   PVector loc, vel;
-  int diam;
+  int diam,t;
   boolean punch;
 
   //make constructor
   punch() {
     loc = new PVector();
-    vel = new PVector(10, 0);
+    vel = new PVector(5, 0);
     diam = 10;     //size
+    t = 0;
   }
 
   void display() { //displaying hitbox
-    fill(0);
+    fill(0,t);
     noStroke();
     ellipse(loc.x, loc.y, diam, diam);
   }
@@ -20,15 +21,21 @@ class punch {
   void update(player player) {
     if (punch) {
       if (player.facingright) {
+        t = 255;
         loc.add(vel);
       } else {
+        t = 255;
         loc.sub(vel);
       }
-      if (frameCount%3 ==0) {
+      if (frameCount%5 ==0) {
         punch = false;
       }
-    } else {
-      loc.set(player.loc.x + player.l*2/3, player.loc.y + player.w* 2/5);
+    } else if (player.facingright) {
+      t = 0;
+      loc.set(player.loc.x + player.l, player.loc.y + player.w/2);
+    } else if(!player.facingright){
+      t = 0;
+      loc.set(player.loc.x, player.loc.y + player.w/2);
     }
   }
   boolean isInContactWith(player player) { 

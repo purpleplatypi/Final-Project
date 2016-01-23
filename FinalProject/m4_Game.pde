@@ -20,6 +20,8 @@ void game() {
     a1.display(p1);
     a2.display(p2);
     p1.display();
+    punch1.display();
+    punch1.update(p1);
     p1.face();
     p1.move();
     p1.restrict();
@@ -31,6 +33,8 @@ void game() {
     p1.platformControls(f);
     p1.platformControls(g);
     p2.display();
+    punch2.display();
+    punch2.update(p2);
     p2.face();
     p2.move();
     p2.restrict();
@@ -48,21 +52,23 @@ void game() {
     e.display();
     f.display();
     g.display();
-    punch1.display();
-    punch1.update(p1);
     h1.display();
-    punch2.display();
-    punch2.update(p2);
     h2.display();
     h1.healthcolor();
     h2.healthcolor();
-    if (punch1.isInContactWith(p2)) {
-      p2.bounceBack = true;
-      h2.update();
+    if (punch1.punch || punch2.punch) {
+      if (punch1.isInContactWith(p2)) {
+        p2.bounceBack = true;
+        h2.update();
+      }
+      if (punch2.isInContactWith(p1)) {
+        p1.bounceBack = true;
+        h1.update();
+      }
     }
-    if (punch2.isInContactWith(p1)) {
-      p1.bounceBack = true;
-      h1.update();
-    }
+    //if (p1.loc.dist(p2.loc) <= p1.l + 5) {
+    //  p1.vel.x = 0;
+    //  p2.vel.x = 0;
+    //}
   }
 }

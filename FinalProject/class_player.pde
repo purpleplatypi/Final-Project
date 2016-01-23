@@ -9,24 +9,25 @@ class player {
   //make constructor
   player(int x, int y) {  
     loc = new PVector(x, y);
-    vel = new PVector(5, -30);
+    vel = new PVector(5, -15);
     g = new PVector(0, 1);
     l=60;
-    w=160;
+    w=130;
     ground = height - w;
-    origJumpSpeed=-30;
+    origJumpSpeed=-15;
   }
 
   //write methods
   void display() {
     noFill();
+    stroke(0);
     rectMode(CORNER);
     rect(loc.x, loc.y, l, w);
   }
 
   void face() {
     fill(0, 0, 255);
-    image(pic, loc.x + 20, loc.y + 10);
+    image(pic, loc.x + 10, loc.y -10);
   }
 
   void move() {
