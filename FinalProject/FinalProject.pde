@@ -5,21 +5,24 @@ punch punch1, punch2;
 health h1, h2;
 animation a1, a2;
 int mode = 0;
+int r1,g1,b1,r2,g2,b2;
+String p1text, p2text;
 PImage backing, sun, lockerroom;
 boolean esc;
-PImage start, sansi, bio, mrN, valley, monroy, mcmenamin, liu, gamebackground, andy, liuback, MrNback, mcstage, valleyback, sansiback;
+PImage start, sansi, mrN, valley, kippback, mcmenamin, liu, gamebackground, andy, liuback, MrNback, mcstage, valleyback, sansiback;
+PImage faceSan, faceVal, faceKipp, faceLiu, faceMc, faceMrN;
 
 void setup() {
   size(1200, 800);
   //initialize variables
   start= loadImage("start.png");
   sansi = loadImage("sansi.jpg");
-  backing = loadImage("epicback.jpg");
+  backing = loadImage("magnet.jpg");
   mrN= loadImage ("MR.ChefN.png");
-  bio= loadImage("bio.jpg");
+ // kippback = 
   valley=loadImage("valleynatior.png");
   valleyback=loadImage("valleynatior.jpg");
-  monroy= loadImage("monroy.jpg");
+  //kipp = 
   mcmenamin= loadImage("macman.png");
   gamebackground= loadImage("gamebackground.jpg");
   liu= loadImage("liu.JPG");
@@ -30,8 +33,22 @@ void setup() {
   liuback = loadImage("abramsliu.jpg");
   MrNback = loadImage("MrNbar.jpg");
   mcstage = loadImage("mcstage.jpg");
-  p1 = new player(0, height - 160);
-  p2 = new player(width - 60, height - 160);
+  faceSan = loadImage("FaceSan.jpg");
+  faceVal = loadImage("FaceVal.jpg");
+  faceKipp = loadImage("FaceKipp.jpeg");
+  faceLiu = loadImage("FaceLiu.jpg");
+  faceMc = loadImage("FaceMc.jpg");
+  faceMrN = loadImage("FaceMrN.jpg");
+  r1 = 255;
+  g1 = 255;
+  b1 = 255;
+  r2 = 0;
+  g2 = 0;
+  b2 = 0;
+  p1text = "P1 Click Here";
+  p2text = "P2 Click Here";
+  p1 = new player(0, height - 130);
+  p2 = new player(width - 60, height - 130);
   punch1 = new punch();
   punch2 = new punch();
   h1 = new health(50, 75);
