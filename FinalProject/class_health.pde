@@ -25,7 +25,7 @@ class health {
       c=color(255, 0, 0);
     }
     if (health<=0) {
-      mode=13;
+      mode=5;
     }
   }
 }
