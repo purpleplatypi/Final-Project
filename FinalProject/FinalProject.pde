@@ -1,52 +1,76 @@
 //declare variables///
-player p1, p2;///
-platform a, b, c;////
+player p1, p2;
+platform a, b, c, d, e, f, g, h, i, j, k, l;
 punch punch1, punch2;
 health h1, h2;
 animation a1, a2;
 int mode = 0;
+int r1,g1,b1,r2,g2,b2;
+String p1text, p2text;
 PImage backing, sun, lockerroom;
 boolean esc;
-PImage start, sansi, bio, mrN, valley, monroy, mcmenamin, liu, gamebackground,andy, liuback, MrNback, mcstage, valleyback;
+PImage start, sansi, mrN, valley, kippback, mcmenamin, liu, gamebackground, andy, liuback, MrNback, mcstage, valleyback, sansiback;
+PImage faceSan, faceVal, faceKipp, faceLiu, faceMc, faceMrN;
 
 void setup() {
   size(1200, 800);
   //initialize variables
   start= loadImage("start.png");
   sansi = loadImage("sansi.jpg");
-  backing = loadImage("epicback.jpg");
+  backing = loadImage("magnet.jpg");
   mrN= loadImage ("MR.ChefN.png");
-  bio= loadImage("bio.jpg");
+ // kippback = 
   valley=loadImage("valleynatior.png");
   valleyback=loadImage("valleynatior.jpg");
-  monroy= loadImage("monroy.jpg");
+  //kipp = 
   mcmenamin= loadImage("macman.png");
   gamebackground= loadImage("gamebackground.jpg");
   liu= loadImage("liu.JPG");
   sun = loadImage("sunrise.png");
   lockerroom = loadImage("lockerroom.jpg");
-  andy =loadImage("angryandy.png");
-  p1 = new player(0, 593);
-  p2 = new player(width - 103, 593);
+  andy =loadImage("angryandy.png");  
+  sansiback = loadImage("jasonback.jpg");
+  liuback = loadImage("abramsliu.jpg");
+  MrNback = loadImage("MrNbar.jpg");
+  mcstage = loadImage("mcstage.jpg");
+  faceSan = loadImage("FaceSan.jpg");
+  faceVal = loadImage("FaceVal.jpg");
+  faceKipp = loadImage("FaceKipp.jpeg");
+  faceLiu = loadImage("FaceLiu.jpg");
+  faceMc = loadImage("FaceMc.jpg");
+  faceMrN = loadImage("FaceMrN.jpg");
+  r1 = 255;
+  g1 = 255;
+  b1 = 255;
+  r2 = 0;
+  g2 = 0;
+  b2 = 0;
+  p1text = "P1 Click Here";
+  p2text = "P2 Click Here";
+  p1 = new player(0, height - 130);
+  p2 = new player(width - 60, height - 130);
   punch1 = new punch();
   punch2 = new punch();
   h1 = new health(50, 75);
-  h2 = new health(950, 75);
-  a = new platform(300, 720, 800, 10);
-  b = new platform(400, 625, 400, 10);
-  c = new platform(0, 720, 200, 10);
-  a1 = new animation ("frame", 10, ".png");
-  a2 = new animation ("frame", 10, ".png");
-  a = new platform(100, 593, 200, 5);
-  b = new platform(500, 593, 200, 5);
+  h2 = new health(850, 75);
+  a = new platform(200, 600, 800, 10);
+  b = new platform(400, 450, 400, 10);
+  c = new platform(0, 350, 100, 10);
+  d = new platform(900, 350, 300, 10);
+  e = new platform(0, 150, 100, 10);
+  f = new platform(900, 150, 300, 10);
+  g = new platform(300, 275, 400, 10); 
+  a1 = new animation ();
+  a2 = new animation ();
 }
 
-void draw() {
+  void draw() {
   startScreen();
   characters();
   instructions();
   bios();
   game();
+  gameOver();
   if (esc) {     //IF Z IS PRESSED THIS IS THE WAY TO GET BACK TO THE HOME SCREEN FROM ANYWHERE!!! 
     mode = 0;
   }
