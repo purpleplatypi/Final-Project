@@ -19,7 +19,7 @@ void game() {
     a1.display(p1);
     a2.display(p2);
     p1.display();
-    punch1.display();
+    punch1.display(p1);
     punch1.update(p1);
     p1.move();
     p1.restrict();
@@ -31,7 +31,7 @@ void game() {
     p1.platformControls(f);
     p1.platformControls(g);
     p2.display();
-    punch2.display();
+    punch2.display(p2);
     punch2.update(p2);
     p2.move();
     p2.restrict();
@@ -77,6 +77,7 @@ void game() {
         h1.update();
       }
     }
+    //makes sure the players dont overlap each other
     if (p1.loc.dist(p2.loc) <= p1.l + 5) {
       if (p1.facingright) {
         if (!p2.facingright&&p1.loc.x < p2.loc.x) {
@@ -105,6 +106,7 @@ void game() {
         }
       }
     }
+    //allows the players to land on each other
     if (p1.jumping && p1.vel.y > 0 && p1.loc.x + p1.l/2 >= p2.loc.x && p1.loc.x + p1.l/2 <= p2.loc.x + p2.l && p1.loc.y + p1.w >= p2.loc.y && p1.loc.y + p1.w < p2.loc.y + p2.w) {
       p1.vel.add(p1.g);
       p1.loc.y += p1.vel.y;

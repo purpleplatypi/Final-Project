@@ -14,11 +14,11 @@ void gameOver() {
   if (h2.health <= 0) {
     fill(255, 20, 0);
     textSize(300);
-    text("1", width/4.5, 600);
+    text("P1", width/4.5, 600);
   }
   if (h1.health <= 0) {
     fill(255, 204, 0);
     textSize(300);
-    text("2", width/4.5, 600);
+    text("P2", width/4.5, 600);
   }
 }
