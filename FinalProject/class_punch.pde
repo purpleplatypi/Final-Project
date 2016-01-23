@@ -12,7 +12,7 @@ class punch {
     t = 0;
   }
 
-  void display() { //displaying hitbox
+  void display() { 
     fill(0,t);
     noStroke();
     ellipse(loc.x, loc.y, diam, diam);
@@ -27,19 +27,26 @@ class punch {
         t = 255;
         loc.sub(vel);
       }
-      if (frameCount%5 ==0) {
+      if (frameCount%3 ==0) {
         punch = false;
       }
     } else if (player.facingright) {
       t = 0;
-      loc.set(player.loc.x + player.l, player.loc.y + player.w/2);
+      loc.set(player.loc.x + player.l - 5, player.loc.y + player.w/2);
     } else if(!player.facingright){
       t = 0;
       loc.set(player.loc.x, player.loc.y + player.w/2);
     }
   }
-  boolean isInContactWith(player player) { 
-    if (loc.y +diam <= player.loc.y + player.w && loc.y >= player.loc.y && loc.x + diam >= player.loc.x && player.loc.x + player.l >= loc.x) {
+  boolean isInContactWithLeft(player player) { 
+    if (loc.y + diam/2 <= player.loc.y + player.w && loc.y - diam/2 >= player.loc.y && loc.x + diam/2 >= player.loc.x && player.loc.x + player.l/2 >= loc.x + diam/2) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  boolean isInContactWithRight(player player) { 
+    if (loc.y + diam/2 <= player.loc.y + player.w && loc.y - diam/2 >= player.loc.y && loc.x - diam/2 >= player.loc.x + player.l/2 && player.loc.x + player.l >= loc.x - diam/2) {
       return true;
     } else {
       return false;

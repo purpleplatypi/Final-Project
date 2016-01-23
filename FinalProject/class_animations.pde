@@ -27,7 +27,7 @@ class animation {
     if (player.facingright) {
       if (player.right ) {
         frame = (frame+1) % imageCount;
-        image(right[frame], player.loc.x, player.loc.y);
+        image(right[frame], player.loc.x - 5, player.loc.y);
       } else {
         image(stationaryright, player.loc.x, player.loc.y);
       }
