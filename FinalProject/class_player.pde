@@ -4,26 +4,30 @@ class player {
   PVector loc, vel, g;
   float l, w, ground;
   float origJumpSpeed ;
-  color c;
-  
+  PImage pic;
+
   //make constructor
   player(int x, int y) {  
     loc = new PVector(x, y);
-    vel = new PVector(5, -30);
+    vel = new PVector(5, -20);
     g = new PVector(0, 1);
     l=60;
-    w=160;
+    w=130;
     ground = height - w;
-    origJumpSpeed=-30;
-    c = color(0, 0, 0);
+    origJumpSpeed=-15;
   }
 
   //write methods
   void display() {
-    //fill(c);
     noFill();
+    stroke(0);
     rectMode(CORNER);
     rect(loc.x, loc.y, l, w);
+  }
+
+  void face() {
+    fill(0, 0, 255);
+    image(pic, loc.x + 10, loc.y -10);
   }
 
   void move() {
@@ -48,7 +52,7 @@ class player {
     if (bounceBack) {
       if (facingright) {
         loc.x -= vel.x;
-      } else{
+      } else {
         loc.x += vel.x;
       }
       bounceBack = false;
@@ -76,7 +80,7 @@ class player {
       }
     }
     if (loc.y + w == platform.loc.y) {
-      if (platform.loc.x - 5 == loc.x + l || loc.x == platform.loc.x + platform.size.x + 5) {
+      if (platform.loc.x - 10 == loc.x + l || loc.x == platform.loc.x + platform.size.x + 10) {
         vel.y = 0;
         jumping = true;
       }

@@ -20,6 +20,9 @@ void game() {
     a1.display(p1);
     a2.display(p2);
     p1.display();
+    punch1.display();
+    punch1.update(p1);
+    p1.face();
     p1.move();
     p1.restrict();
     p1.platformControls(a);
@@ -30,6 +33,9 @@ void game() {
     p1.platformControls(f);
     p1.platformControls(g);
     p2.display();
+    punch2.display();
+    punch2.update(p2);
+    p2.face();
     p2.move();
     p2.restrict();
     p2.platformControls(a);
@@ -46,21 +52,42 @@ void game() {
     e.display();
     f.display();
     g.display();
-    punch1.display();
-    punch1.update(p1);
     h1.display();
-    punch2.display();
-    punch2.update(p2);
     h2.display();
     h1.healthcolor();
     h2.healthcolor();
-    if (punch1.isInContactWith(p2)) {
-      p2.bounceBack = true;
-      h2.update();
+    if (punch1.punch || punch2.punch) {
+      if (punch1.isInContactWith(p2)) {
+        p2.bounceBack = true;
+        h2.update();
+      }
+      if (punch2.isInContactWith(p1)) {
+        p1.bounceBack = true;
+        h1.update();
+      }
     }
-    if (punch2.isInContactWith(p1)) {
-      p1.bounceBack = true;
-      h1.update();
+    if (p1.jumping && p1.vel.y>0 && p1.loc.y+130>p2.loc.y && p1.loc.x < p2.loc.x +50 && p1.loc.x > p2.loc.x) {
+      p1.loc.y=540;
+      p1.vel.y = p1.origJumpSpeed;
+      p1.jumping = false;
+
+
+      if (p1.loc.y==540) {
+        if (p1.loc.x - 50 == p2.loc.x || p1.loc.x == p2.loc.x ) {
+          p1.loc.y=p1.ground;
+
+          p1.jumping = true;
+        }
+      }
     }
   }
+  // if(p1.loc.x > p2.loc.x +130 && p1.loc.x > p2.loc.x +140 || p1.loc.x < p2.loc.x && p1.loc.x < p2.loc.x-10){
+  //  p1.vel.y=0;
+  //  p1.jumping=true;
+  //  }
+
+  //if (p1.loc.dist(p2.loc) <= p1.l + 5) {
+  //  p1.vel.x = 0;
+  //  p2.vel.x = 0;
+  //}
 }
