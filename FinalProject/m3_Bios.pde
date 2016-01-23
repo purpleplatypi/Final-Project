@@ -7,7 +7,7 @@ void bios() {
     image(mrN, 300, 50, 200, 200);
     image(valley, 550, 50, 200, 200);
     image(liu, 50, 300, 200, 200);  
-    //image(kipp, 300, 300, 200, 200);
+    image(faceKipp, 300, 300, 200, 200);
     image(mcmenamin, 550, 300, 200, 200);
     fill(255);
     rect(600, 725, 100, 50);
@@ -138,25 +138,25 @@ void bios() {
     }
   } 
 
-  if (mode==10) {
-    background(255);
-    textSize(25);
-    //image(kippback, 0, 0, 1200, 800);
-    fill(255);
-    //text("Monroy:", 50, 525);
-    //text("Mrs. Monroy,", 150, 525);
-    //text("Gained the Respect of every student on campus last year after she trashed the UCVTS", 50, 575);
-    //text("administration in a verbal steal cage MMA fight. Combined with her skills in the", 50, 625);
-    //text("pyrotechnics of snack food, Mrs. Monroy can tackle any foe.", 50, 675);
-    rect(100, 725, 100, 50);
-    textMode(CENTER);
-    textSize(30);
-    fill(0);
-    text("Back", 100, 735);
-    if (mousePressed && mouseX >50 && mouseX < 150  && mouseY > 700 && mouseY < 750) {  //back button for Mrs. Monroy's bio
-      mode=3;
-    }
-  }
+  //if (mode==10) {
+  //  background(255);
+  //  textSize(25);
+  //  //image(kippback, 0, 0, 1200, 800);
+  //  fill(255);
+  //  //text("Monroy:", 50, 525);
+  //  //text("Mrs. Monroy,", 150, 525);
+  //  //text("Gained the Respect of every student on campus last year after she trashed the UCVTS", 50, 575);
+  //  //text("administration in a verbal steal cage MMA fight. Combined with her skills in the", 50, 625);
+  //  //text("pyrotechnics of snack food, Mrs. Monroy can tackle any foe.", 50, 675);
+  //  rect(100, 725, 100, 50);
+  //  textMode(CENTER);
+  //  textSize(30);
+  //  fill(0);
+  //  text("Back", 100, 735);
+  //  if (mousePressed && mouseX >50 && mouseX < 150  && mouseY > 700 && mouseY < 750) {  //back button for Mrs. Monroy's bio
+  //    mode=3;
+  //  }
+  //}
 
   if (mode==11) {
     fill(0);
@@ -178,7 +178,7 @@ void bios() {
       mode=3;
     }
   }
-  if (mode==12) {   
+  if (mode==10) {   
     image(Kippback, 0, 0, 1200, 800);
     fill(0);
     textSize(50);
