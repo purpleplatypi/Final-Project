@@ -10,6 +10,7 @@ String p1text, p2text;
 PImage backing, sun, lockerroom;
 boolean esc;
 PImage start, sansi, bio, mrN, valley, monroy, mcmenamin, liu, gamebackground, andy, liuback, MrNback, mcstage, valleyback, sansiback;
+PImage faceSan, faceVal, faceKipp, faceLiu, faceMc, faceMrN;
 
 void setup() {
   size(1200, 800);
@@ -32,6 +33,12 @@ void setup() {
   liuback = loadImage("abramsliu.jpg");
   MrNback = loadImage("MrNbar.jpg");
   mcstage = loadImage("mcstage.jpg");
+  faceSan = loadImage("FaceSan.jpeg");
+  faceVal = loadImage("FaceVal.jpeg");
+  faceKipp = loadImage("FaceKipp.jpeg");
+  faceLiu = loadImage("FaceLiu.jpeg");
+  faceMc = loadImage("FaceMc.jpeg");
+  faceMrN = loadImage("FaceMrN.jpeg");
   r1 = 255;
   g1 = 255;
   b1 = 255;

@@ -31,26 +31,32 @@ void characters() {
       if (p1text == "Choose teacher") {
         //********* Mr. Sanservino's Stuff **********//
         if (mouseX >50 && mouseX < 250 && mouseY > 50 && mouseY < 250) { //sansis charcter button P1
+          p1.pic = faceSan;
           mode =12;
         } 
         //***** MR N'S STUFF **********/
         if (mouseX >350 && mouseX < 550 && mouseY > 50 && mouseY < 250) { //MR.N's character button  P1
+          p1.pic = faceMrN;
           mode=12;
         }
         //***************** Mrs. Valley's Stuff *****************//
         if (mouseX >650 && mouseX < 850 && mouseY > 50 && mouseY < 250) { //Mrs. Valley character button P1
+          p1.pic = faceVal;
           mode=12;
         }  
         //************** Mr.Liu's Stuff ******************//
         if (mouseX >950 && mouseX < 1150 && mouseY > 50 && mouseY < 250) { //Mr.Liu's  charatcer button P1
+          p1.pic = faceLiu;
           mode=12;
         }  
-        //************************ Mrs. Monroy's Stuff ****************************/
-        if (mouseX >50 && mouseX < 250 && mouseY > 300 && mouseY < 500) { //Mrs. Monroy's character button P1
+        //************************ Mrs. Kipp's Stuff ****************************/
+        if (mouseX >50 && mouseX < 250 && mouseY > 300 && mouseY < 500) { //Mrs. Kipp's character button P1
+          p1.pic = faceKipp;
           mode=12;
         }  
         //**************** Mr.mcmenamin's Stuff *********************//
         if (mouseX >950 && mouseX < 1150 && mouseY > 300 && mouseY < 500) { //Mr.mcmenamin's character button P1
+          p1.pic = faceMc;
           mode=12;
         }
       }
@@ -95,26 +101,32 @@ void characters() {
       if (p2text == "Choose teacher") {
         //********* Mr. Sanservino's Stuff **********//
         if (mouseX >50 && mouseX < 250 && mouseY > 50 && mouseY < 250) { //sansis character button for P2
+          p2.pic = faceSan;
           mode=4;
         }
         //***** MR N'S STUFF **********/
         if (mouseX >350 && mouseX < 550 && mouseY > 50 && mouseY < 250) { //MR.N's character button for P2
+          p2.pic = faceMrN;
           mode=4;
         }
         //***************** Mrs. Valley's Stuff *****************//
         if (mouseX >650 && mouseX < 850 && mouseY > 50 && mouseY < 250) { //Mrs. Valley character button for P2
+          p2.pic = faceVal;
           mode=4;
         }  
         //************** Mr.Liu's Stuff ******************//
         if (mouseX >950 && mouseX < 1150 && mouseY > 50 && mouseY < 250) { //Mr.Liu's  character button for P2
+          p2.pic = faceLiu;
           mode=4;
         }  
-        //************************ Mrs. Monroy's Stuff ****************************/
+        //************************ Mrs. Kipp's Stuff ****************************/
         if (mouseX >50 && mouseX < 250 && mouseY > 300 && mouseY < 500) { //Mrs. Monroy's character button for P2
+          p2.pic = faceKipp;
           mode=4;
         }  
         //**************** Mr.mcmenamin's Stuff *********************//
         if (mouseX >950 && mouseX < 1150 && mouseY > 300 && mouseY < 500) { //Mr.mcmenamin's character button for P2
+          p2.pic = faceMc;
           mode=4;
         }
       }

@@ -4,8 +4,8 @@ class player {
   PVector loc, vel, g;
   float l, w, ground;
   float origJumpSpeed ;
-  color c;
-  
+  PImage pic;
+
   //make constructor
   player(int x, int y) {  
     loc = new PVector(x, y);
@@ -15,15 +15,18 @@ class player {
     w=160;
     ground = height - w;
     origJumpSpeed=-30;
-    c = color(0, 0, 0);
   }
 
   //write methods
   void display() {
-    //fill(c);
     noFill();
     rectMode(CORNER);
     rect(loc.x, loc.y, l, w);
+  }
+
+  void face() {
+    fill(0, 0, 255);
+    image(pic, loc.x + 20, loc.y + 10, 60, 60);
   }
 
   void move() {
@@ -48,7 +51,7 @@ class player {
     if (bounceBack) {
       if (facingright) {
         loc.x -= vel.x;
-      } else{
+      } else {
         loc.x += vel.x;
       }
       bounceBack = false;

@@ -20,6 +20,7 @@ void game() {
     a1.display(p1);
     a2.display(p2);
     p1.display();
+    p1.face();
     p1.move();
     p1.restrict();
     p1.platformControls(a);
@@ -30,6 +31,7 @@ void game() {
     p1.platformControls(f);
     p1.platformControls(g);
     p2.display();
+    p2.face();
     p2.move();
     p2.restrict();
     p2.platformControls(a);
