@@ -15,7 +15,7 @@ int r1, g1, b1, r2, g2, b2;
 String p1text, p2text;
 PImage backing, sun, lockerroom;
 PImage start, sansi, mrN, valley, kippback, mcmenamin, liu, gamebackground, andy, liuback, MrNback, mcstage, valleyback, sansiback;
-PImage faceSan, faceVal, faceKipp, faceLiu, faceMc, faceMrN, arrow, wasd, school;
+PImage faceSan, faceVal, faceKipp, faceLiu, faceMc, faceMrN, arrow, wasd, school, Kippback;
 
 
 void setup() {
@@ -55,6 +55,7 @@ void setup() {
   arrow= loadImage("arrow keys.png");
   wasd = loadImage("wasd.png");
   school = loadImage("bridge.jpg");
+  Kippback = loadImage("Kippback.png");
   r1 = 255;
   g1 = 255;
   b1 = 255;
