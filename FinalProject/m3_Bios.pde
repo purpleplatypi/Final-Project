@@ -45,20 +45,17 @@ void bios() {
       mode=0;
     }
   }
-  
+
   if (mode==6) {
-    background(255);
-    textSize(18);
-    image(sansiback, 0, 0, 1200, 800);
+    background(0);
+    textSize(50);
+    image(sansiback, 0, 0, 790, height);
     fill(255);
-    text("Sansi...", 800, 325);
-    text("Jason Sanservinio,", 900, 325);
-    text("Otherwise known and the 'family man' hails", 800, 355);
-    text("from the Sanservino house, which started", 800, 385);
-    text("a family buisness back during prohibition,", 800, 415); 
-    text("He has a very particular set of 'skills'", 800, 445);
-    text("that make him a formiddable foe....", 800, 475); 
-    text("and even a more intresting teacher....", 800, 505);
+    text("Sansi...", 800, 300);
+    textSize(18);
+    textLeading(25);
+    String San = "Jason Sanservinio\nOtherwise known and the 'family man' hails\nfrom the Sanservino house, which started\na family buisness back during prohibition,\nHe has a very particular set of 'skills'\nthat make him a formiddable foe....\nand even a more intresting teacher....";
+    text(San, 800, 325);
     rect(100, 725, 100, 50);
     textMode(CENTER);
     textSize(30);
@@ -71,16 +68,16 @@ void bios() {
 
   if (mode==7) {
     background(255);
-    textSize(25);
     image(MrNback, 0, 0, 1200, 800);
+    fill(0);
+    rect(950, 150, 500, 300);   
     fill(255);
-    text("Mr.N", 250, 125);
-    text("Peter Nowakowski,", 350, 125);
-    text("was a world renowned cheif before he was", 250, 175);
-    text("fired for incessantly correcting his", 250, 225);
-    text("customer's grammar. Mr.Nowakowski is", 250,275); 
-    text("skilled in the martial arts as well as the ", 250, 325);
-    text("ancient tradition of MLA formatting", 250, 375);
+    textSize(50);
+    text("Mr.N", 850, 50);
+    textSize(25);
+    String MrN = "Peter Nowakowski, \nwas a world renowned chef\nbefore he was fired for incessantly\ncorrecting his customer's grammar.\nMr.Nowakowski is skilled in the martial\narts as well as the ancient tradition of\nMLA formatting.";
+    textLeading(25);
+    text(MrN, 710, 100);
     rect(100, 725, 100, 50);
     textMode(CENTER);
     textSize(30);
@@ -121,7 +118,7 @@ void bios() {
     fill(0);
     text("Mr.Liu", 25, 75);
     text("Rong Liu,", 125, 75);
-    text("is most famously know for his service in the", 25,125);  
+    text("is most famously know for his service in the", 25, 125);  
     text("American Marine Corps where he single handedly", 25, 175);
     text("defeated an Al-Qaeda resistance cell using only", 25, 225); 
     text("the powers of a mysticle force known as", 25, 275);
