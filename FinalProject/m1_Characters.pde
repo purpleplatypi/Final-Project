@@ -5,7 +5,7 @@ void characters() {
     image(mrN, 350, 50, 200, 200);
     image(valley, 650, 50, 200, 200);
     image(liu, 950, 50, 200, 200);  
-    image(monroy, 50, 300, 200, 200);
+    //image(kipp, 50, 300, 200, 200);
     image(mcmenamin, 950, 300, 200, 200);
     fill(255);
     rect(600, 725, 100, 50);
@@ -75,7 +75,7 @@ void characters() {
     image(mrN, 350, 50, 200, 200);
     image(valley, 650, 50, 200, 200);
     image(liu, 950, 50, 200, 200);  
-    image(monroy, 50, 300, 200, 200);
+    //image(kipp, 50, 300, 200, 200);
     image(mcmenamin, 950, 300, 200, 200);
     fill(255);
     rect(600, 725, 100, 50);

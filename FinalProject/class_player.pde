@@ -26,7 +26,7 @@ class player {
 
   void face() {
     fill(0, 0, 255);
-    image(pic, loc.x + 20, loc.y + 10, 60, 60);
+    image(pic, loc.x + 20, loc.y + 10);
   }
 
   void move() {

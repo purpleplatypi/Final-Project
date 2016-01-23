@@ -9,7 +9,7 @@ int r1,g1,b1,r2,g2,b2;
 String p1text, p2text;
 PImage backing, sun, lockerroom;
 boolean esc;
-PImage start, sansi, bio, mrN, valley, monroy, mcmenamin, liu, gamebackground, andy, liuback, MrNback, mcstage, valleyback, sansiback;
+PImage start, sansi, mrN, valley, kippback, mcmenamin, liu, gamebackground, andy, liuback, MrNback, mcstage, valleyback, sansiback;
 PImage faceSan, faceVal, faceKipp, faceLiu, faceMc, faceMrN;
 
 void setup() {
@@ -17,12 +17,12 @@ void setup() {
   //initialize variables
   start= loadImage("start.png");
   sansi = loadImage("sansi.jpg");
-  backing = loadImage("epicback.jpg");
+  backing = loadImage("magnet.jpg");
   mrN= loadImage ("MR.ChefN.png");
-  bio= loadImage("bio.jpg");
+ // kippback = 
   valley=loadImage("valleynatior.png");
   valleyback=loadImage("valleynatior.jpg");
-  monroy= loadImage("monroy.jpg");
+  //kipp = 
   mcmenamin= loadImage("macman.png");
   gamebackground= loadImage("gamebackground.jpg");
   liu= loadImage("liu.JPG");
@@ -33,12 +33,12 @@ void setup() {
   liuback = loadImage("abramsliu.jpg");
   MrNback = loadImage("MrNbar.jpg");
   mcstage = loadImage("mcstage.jpg");
-  faceSan = loadImage("FaceSan.jpeg");
-  faceVal = loadImage("FaceVal.jpeg");
+  faceSan = loadImage("FaceSan.jpg");
+  faceVal = loadImage("FaceVal.jpg");
   faceKipp = loadImage("FaceKipp.jpeg");
-  faceLiu = loadImage("FaceLiu.jpeg");
-  faceMc = loadImage("FaceMc.jpeg");
-  faceMrN = loadImage("FaceMrN.jpeg");
+  faceLiu = loadImage("FaceLiu.jpg");
+  faceMc = loadImage("FaceMc.jpg");
+  faceMrN = loadImage("FaceMrN.jpg");
   r1 = 255;
   g1 = 255;
   b1 = 255;
