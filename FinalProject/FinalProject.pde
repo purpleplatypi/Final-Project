@@ -10,7 +10,7 @@ String p1text, p2text;
 PImage backing, sun, lockerroom;
 boolean esc;
 PImage start, sansi, mrN, valley, kippback, mcmenamin, liu, gamebackground, andy, liuback, MrNback, mcstage, valleyback, sansiback;
-PImage faceSan, faceVal, faceKipp, faceLiu, faceMc, faceMrN;
+PImage faceSan, faceVal, faceKipp, faceLiu, faceMc, faceMrN, arrow, wasd, school;
 
 void setup() {
   size(1200, 800);
@@ -31,14 +31,17 @@ void setup() {
   andy =loadImage("angryandy.png");  
   sansiback = loadImage("jasonback.jpg");
   liuback = loadImage("abramsliu.jpg");
-  MrNback = loadImage("MrNbar.jpg");
+  MrNback = loadImage("MrNbar.png");
   mcstage = loadImage("mcstage.jpg");
-  faceSan = loadImage("FaceSan.jpg");
-  faceVal = loadImage("FaceVal.jpg");
-  faceKipp = loadImage("FaceKipp.jpeg");
-  faceLiu = loadImage("FaceLiu.jpg");
-  faceMc = loadImage("FaceMc.jpg");
-  faceMrN = loadImage("FaceMrN.jpg");
+  faceSan = loadImage("FaceSan.png");
+  faceVal = loadImage("FaceVal.png");
+  faceKipp = loadImage("FaceKipp.png");
+  faceLiu = loadImage("FaceLiu.png");
+  faceMc = loadImage("FaceMc.png");
+  faceMrN = loadImage("FaceMrN.png");
+  arrow= loadImage("arrow keys.png");
+  wasd = loadImage("wasd.png");
+  school = loadImage("bridge.jpg");
   r1 = 255;
   g1 = 255;
   b1 = 255;
