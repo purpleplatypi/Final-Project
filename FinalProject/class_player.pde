@@ -9,7 +9,7 @@ class player {
   //make constructor
   player(int x, int y) {  
     loc = new PVector(x, y);
-    vel = new PVector(5, -15);
+    vel = new PVector(5, -20);
     g = new PVector(0, 1);
     l=60;
     w=130;
@@ -80,7 +80,7 @@ class player {
       }
     }
     if (loc.y + w == platform.loc.y) {
-      if (platform.loc.x - 5 == loc.x + l || loc.x == platform.loc.x + platform.size.x + 5) {
+      if (platform.loc.x - 10 == loc.x + l || loc.x == platform.loc.x + platform.size.x + 10) {
         vel.y = 0;
         jumping = true;
       }
