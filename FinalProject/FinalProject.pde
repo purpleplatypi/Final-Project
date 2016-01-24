@@ -53,13 +53,13 @@ void setup() {
   punch2 = new punch();
   h1 = new health(50, 75);
   h2 = new health(850, 75);
-  a = new platform(200, 600, 800, 10);
-  b = new platform(400, 450, 400, 10);
-  c = new platform(0, 350, 100, 10);
-  d = new platform(900, 350, 300, 10);
-  e = new platform(0, 150, 100, 10);
-  f = new platform(900, 150, 300, 10);
-  g = new platform(300, 275, 400, 10); 
+  a = new platform(200, 700, 800, 10);
+  b = new platform(400, 600, 400, 10);
+  c = new platform(0, 550, 100, 10);
+  d = new platform(900, 550, 300, 10);
+  e = new platform(0, 350, 100, 10);
+  f = new platform(900, 350, 300, 10);
+  g = new platform(300, 475, 400, 10); 
   a1 = new animation ();
   a2 = new animation ();
 }

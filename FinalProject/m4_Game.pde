@@ -66,9 +66,28 @@ void game() {
         h1.update();
       }
     }
-    //if (p1.loc.dist(p2.loc) <= p1.l + 5) {
-    //  p1.vel.x = 0;
-    //  p2.vel.x = 0;
-    //}
+    if (p1.jumping && p1.vel.y>0 && p1.loc.y+130>p2.loc.y && p1.loc.x < p2.loc.x +50 && p1.loc.x > p2.loc.x) {
+      p1.loc.y=540;
+      p1.vel.y = p1.origJumpSpeed;
+      p1.jumping = false;
+
+
+      if (p1.loc.y==540) {
+        if (p1.loc.x - 50 == p2.loc.x || p1.loc.x == p2.loc.x ) {
+          p1.loc.y=p1.ground;
+
+          p1.jumping = true;
+        }
+      }
+    }
   }
+  // if(p1.loc.x > p2.loc.x +130 && p1.loc.x > p2.loc.x +140 || p1.loc.x < p2.loc.x && p1.loc.x < p2.loc.x-10){
+  //  p1.vel.y=0;
+  //  p1.jumping=true;
+  //  }
+
+  //if (p1.loc.dist(p2.loc) <= p1.l + 5) {
+  //  p1.vel.x = 0;
+  //  p2.vel.x = 0;
+  //}
 }
