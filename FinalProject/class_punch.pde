@@ -38,8 +38,15 @@ class punch {
       loc.set(player.loc.x, player.loc.y + player.w/2);
     }
   }
-  boolean isInContactWith(player player) { 
-    if (loc.y +diam <= player.loc.y + player.w && loc.y >= player.loc.y && loc.x + diam >= player.loc.x && player.loc.x + player.l >= loc.x) {
+  boolean isInContactWithLeft(player player) { 
+    if (loc.y + diam/2 <= player.loc.y + player.w && loc.y - diam/2 >= player.loc.y && loc.x + diam/2 >= player.loc.x && player.loc.x + player.l/2 >= loc.x + diam/2) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  boolean isInContactWithRight(player player) { 
+    if (loc.y + diam/2 <= player.loc.y + player.w && loc.y - diam/2 >= player.loc.y && loc.x - diam/2 >= player.loc.x + player.l/2 && player.loc.x + player.l >= loc.x - diam/2) {
       return true;
     } else {
       return false;

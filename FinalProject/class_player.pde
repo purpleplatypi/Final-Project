@@ -1,6 +1,6 @@
 class player {
   //declare variables
-  boolean left, right, jumping, falling, facingright, bounceBack;
+  boolean left, right, jumping, falling, facingright, bounceBack, lefthit, righthit;
   PVector loc, vel, g;
   float l, w, ground;
   float origJumpSpeed ;
@@ -27,7 +27,7 @@ class player {
 
   void face() {
     fill(0, 0, 255);
-    image(pic, loc.x + 10, loc.y -10);
+    image(pic, loc.x + 7, loc.y -10, 50, 50);
   }
 
   void move() {
@@ -50,9 +50,9 @@ class player {
       }
     }
     if (bounceBack) {
-      if (facingright) {
+      if (righthit ) {
         loc.x -= vel.x;
-      } else {
+      } else if (lefthit) {
         loc.x += vel.x;
       }
       bounceBack = false;
