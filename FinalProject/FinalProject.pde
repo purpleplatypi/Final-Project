@@ -5,7 +5,7 @@ punch punch1, punch2;
 health h1, h2;
 animation a1, a2;
 int mode = 0;
-int r1,g1,b1,r2,g2,b2;
+int r1, g1, b1, r2, g2, b2;
 String p1text, p2text;
 PImage backing, sun, lockerroom;
 boolean esc;
@@ -19,7 +19,7 @@ void setup() {
   sansi = loadImage("sansi.jpg");
   backing = loadImage("magnet.jpg");
   mrN= loadImage ("MR.ChefN.png");
- // kippback = 
+  // kippback = 
   valley=loadImage("valleynatior.png");
   valleyback=loadImage("valleynatior.jpg");
   //kipp = 
@@ -56,18 +56,18 @@ void setup() {
   punch2 = new punch();
   h1 = new health(50, 75);
   h2 = new health(850, 75);
-  a = new platform(200, 700, 800, 10);
-  b = new platform(400, 600, 400, 10);
-  c = new platform(0, 550, 100, 10);
-  d = new platform(900, 550, 300, 10);
-  e = new platform(0, 350, 100, 10);
-  f = new platform(900, 350, 300, 10);
-  g = new platform(300, 475, 400, 10); 
+  a = new platform(200, 650, 600, 10);
+  b = new platform(500, 500, 400, 10);
+  c = new platform(0, 200, 200, 10);
+  d = new platform(1000, 600, 300, 10);
+  e = new platform(0, 400, 100, 10);
+  f = new platform(900, 200, 300, 10);
+  g = new platform(300, 350, 400, 10); 
   a1 = new animation ();
   a2 = new animation ();
 }
 
-  void draw() {
+void draw() {
   startScreen();
   characters();
   instructions();

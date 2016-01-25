@@ -107,10 +107,7 @@ void game() {
         }
       }
     }
-  }
-}          
-
-//if (p1.jumping && p1.vel.y>0 && p1.loc.y+130>p2.loc.y && p1.loc.x < p2.loc.x +50 && p1.loc.x > p2.loc.x) {
+    //if (p1.jumping && p1.vel.y>0 && p1.loc.y+130>p2.loc.y && p1.loc.x < p2.loc.x +50 && p1.loc.x > p2.loc.x) {
 //  p1.loc.y=540;
 //  p1.vel.y = p1.origJumpSpeed;
 //  p1.jumping = false;
@@ -128,3 +125,6 @@ void game() {
 //  p1.vel.y=0;
 //  p1.jumping=true;
 //  }
+
+  }
+}          

@@ -11,10 +11,10 @@ class player {
     loc = new PVector(x, y);
     vel = new PVector(5, -20);
     g = new PVector(0, 1);
-    l=60;
-    w=130;
+    l=70;
+    w=13030;
     ground = height - w;
-    origJumpSpeed=-15;
+    origJumpSpeed=-20;
   }
 
   //write methods
