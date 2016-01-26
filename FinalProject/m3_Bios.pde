@@ -14,7 +14,7 @@ void bios() {
     textMode(CENTER);
     textSize(30);
     fill(0);
-    text("Back", 565, 730);
+    text("Back", width/2, 730);
     if (mousePressed) {
       //********* Mr. Sanservino's Stuff **********//
       if (mouseX >50 && mouseX < 250 && mouseY > 50 && mouseY < 250) { //sansis bio button
@@ -60,7 +60,7 @@ void bios() {
     textMode(CENTER);
     textSize(30);
     fill(0);
-    text("Back", 65, 730);
+    text("Back", 100, 735);
     if (mousePressed && mouseX >50 && mouseX < 150  && mouseY > 700 && mouseY < 750) {  //back button for sansis bio
       mode=3;
     }
@@ -82,7 +82,7 @@ void bios() {
     textMode(CENTER);
     textSize(30);
     fill(0);
-    text("Back", 65, 730);
+    text("Back", 100, 735);
     if (mousePressed && mouseX >50 && mouseX < 150  && mouseY > 700 && mouseY < 750) {  //back button for Mr.N's bio
       mode=3;
     }
@@ -102,7 +102,7 @@ void bios() {
     textMode(CENTER);
     textSize(30);
     fill(0);
-    text("Back", 65, 730);
+    text("Back", 100, 735);
     if (mousePressed && mouseX >50 && mouseX < 150  && mouseY > 700 && mouseY < 750) {  //back button for Valley bio
       mode=3;
     }
@@ -128,7 +128,7 @@ void bios() {
     textMode(CENTER);
     textSize(30);
     fill(0);
-    text("Back", 65, 730);
+    text("Back", 100, 735);
     if (mousePressed && mouseX >50 && mouseX < 150  && mouseY > 700 && mouseY < 750) {  //back button for Mr.Liu's  bio
       mode=3;
     }
@@ -148,7 +148,7 @@ void bios() {
     textMode(CENTER);
     textSize(30);
     fill(0);
-    text("Back", 65, 730);
+    text("Back", 100, 735);
     if (mousePressed && mouseX >50 && mouseX < 150  && mouseY > 700 && mouseY < 750) {  //back button for Mrs. Monroy's bio
       mode=3;
     }
@@ -160,16 +160,16 @@ void bios() {
     image(mcstage, 0, 0, 1200, 800);
     rect(width/2, 700, width, 200);
     fill(255);
-    text("Mr.McMenamin:", 50, 650);
+    text("Mr.McMenamin:", 25, 625);
     textSize(25);
     textLeading(30);
     String McM = "Joseph McMeniman,was the lead singer of his world (not really) renowned band the\n ''JAMBULANCE'' until the other members were permentantly incapacitated due to\nunknown causes. Ever since his guitar slinging days McMenamin has become a\nteacher of history and weilds a military-grade gavel affectionately named\nOMNIPOTENCE OF JUSTICE.";
-    text(McM, 50, 675);
+    text(McM, 25, 650);
     rect(1150, 725, 100, 50);
     textMode(CENTER);
     textSize(30);
     fill(0);
-    text("Back", 1115, 730);
+    text("Back", 1145, 730);
     if (mousePressed && mouseX >1100 && mouseX < 1200  && mouseY > 700 && mouseY < 750) {  //back button for Mr.mcmenamin's bio
       mode=3;
     }

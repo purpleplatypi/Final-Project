@@ -12,13 +12,13 @@ void game() {
      land on it
      ******************/
     background(200);
-    file.play();
+    //file.play();
     //image(school, 0,0, width, height);
     //image(gamebackground,0,0,1200,800);
     fill(255);
     textSize(50);
-    text("Player 1", 50, 50);
-    text("Player 2", 850, 50);
+    text("Player 1", 200, 50);
+    text("Player 2", 1000, 50);
     a1.display(p1);
     a2.display(p2);
     p1.display();
