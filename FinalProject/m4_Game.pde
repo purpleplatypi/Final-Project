@@ -12,6 +12,7 @@ void game() {
      land on it
      ******************/
     background(200);
+    file.play();
     //image(school, 0,0, width, height);
     //image(gamebackground,0,0,1200,800);
     fill(255);
