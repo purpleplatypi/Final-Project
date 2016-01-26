@@ -84,7 +84,6 @@ void setup() {
 }
 
 void draw() {
-  mode = 11;
   startScreen();
   characters();
   instructions();
