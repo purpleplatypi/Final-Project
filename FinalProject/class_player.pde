@@ -72,7 +72,7 @@ class player {
     if (jumping && vel.y > 0 && platform.loc.x < loc.x + l && loc.x < platform.loc.x + platform.size.x && loc.y + w > platform.loc.y && loc.y + w < platform.loc.y + platform.size.y) {
       vel.add(g);
       loc.y += vel.y;
-      if ( loc.y > platform.loc.y - w) {
+      if (loc.y > platform.loc.y - w) {
         loc.y= platform.loc.y - w;
         vel.y = origJumpSpeed;
         jumping = false;
