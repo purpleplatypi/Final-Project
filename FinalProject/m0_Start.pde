@@ -7,10 +7,8 @@ void startScreen() {
       image(andy, 0, wai, scf, scf);
     }
     image(start, 50, 50, 1100, 400);
-
     fill(0);
     textAlign(CENTER);
-
     textSize(100);
     text("START", width/2, height/2 + 125);
     textSize(50);
@@ -37,11 +35,8 @@ void startScreen() {
         mode =  2;
       }
       if (mouseX >0 && mouseX < 150 && mouseY > 600 && mouseY < 800) {
-        println("check");
         undy = true;
       }
-    } else {
-      println(0);
-    }
+    } 
   }
 }
