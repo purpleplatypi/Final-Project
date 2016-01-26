@@ -5,12 +5,12 @@ punch punch1, punch2;
 health h1, h2;
 animation a1, a2;
 int mode = 0;
-int r1,g1,b1,r2,g2,b2;
+int r1, g1, b1, r2, g2, b2;
 String p1text, p2text;
 PImage backing, sun, lockerroom;
 boolean esc;
 PImage start, sansi, mrN, valley, kippback, mcmenamin, liu, gamebackground, andy, liuback, MrNback, mcstage, valleyback, sansiback;
-PImage faceSan, faceVal, faceKipp, faceLiu, faceMc, faceMrN;
+PImage faceSan, faceVal, faceKipp, faceLiu, faceMc, faceMrN, arrow, wasd, school;
 
 void setup() {
   size(1200, 800);
@@ -19,7 +19,7 @@ void setup() {
   sansi = loadImage("sansi.jpg");
   backing = loadImage("magnet.jpg");
   mrN= loadImage ("MR.ChefN.png");
- // kippback = 
+  // kippback = 
   valley=loadImage("valleynatior.png");
   valleyback=loadImage("valleynatior.jpg");
   //kipp = 
@@ -31,14 +31,17 @@ void setup() {
   andy =loadImage("angryandy.png");  
   sansiback = loadImage("jasonback.jpg");
   liuback = loadImage("abramsliu.jpg");
-  MrNback = loadImage("MrNbar.jpg");
+  MrNback = loadImage("MrNbar.png");
   mcstage = loadImage("mcstage.jpg");
-  faceSan = loadImage("FaceSan.jpg");
-  faceVal = loadImage("FaceVal.jpg");
-  faceKipp = loadImage("FaceKipp.jpeg");
-  faceLiu = loadImage("FaceLiu.jpg");
-  faceMc = loadImage("FaceMc.jpg");
-  faceMrN = loadImage("FaceMrN.jpg");
+  faceSan = loadImage("FaceSan.png");
+  faceVal = loadImage("FaceVal.png");
+  faceKipp = loadImage("FaceKipp.png");
+  faceLiu = loadImage("FaceLiu.png");
+  faceMc = loadImage("FaceMc.png");
+  faceMrN = loadImage("FaceMrN.png");
+  arrow= loadImage("arrow keys.png");
+  wasd = loadImage("wasd.png");
+  school = loadImage("bridge.jpg");
   r1 = 255;
   g1 = 255;
   b1 = 255;
@@ -53,18 +56,18 @@ void setup() {
   punch2 = new punch();
   h1 = new health(50, 75);
   h2 = new health(850, 75);
-  a = new platform(200, 700, 800, 10);
-  b = new platform(400, 600, 400, 10);
-  c = new platform(0, 550, 100, 10);
-  d = new platform(900, 550, 300, 10);
-  e = new platform(0, 350, 100, 10);
-  f = new platform(900, 350, 300, 10);
-  g = new platform(300, 475, 400, 10); 
+  a = new platform(200, 650, 600, 10);
+  b = new platform(500, 500, 400, 10);
+  c = new platform(0, 200, 200, 10);
+  d = new platform(1000, 600, 300, 10);
+  e = new platform(0, 400, 100, 10);
+  f = new platform(900, 200, 300, 10);
+  g = new platform(300, 350, 400, 10); 
   a1 = new animation ();
   a2 = new animation ();
 }
 
-  void draw() {
+void draw() {
   startScreen();
   characters();
   instructions();
