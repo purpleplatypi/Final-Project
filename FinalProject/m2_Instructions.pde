@@ -1,5 +1,8 @@
 void instructions() {
   if (mode==2) {  //display instructions
+   if (mousePressed && mouseX >50 && mouseX < 150  && mouseY > 700 && mouseY < 750) {  //back button for instructions
+      mode=0;
+    }
     background(255);
     image(lockerroom, 0, 0, width, height);
     fill(255);
@@ -18,8 +21,6 @@ void instructions() {
     textSize(30);
     fill(0);
     text("Back", 100, 735);
-    if (mousePressed && mouseX >50 && mouseX < 150  && mouseY > 700 && mouseY < 750) {  //back button for instructions
-      mode=0;
-    }
+   
   }
 }

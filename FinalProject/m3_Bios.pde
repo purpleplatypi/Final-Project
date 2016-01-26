@@ -40,6 +40,10 @@ void bios() {
       if (mouseX >550 && mouseX < 750 && mouseY > 300 && mouseY < 500) { //Mr.mcmenamin's bio button
         mode=11;
       }
+      //**************************Mrs. Kipp's Stuff**************//
+      if (mousePressed && mouseX >600 && mouseX < 700  && mouseY > 700 && mouseY < 750) {  //back button for Mrs. Monroy's bio
+        mode=12;
+      }
     }
     if (mousePressed && mouseX >550 && mouseX < 650  && mouseY > 700 && mouseY < 750  && mode==3) { 
       mode=0;
@@ -165,6 +169,25 @@ void bios() {
     textLeading(30);
     String McM = "Joseph McMeniman,was the lead singer of his world (not really) renowned band the\n ''JAMBULANCE'' until the other members were permentantly incapacitated due to\nunknown causes. Ever since his guitar slinging days McMenamin has become a\nteacher of history and weilds a military-grade gavel affectionately named\nOMNIPOTENCE OF JUSTICE.";
     text(McM, 25, 650);
+    rect(1150, 725, 100, 50);
+    textMode(CENTER);
+    textSize(30);
+    fill(0);
+    text("Back", 1145, 730);
+    if (mousePressed && mouseX >1100 && mouseX < 1200  && mouseY > 700 && mouseY < 750) {  //back button for Mr.mcmenamin's bio
+      mode=3;
+    }
+  }
+  if (mode==12) {   
+    image(Kippback, 0, 0, 1200, 800);
+    fill(0);
+    textSize(50);
+    rect(width/2, 700, width, 200);
+    fill(255);
+    text("Mrs. Kipp:", 25, 625);
+    textSize(25);
+    textLeading(30);
+    String McM = "Mary Kipp, during her pre-teaching career, Mrs. Kipp used the alias ‘Rendering “phantom section” AUGI’ to ride with the infamous biker gang “The Free Association AutoCADDERs” feared for their high stakes carjackings. Kipp went off the grid in the early 90s and reappeared as the sophomore teacher of technology. Armed with a weaponized CNC router, Kipp remains on the FBI’s most wanted list.";
     rect(1150, 725, 100, 50);
     textMode(CENTER);
     textSize(30);
