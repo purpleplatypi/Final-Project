@@ -20,14 +20,13 @@ class player {
   //write methods
   void display() {
     noFill();
-    stroke(0);
+    //stroke(0);
     rectMode(CORNER);
     rect(loc.x, loc.y, l, w);
   }
 
   void face() {
-    fill(0, 0, 255);
-    image(pic, loc.x + 7, loc.y -10, 50, 50);
+    image(pic, loc.x + 5, loc.y -10, 50, 50);
   }
 
   void move() {
@@ -72,15 +71,15 @@ class player {
     if (jumping && vel.y > 0 && platform.loc.x < loc.x + l && loc.x < platform.loc.x + platform.size.x && loc.y + w > platform.loc.y && loc.y + w < platform.loc.y + platform.size.y) {
       vel.add(g);
       loc.y += vel.y;
-      if ( loc.y > platform.loc.y - w) {
-        loc.y= platform.loc.y - w;
+      if (loc.y > platform.loc.y - w) {
+        loc.y = platform.loc.y - w;
         vel.y = origJumpSpeed;
         jumping = false;
         vel.y = origJumpSpeed;
       }
     }
     if (loc.y + w == platform.loc.y) {
-      if (platform.loc.x - 10 == loc.x + l || loc.x == platform.loc.x + platform.size.x + 10) {
+      if (platform.loc.x == loc.x + l || loc.x == platform.loc.x + platform.size.x) {
         vel.y = 0;
         jumping = true;
       }
