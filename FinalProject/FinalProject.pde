@@ -1,6 +1,6 @@
-import processing.sound.*;
+//import processing.sound.*;
 
-SoundFile file;
+//SoundFile file;
 
 //declare variables///
 player p1, p2;
@@ -30,7 +30,7 @@ void setup() {
   textAlign(LEFT);
   size(1200, 800);
   //initialize variables
-  file = new SoundFile(this, "fightmusic.mp3");
+  //file = new SoundFile(this, "fightmusic.mp3");
   start= loadImage("start.png");
   sansi = loadImage("sansi.jpg");
   backing = loadImage("magnet.jpg");
@@ -84,6 +84,7 @@ void setup() {
 }
 
 void draw() {
+  mode = 11;
   startScreen();
   characters();
   instructions();
