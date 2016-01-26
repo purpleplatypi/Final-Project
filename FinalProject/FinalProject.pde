@@ -5,12 +5,16 @@ punch punch1, punch2;
 health h1, h2;
 animation a1, a2;
 int mode = 0;
+float scf, wai;
 PImage backing, sun, lockerroom;
-boolean esc;
+boolean esc, undy;
 PImage start, sansi, bio, mrN, valley, monroy, mcmenamin, liu, gamebackground, andy, liuback, MrNback, mcstage, valleyback;
 PFont font;
 
 void setup() {
+ undy = false;
+  scf = 400;
+  wai = 400;
   font = createFont("Arial Rounded MT Bold", 48);
   textFont(font);
   textAlign(LEFT);
@@ -43,6 +47,7 @@ void setup() {
   a2 = new animation ("frame", 10, ".png");
   a = new platform(100, 593, 200, 5);
   b = new platform(500, 593, 200, 5);
+
 }
 
 void draw() {
