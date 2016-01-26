@@ -11,7 +11,7 @@ class health {
 
   void display () {
     fill(c);
-    rect(loc.x, loc.y, health, 5);
+    rect(loc.x, loc.y, health, 10);
   }
 
   void update() {
