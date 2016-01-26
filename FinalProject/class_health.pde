@@ -11,7 +11,7 @@ class health {
 
   void display () {
     fill(c);
-    rect(loc.x, loc.y, health, 5);
+    rect(loc.x, loc.y, health, 10);
   }
 
   void update() {
@@ -19,14 +19,13 @@ class health {
   }
   void healthcolor() {
     if (health <= 200) {
-      c=color(255,255,0);
+      c=color(255, 255, 0);
     }
-    if(health<= 100){
-      c=color(255,0,0);
+    if (health<= 100) {
+      c=color(255, 0, 0);
     }
-    if(health<=0){
-     mode=13; 
+    if (health<=0) {
+      mode=5;
     }
-    
   }
 }
