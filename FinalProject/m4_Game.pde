@@ -79,7 +79,7 @@ void game() {
         h1.update();
       }
     }
-    if (p1.loc.dist(p2.loc) <= p1.l + 5) {
+    if (p1.loc.dist(p2.loc) <= p1.l) {
       if (p1.facingright) {
         if (!p2.facingright&&p1.loc.x < p2.loc.x) {
           p1.loc.x -= p1.vel.x;
@@ -118,7 +118,7 @@ void game() {
       }
     }
     if (p1.loc.y + p1.w == p2.loc.y) {
-      if (p2.loc.x - 10 == p1.loc.x + p1.l || p1.loc.x == p2.loc.x + p2.l + 10) {
+      if (p2.loc.x == p1.loc.x + p1.l || p1.loc.x == p2.loc.x + p2.l) {
         p1.vel.y = 0;
         p1.jumping = true;
       }
@@ -134,7 +134,7 @@ void game() {
       }
     }
     if (p2.loc.y + p2.w == p1.loc.y) {
-      if (p1.loc.x - 10 == p2.loc.x + p2.l || p2.loc.x == p1.loc.x + p1.l + 10) {
+      if (p1.loc.x == p2.loc.x + p2.l || p2.loc.x == p1.loc.x + p1.l) {
         p2.vel.y = 0;
         p2.jumping = true;
       }

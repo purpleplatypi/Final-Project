@@ -27,12 +27,12 @@ class punch {
         t = 255;
         loc.sub(vel);
       }
-      if (frameCount%5 ==0) {
+      if (frameCount%3 ==0) {
         punch = false;
       }
     } else if (player.facingright) {
       t = 0;
-      loc.set(player.loc.x + player.l, player.loc.y + player.w/2);
+      loc.set(player.loc.x + player.l - 5, player.loc.y + player.w/2);
     } else if(!player.facingright){
       t = 0;
       loc.set(player.loc.x, player.loc.y + player.w/2);
