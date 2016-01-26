@@ -54,7 +54,7 @@ void bios() {
     text("Sansi...", 800, 300);
     textSize(18);
     textLeading(25);
-    String San = "Jason Sanservinio\n,otherwise known as the 'family man', hails\nfrom the Sanservino house, which started\na family buisness back during prohibition.\nHe has a very particular set of 'skills'\nthat make him a formiddable foe\nand an even intresting teacher....";
+    String San = "Jason Sanservinio\n,otherwise known as the ''family man'', hails\nfrom the Sanservino house, which started\na family buisness back during prohibition.\nHe has a very particular set of ''skills''\nthat make him a formiddable foe\nand an even intresting teacher....";
     text(San, 800, 325);
     rect(100, 725, 100, 50);
     textMode(CENTER);
@@ -163,7 +163,7 @@ void bios() {
     text("Mr.McMenamin:", 50, 650);
     textSize(25);
     textLeading(30);
-    String McM = "Joseph McMeniman,was the lead singer of his world (not really) renowned band the\n'JAMBULANCE' until the other members were permentantly incapacitated due to\nunknown causes. Ever since his guitar slinging days McMenamin has become a\nteacher of history and weilds a military-grade gavel affectionately named\nOMNIPOTENCE OF JUSTICE.";
+    String McM = "Joseph McMeniman,was the lead singer of his world (not really) renowned band the\n ''JAMBULANCE'' until the other members were permentantly incapacitated due to\nunknown causes. Ever since his guitar slinging days McMenamin has become a\nteacher of history and weilds a military-grade gavel affectionately named\nOMNIPOTENCE OF JUSTICE.";
     text(McM, 50, 675);
     rect(1150, 725, 100, 50);
     textMode(CENTER);
