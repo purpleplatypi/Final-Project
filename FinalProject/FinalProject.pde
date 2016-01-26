@@ -1,3 +1,7 @@
+import processing.sound.*;
+
+SoundFile file;
+
 //declare variables///
 player p1, p2;
 platform a, b, c, d, e, f, g, h, i, j, k, l;
@@ -12,9 +16,13 @@ boolean esc;
 PImage start, sansi, mrN, valley, kippback, mcmenamin, liu, gamebackground, andy, liuback, MrNback, mcstage, valleyback, sansiback;
 PImage faceSan, faceVal, faceKipp, faceLiu, faceMc, faceMrN, arrow, wasd, school;
 
+
+
+
 void setup() {
   size(1200, 800);
   //initialize variables
+  file = new SoundFile(this, "fightmusic.mp3");
   start= loadImage("start.png");
   sansi = loadImage("sansi.jpg");
   backing = loadImage("magnet.jpg");
