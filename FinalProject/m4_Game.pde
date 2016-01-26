@@ -23,7 +23,7 @@ void game() {
     p1.display();
     punch1.display();
     punch1.update(p1);
-    p1.face();
+
     p1.move();
     p1.restrict();
     p1.platformControls(a);
@@ -36,7 +36,7 @@ void game() {
     p2.display();
     punch2.display();
     punch2.update(p2);
-    p2.face();
+
     p2.move();
     p2.restrict();
     p2.platformControls(a);
@@ -57,6 +57,8 @@ void game() {
     h2.display();
     h1.healthcolor();
     h2.healthcolor();
+    p1.face();
+    p2.face();
     if (punch1.punch || punch2.punch) {
       if (punch1.isInContactWithLeft(p2)) {
         p2.lefthit = true;
@@ -106,25 +108,43 @@ void game() {
           p2.loc.x -= p2.vel.x;
         }
       }
+
+      if (p1.jumping && p1.vel.y>0 && p1.loc.y+130>p2.loc.y && p1.loc.x < p2.loc.x +100 && p1.loc.x > p2.loc.x) {
+        p1.loc.y=p2.loc.y-130;
+        p1.vel.y = p1.origJumpSpeed;
+        p1.jumping = false;
+
+
+        if (p1.loc.y==p2.loc.y-130) {
+          if (p1.loc.x < p2.loc.x || p1.loc.x > p2.loc.x+70 ) {
+            p1.loc.y=p1.ground;
+            p1.jumping = true;
+          }
+        }
+      }
+
+      if (p1.loc.x > p2.loc.x +130 && p1.loc.x > p2.loc.x +130 || p1.loc.x < p2.loc.x && p1.loc.x < p2.loc.x-10) {
+        p1.vel.y=0;
+        p1.jumping=true;
+      }
+        if (p2.jumping && p2.vel.y>0 && p2.loc.y+130>p1.loc.y && p2.loc.x < p1.loc.x +100 && p2.loc.x > p1.loc.x) {
+        p2.loc.y=p1.loc.y-130;
+        p2.vel.y = p2.origJumpSpeed;
+        p2.jumping = false;
+
+
+        if (p2.loc.y==p1.loc.y-130) {
+          if (p2.loc.x < p1.loc.x || p2.loc.x > p1.loc.x+70 ) {
+            p2.loc.y=p2.ground;
+            p2.jumping = true;
+          }
+        }
+      }
+
+      if (p2.loc.x > p1.loc.x +130 && p2.loc.x > p1.loc.x +130 || p2.loc.x < p1.loc.x && p2.loc.x < p1.loc.x-10) {
+        p2.vel.y=0;
+        p2.jumping=true;
+      }
     }
-    //if (p1.jumping && p1.vel.y>0 && p1.loc.y+130>p2.loc.y && p1.loc.x < p2.loc.x +50 && p1.loc.x > p2.loc.x) {
-//  p1.loc.y=540;
-//  p1.vel.y = p1.origJumpSpeed;
-//  p1.jumping = false;
-
-
-//  if (p1.loc.y==540) {
-//    if (p1.loc.x - 50 == p2.loc.x || p1.loc.x == p2.loc.x ) {
-//      p1.loc.y=p1.ground;
-//      p1.jumping = true;
-//    }
-//  }
-//}
-
-// if(p1.loc.x > p2.loc.x +130 && p1.loc.x > p2.loc.x +140 || p1.loc.x < p2.loc.x && p1.loc.x < p2.loc.x-10){
-//  p1.vel.y=0;
-//  p1.jumping=true;
-//  }
-
   }
 }          

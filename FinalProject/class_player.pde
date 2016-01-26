@@ -12,7 +12,7 @@ class player {
     vel = new PVector(5, -20);
     g = new PVector(0, 1);
     l=70;
-    w=13030;
+    w=130;
     ground = height - w;
     origJumpSpeed=-20;
   }
@@ -69,7 +69,7 @@ class player {
   }
 
   void platformControls (platform platform) {
-    if (jumping && vel.y > 0 && platform.loc.x < loc.x + l && loc.x + l < platform.loc.x + platform.size.x && loc.y + w > platform.loc.y && loc.y + w < platform.loc.y + platform.size.y) {
+    if (jumping && vel.y > 0 && platform.loc.x < loc.x + l && loc.x < platform.loc.x + platform.size.x && loc.y + w > platform.loc.y && loc.y + w < platform.loc.y + platform.size.y) {
       vel.add(g);
       loc.y += vel.y;
       if ( loc.y > platform.loc.y - w) {
