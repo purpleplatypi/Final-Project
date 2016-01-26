@@ -23,7 +23,6 @@ void game() {
     p1.display();
     punch1.display();
     punch1.update(p1);
-
     p1.move();
     p1.restrict();
     p1.platformControls(a);
@@ -36,7 +35,6 @@ void game() {
     p2.display();
     punch2.display();
     punch2.update(p2);
-
     p2.move();
     p2.restrict();
     p2.platformControls(a);
@@ -108,43 +106,38 @@ void game() {
           p2.loc.x -= p2.vel.x;
         }
       }
-
-      if (p1.jumping && p1.vel.y>0 && p1.loc.y+130>p2.loc.y && p1.loc.x < p2.loc.x +100 && p1.loc.x > p2.loc.x) {
-        p1.loc.y=p2.loc.y-130;
+    }
+    if (p1.jumping && p1.vel.y > 0 && p1.loc.x + p1.l/2 >= p2.loc.x && p1.loc.x + p1.l/2 <= p2.loc.x + p2.l && p1.loc.y + p1.w >= p2.loc.y && p1.loc.y + p1.w < p2.loc.y + p2.w) {
+      p1.vel.add(p1.g);
+      p1.loc.y += p1.vel.y;
+      if (p1.loc.y >= p2.loc.y - p1.w) {
+        p1.loc.y = p2.loc.y - p1.w;
         p1.vel.y = p1.origJumpSpeed;
         p1.jumping = false;
-
-
-        if (p1.loc.y==p2.loc.y-130) {
-          if (p1.loc.x < p2.loc.x || p1.loc.x > p2.loc.x+70 ) {
-            p1.loc.y=p1.ground;
-            p1.jumping = true;
-          }
-        }
+        p1.vel.y = p1.origJumpSpeed;
       }
-
-      if (p1.loc.x > p2.loc.x +130 && p1.loc.x > p2.loc.x +130 || p1.loc.x < p2.loc.x && p1.loc.x < p2.loc.x-10) {
-        p1.vel.y=0;
-        p1.jumping=true;
+    }
+    if (p1.loc.y + p1.w == p2.loc.y) {
+      if (p2.loc.x - 10 == p1.loc.x + p1.l || p1.loc.x == p2.loc.x + p2.l + 10) {
+        p1.vel.y = 0;
+        p1.jumping = true;
       }
-        if (p2.jumping && p2.vel.y>0 && p2.loc.y+130>p1.loc.y && p2.loc.x < p1.loc.x +100 && p2.loc.x > p1.loc.x) {
-        p2.loc.y=p1.loc.y-130;
+    }
+    if (p2.jumping && p2.vel.y > 0 && p2.loc.x + p2.l/2 >= p1.loc.x && p2.loc.x + p2.l/2 <= p1.loc.x + p1.l && p2.loc.y + p2.w >= p1.loc.y && p2.loc.y + p2.w < p1.loc.y + p1.w) {
+      p2.vel.add(p2.g);
+      p2.loc.y += p2.vel.y;
+      if (p2.loc.y >= p1.loc.y - p2.w) {
+        p2.loc.y = p1.loc.y - p2.w;
         p2.vel.y = p2.origJumpSpeed;
         p2.jumping = false;
-
-
-        if (p2.loc.y==p1.loc.y-130) {
-          if (p2.loc.x < p1.loc.x || p2.loc.x > p1.loc.x+70 ) {
-            p2.loc.y=p2.ground;
-            p2.jumping = true;
-          }
-        }
+        p2.vel.y = p2.origJumpSpeed;
       }
-
-      if (p2.loc.x > p1.loc.x +130 && p2.loc.x > p1.loc.x +130 || p2.loc.x < p1.loc.x && p2.loc.x < p1.loc.x-10) {
-        p2.vel.y=0;
-        p2.jumping=true;
+    }
+    if (p2.loc.y + p2.w == p1.loc.y) {
+      if (p1.loc.x - 10 == p2.loc.x + p2.l || p2.loc.x == p1.loc.x + p1.l + 10) {
+        p2.vel.y = 0;
+        p2.jumping = true;
       }
     }
   }
-}          
+}
