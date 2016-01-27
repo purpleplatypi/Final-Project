@@ -2,19 +2,11 @@
 //SoundFile file;
 
 //declare variables///
-<<<<<<< HEAD
 Player p1, p2;
 Platform a, b, c, d, e, f, g;
 Punch punch1, punch2;
 Health h1, h2;
 Animation a1, a2;
-=======
-player p1, p2;
-platform a, b, c, d, e, f, g;
-punch punch1, punch2;
-health h1, h2;
-animation a1, a2;
->>>>>>> origin/development
 int mode = 0;
 float scf, wai;
 boolean esc, undy;

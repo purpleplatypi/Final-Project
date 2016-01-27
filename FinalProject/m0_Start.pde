@@ -33,11 +33,7 @@ void startScreen() {
       }
       if (mouseX >450 && mouseX < 750 && mouseY > 600 && mouseY < 700) {  //instr button
         mode =  2;
-<<<<<<< HEAD
-      }
-=======
       } 
->>>>>>> origin/development
       if (mouseX >0 && mouseX < 150 && mouseY > 600 && mouseY < 800) {
         undy = true;
       }
