@@ -7,7 +7,7 @@ void bios() {
     image(mrN, 300, 50, 200, 200);
     image(valley, 550, 50, 200, 200);
     image(liu, 50, 300, 200, 200);  
-    //image(kipp, 300, 300, 200, 200);
+    image(faceKipp, 300, 300, 200, 200);
     image(mcmenamin, 550, 300, 200, 200);
     fill(255);
     rect(600, 725, 100, 50);
@@ -39,6 +39,10 @@ void bios() {
       //**************** Mr.mcmenamin's Stuff *********************//
       if (mouseX >550 && mouseX < 750 && mouseY > 300 && mouseY < 500) { //Mr.mcmenamin's bio button
         mode=11;
+      }
+      //**************************Mrs. Kipp's Stuff**************//
+      if (mousePressed && mouseX >600 && mouseX < 700  && mouseY > 700 && mouseY < 750) {  //back button for Mrs. Monroy's bio
+        mode=12;
       }
     }
     if (mousePressed && mouseX >550 && mouseX < 650  && mouseY > 700 && mouseY < 750  && mode==3) { 
@@ -134,25 +138,25 @@ void bios() {
     }
   } 
 
-  if (mode==10) {
-    background(255);
-    textSize(25);
-    //image(kippback, 0, 0, 1200, 800);
-    fill(255);
-    //text("Monroy:", 50, 525);
-    //text("Mrs. Monroy,", 150, 525);
-    //text("Gained the Respect of every student on campus last year after she trashed the UCVTS", 50, 575);
-    //text("administration in a verbal steal cage MMA fight. Combined with her skills in the", 50, 625);
-    //text("pyrotechnics of snack food, Mrs. Monroy can tackle any foe.", 50, 675);
-    rect(100, 725, 100, 50);
-    textMode(CENTER);
-    textSize(30);
-    fill(0);
-    text("Back", 100, 735);
-    if (mousePressed && mouseX >50 && mouseX < 150  && mouseY > 700 && mouseY < 750) {  //back button for Mrs. Monroy's bio
-      mode=3;
-    }
-  }
+  //if (mode==10) {
+  //  background(255);
+  //  textSize(25);
+  //  //image(kippback, 0, 0, 1200, 800);
+  //  fill(255);
+  //  //text("Monroy:", 50, 525);
+  //  //text("Mrs. Monroy,", 150, 525);
+  //  //text("Gained the Respect of every student on campus last year after she trashed the UCVTS", 50, 575);
+  //  //text("administration in a verbal steal cage MMA fight. Combined with her skills in the", 50, 625);
+  //  //text("pyrotechnics of snack food, Mrs. Monroy can tackle any foe.", 50, 675);
+  //  rect(100, 725, 100, 50);
+  //  textMode(CENTER);
+  //  textSize(30);
+  //  fill(0);
+  //  text("Back", 100, 735);
+  //  if (mousePressed && mouseX >50 && mouseX < 150  && mouseY > 700 && mouseY < 750) {  //back button for Mrs. Monroy's bio
+  //    mode=3;
+  //  }
+  //}
 
   if (mode==11) {
     fill(0);
@@ -165,6 +169,25 @@ void bios() {
     textLeading(30);
     String McM = "Joseph McMeniman,was the lead singer of his world (not really) renowned band the\n ''JAMBULANCE'' until the other members were permentantly incapacitated due to\nunknown causes. Ever since his guitar slinging days McMenamin has become a\nteacher of history and weilds a military-grade gavel affectionately named\nOMNIPOTENCE OF JUSTICE.";
     text(McM, 25, 650);
+    rect(1150, 725, 100, 50);
+    textMode(CENTER);
+    textSize(30);
+    fill(0);
+    text("Back", 1145, 730);
+    if (mousePressed && mouseX >1100 && mouseX < 1200  && mouseY > 700 && mouseY < 750) {  //back button for Mr.mcmenamin's bio
+      mode=3;
+    }
+  }
+  if (mode==10) {   
+    image(Kippback, 0, 0, 1200, 800);
+    fill(0);
+    textSize(50);
+    rect(width/2, 700, width, 200);
+    fill(255);
+    text("Mrs. Kipp:", 25, 625);
+    textSize(25);
+    textLeading(30);
+    String McM = "Mary Kipp, during her pre-teaching career, Mrs. Kipp used the alias ‘Rendering “phantom section” AUGI’ to ride with the infamous biker gang “The Free Association AutoCADDERs” feared for their high stakes carjackings. Kipp went off the grid in the early 90s and reappeared as the sophomore teacher of technology. Armed with a weaponized CNC router, Kipp remains on the FBI’s most wanted list.";
     rect(1150, 725, 100, 50);
     textMode(CENTER);
     textSize(30);
