@@ -13,7 +13,7 @@ class Punch {
   }
 
   void display() { 
-    fill(0);
+    fill(0, t);
     noStroke();
     ellipse(loc.x, loc.y, diam, diam);
   }

@@ -14,12 +14,12 @@ void startScreen() {
     text("CONTROLS", width/2, height-125 );
     textSize(50);
     text("BIOS", width/2, height/2 + 200 );
-    if (undy) {
-      if (scf<1000) {
-        scf +=100;
+    if (undy) { //boolean for the undy easter egg
+      if (scf<1000) { // if he is smaller than 1000 times original
+        scf +=100; // make him bigger my 100, move him by 100
         wai -= 100;
       } else {
-        scf +=500;
+        scf +=500; //make him bigger by 500 move him by 500 
         wai -= 500;
       }
     }
@@ -33,7 +33,7 @@ void startScreen() {
       if (mouseX >450 && mouseX < 750 && mouseY > 550 && mouseY < 600) {  //bios button
         mode = 3;
       }
-      if (mouseX >0 && mouseX < 150 && mouseY > 600 && mouseY < 800) {
+      if (mouseX >0 && mouseX < 200 && mouseY > 500 && mouseY < 800) { //easter egg button
         undy = true;
       }
     }
