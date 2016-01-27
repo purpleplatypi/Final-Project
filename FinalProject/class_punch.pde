@@ -32,8 +32,13 @@ class Punch {
       }
     } else if (p.facingright) {
       t = 0;
+<<<<<<< HEAD
       loc.set(p.loc.x + p.l - 7, p.loc.y + p.w/2);
     } else if (!p.facingright) {
+=======
+      loc.set(p.loc.x + p.l - 5, p.loc.y + p.w/2);
+    } else if(!p.facingright){
+>>>>>>> refs/remotes/origin/development
       t = 0;
       loc.set(p.loc.x + 7, p.loc.y + p.w/2);
     }
