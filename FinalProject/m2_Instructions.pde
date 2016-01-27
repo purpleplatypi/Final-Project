@@ -1,6 +1,10 @@
 void instructions() {
   if (mode==2) {  //display instructions
+<<<<<<< HEAD
     if (mousePressed && mouseX >50 && mouseX < 150  && mouseY > 700 && mouseY < 750) {  //back button for instructions
+=======
+   if (mousePressed && mouseX >50 && mouseX < 150  && mouseY > 700 && mouseY < 750) {  //back button for instructions
+>>>>>>> refs/remotes/origin/development
       mode=0;
     }
     background(255);
@@ -25,5 +29,9 @@ void instructions() {
     textSize(30);
     fill(0);
     text("Back", 100, 735);
+<<<<<<< HEAD
+=======
+   
+>>>>>>> refs/remotes/origin/development
   }
 }
