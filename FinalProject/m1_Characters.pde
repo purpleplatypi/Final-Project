@@ -9,9 +9,9 @@ void characters() {
     image(mcmenamin, 950, 300, 200, 200);
     fill(255);
     rect(600, 725, 100, 50);
-    fill(r1, g1, b1);
+    fill(c1);
     rect(600, 500, 400, 100);
-    fill(r2, g2, b2);
+    fill(c2);
     rect(600, 600, 400, 100);
     fill(0);
     textMode(CENTER);
@@ -64,12 +64,8 @@ void characters() {
   }
 
   if (mode==12) {
-    r1 = 0;
-    g1 = 0;
-    b1 = 0;
-    r2 = 255;
-    g2 = 255;
-    b2 = 255;
+    c1 = 0;
+    c2 = 255;
     background(255);
     image(sansi, 50, 50, 200, 200);
     image(mrN, 350, 50, 200, 200);
@@ -79,9 +75,9 @@ void characters() {
     image(mcmenamin, 950, 300, 200, 200);
     fill(255);
     rect(600, 725, 100, 50);
-    fill(r1, g1, b1);
+    fill(c1);
     rect(600, 500, 400, 100);
-    fill(r2, g2, b2);
+    fill(c2);
     rect(600, 600, 400, 100);
     fill(0);
     textMode(CENTER);
