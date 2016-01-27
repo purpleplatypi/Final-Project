@@ -2,7 +2,7 @@ void bios() {
   if (mode ==3) {
     textAlign(CENTER);
     background(255);
-    tint(255, 200); 
+    tint(255, 150); 
     image(backing, 0, 0, width, height);
     tint(255, 255); 
     rect(150, 150, 200, 200);
@@ -13,16 +13,15 @@ void bios() {
     image(faceKipp, 300, 300, 200, 200);
     image(mcmenamin, 550, 300, 200, 200);
     fill(255);
-    rect(600, 725, 100, 50);
+    rect(400, 725, 100, 50);
     textMode(CENTER);
     textSize(30);
     fill(0);
-    text("Back", width/2, 735);
-    if (mousePressed && mouseX >550 && mouseX < 650  && mouseY > 700 && mouseY < 750  && mode==3) { 
-      mode=0;
-    }
+    text("Back", width/3, 735);
     if (mousePressed) {
-
+      if (mouseX > 350 && mouseX < 450  && mouseY > 700 && mouseY < 750) { 
+        mode=0;
+      }
       //********* Mr. Sanservino's Stuff **********//
       if (mouseX >50 && mouseX < 250 && mouseY > 50 && mouseY < 250) { //sansis bio button
         mode=6;
@@ -176,18 +175,18 @@ void bios() {
     image(mcstage, 0, 0, 1200, 800);
     rect(width/2, 700, width, 200);
     fill(255);
-    text("Mr.McMenamin:", 25, 625);
+    text("Mr.McMenamin:", 25, 650);
     textSize(25);
     textLeading(30);
     String McM = "Joseph McMeniman,was the lead singer of his world (not really) renowned band the\n ''JAMBULANCE'' until the other members were permentantly incapacitated due to\nunknown causes. Ever since his guitar slinging days McMenamin has become a\nteacher of history and weilds a military-grade gavel affectionately named\nOMNIPOTENCE OF JUSTICE.";
-    text(McM, 25, 650);
+    text(McM, 25, 675);
     rect(1150, 725, 100, 50);
     textSize(30);
     textMode(CENTER);
     fill(0);
-    text("Back", 1110, height-35);
+    text("Back", 1110, height-60);
     if (mousePressed && mouseX >1100 && mouseX < 1200  && mouseY > 700 && mouseY < 750) {  //back button for Mr.mcmenamin's bio
-       mode=3;
-      }
+      mode=3;
+    }
   }
 }
