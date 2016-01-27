@@ -2,16 +2,16 @@
 //SoundFile file;
 
 //declare variables///
-player p1, p2;
-platform a, b, c, d, e, f, g, h, i, j, k, l;
-punch punch1, punch2;
-health h1, h2;
-animation a1, a2;
+Player p1, p2;
+Platform a, b, c, d, e, f, g;
+Punch punch1, punch2;
+Health h1, h2;
+Animation a1, a2;
 int mode = 0;
 float scf, wai;
 boolean esc, undy;
 PFont font;
-int r1, g1, b1, r2, g2, b2;
+int c1, c2;
 String p1text, p2text;
 PImage backing, sun, lockerroom;
 PImage start, sansi, mrN, valley, kippback, mcmenamin, liu, gamebackground, andy, liuback, MrNback, mcstage, valleyback, sansiback;
@@ -56,29 +56,25 @@ void setup() {
   wasd = loadImage("wasd.png");
   school = loadImage("bridge.jpg");
   Kippback = loadImage("Kippback.png");
-  r1 = 255;
-  g1 = 255;
-  b1 = 255;
-  r2 = 0;
-  g2 = 0;
-  b2 = 0;
+  c1 = 255;
+  c2 = 0;
   p1text = "P1 Click Here";
   p2text = "P2 Click Here";
-  p1 = new player(0, height - 130);
-  p2 = new player(width - 60, height - 130);
-  punch1 = new punch();
-  punch2 = new punch();
-  h1 = new health(50, 75);
-  h2 = new health(850, 75);
-  a = new platform(200, 650, 500, 10);
-  b = new platform(1000, 600, 300, 10);
-  c = new platform(500, 500, 400, 10);
-  d = new platform(0, 250, 200, 10);
-  e = new platform(300, 350, 400, 10);
-  f = new platform(0, 500, 200, 10);
-  g = new platform(900, 250, 300, 10); 
-  a1 = new animation ();
-  a2 = new animation ();
+  p1 = new Player(0, height - 130);
+  p2 = new Player(width - 60, height - 130);
+  punch1 = new Punch();
+  punch2 = new Punch();
+  h1 = new Health(50, 75);
+  h2 = new Health(850, 75);
+  a = new Platform(200, 650, 500, 10);
+  b = new Platform(1000, 600, 300, 10);
+  c = new Platform(500, 500, 400, 10);
+  d = new Platform(0, 250, 200, 10);
+  e = new Platform(300, 350, 400, 10);
+  f = new Platform(0, 500, 200, 10);
+  g = new Platform(900, 250, 300, 10); 
+  a1 = new Animation ();
+  a2 = new Animation ();
 }
 
 void draw() {

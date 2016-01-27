@@ -1,9 +1,9 @@
-class health {
+class Health {
   PVector loc;
   float health, diam;
   color c;
 
-  health (float x, float y) {
+  Health (float x, float y) {
     loc = new PVector(x, y);
     health = 300;
     c = color(0, 255, 0);
@@ -15,7 +15,7 @@ class health {
   }
 
   void update() {
-    health=health-1;
+    health=health-5;
   }
   void healthcolor() {
     if (health <= 200) {
