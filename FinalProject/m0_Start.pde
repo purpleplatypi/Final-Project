@@ -30,14 +30,10 @@ void startScreen() {
       if (mouseX >450 && mouseX < 750 && mouseY > 600 && mouseY < 700) {  //instr button
         mode =  2;
       }
-<<<<<<< HEAD
       if (mouseX >450 && mouseX < 750 && mouseY > 550 && mouseY < 600) {  //bios button
         mode = 3;
       }
       if (mouseX >0 && mouseX < 200 && mouseY > 500 && mouseY < 800) { //easter egg button
-=======
-      if (mouseX >0 && mouseX < 150 && mouseY > 600 && mouseY < 800) {
->>>>>>> refs/remotes/origin/development
         undy = true;
       }
     }

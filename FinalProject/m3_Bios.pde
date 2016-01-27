@@ -181,7 +181,6 @@ void bios() {
     String McM = "Joseph McMeniman,was the lead singer of his world (not really) renowned band the\n ''JAMBULANCE'' until the other members were permentantly incapacitated due to\nunknown causes. Ever since his guitar slinging days McMenamin has become a\nteacher of history and weilds a military-grade gavel affectionately named\nOMNIPOTENCE OF JUSTICE.";
     text(McM, 25, 675);
     rect(1150, 725, 100, 50);
-<<<<<<< HEAD
     textSize(30);
     textMode(CENTER);
     fill(0);
@@ -189,8 +188,5 @@ void bios() {
     if (mousePressed && mouseX >1100 && mouseX < 1200  && mouseY > 700 && mouseY < 750) {  //back button for Mr.mcmenamin's bio
       mode=3;
     }
-=======
-    textMode(CENTER);
->>>>>>> refs/remotes/origin/development
   }
 }
