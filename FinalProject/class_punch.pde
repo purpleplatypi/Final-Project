@@ -32,13 +32,8 @@ class Punch {
       }
     } else if (p.facingright) {
       t = 0;
-<<<<<<< HEAD
       loc.set(p.loc.x + p.l - 5, p.loc.y + p.w/2);
     } else if(!p.facingright){
-=======
-      loc.set(player.loc.x + player.l - 5, player.loc.y + player.w/2);
-    } else if (!player.facingright) {
->>>>>>> origin/development
       t = 0;
       loc.set(p.loc.x, p.loc.y + p.w/2);
     }
