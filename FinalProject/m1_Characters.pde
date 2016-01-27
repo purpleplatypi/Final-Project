@@ -1,11 +1,12 @@
 void characters() {
   if (mode==1) {
+
     background(255);
     image(sansi, 50, 50, 200, 200);
     image(mrN, 350, 50, 200, 200);
     image(valley, 650, 50, 200, 200);
     image(liu, 950, 50, 200, 200);  
-    //image(kipp, 50, 300, 200, 200);
+    image(faceKipp, 50, 300, 200, 200);
     image(mcmenamin, 950, 300, 200, 200);
     fill(255);
     rect(600, 725, 100, 50);
@@ -75,7 +76,7 @@ void characters() {
     image(mrN, 350, 50, 200, 200);
     image(valley, 650, 50, 200, 200);
     image(liu, 950, 50, 200, 200);  
-    //image(kipp, 50, 300, 200, 200);
+    image(faceKipp, 50, 300, 200, 200);
     image(mcmenamin, 950, 300, 200, 200);
     fill(255);
     rect(600, 725, 100, 50);

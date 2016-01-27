@@ -1,7 +1,7 @@
 class punch {
   //declare variables
   PVector loc, vel;
-  int diam,t;
+  int diam, t;
   boolean punch;
 
   //make constructor
@@ -12,8 +12,8 @@ class punch {
     t = 0;
   }
 
-  void display() { //displaying hitbox
-    fill(0,t);
+  void display() { 
+    fill(0, t);
     noStroke();
     ellipse(loc.x, loc.y, diam, diam);
   }
@@ -33,7 +33,7 @@ class punch {
     } else if (player.facingright) {
       t = 0;
       loc.set(player.loc.x + player.l - 5, player.loc.y + player.w/2);
-    } else if(!player.facingright){
+    } else if (!player.facingright) {
       t = 0;
       loc.set(player.loc.x, player.loc.y + player.w/2);
     }
