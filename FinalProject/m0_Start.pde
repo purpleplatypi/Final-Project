@@ -25,18 +25,22 @@ void startScreen() {
       }
     }
     if (mousePressed) {
-      if (mouseX >450 && mouseX < 750 && mouseY > 575 && mouseY < 600) {  //start button
+      if (mouseX >450 && mouseX < 750 && mouseY > 550 && mouseY < 600) {  //bios button
         mode = 3;
       }
-      if (mouseX >450 && mouseX < 750 && mouseY > 475 && mouseY < 575) { // instructions button
+      if (mouseX >450 && mouseX < 750 && mouseY > 450 && mouseY < 550) { // start button
         mode = 1;
       }
-      if (mouseX >450 && mouseX < 750 && mouseY > 600 && mouseY < 700) {  //bio button
+      if (mouseX >450 && mouseX < 750 && mouseY > 600 && mouseY < 700) {  //instr button
         mode =  2;
+<<<<<<< HEAD
       }
+=======
+      } 
+>>>>>>> origin/development
       if (mouseX >0 && mouseX < 150 && mouseY > 600 && mouseY < 800) {
         undy = true;
       }
-    } 
+    }
   }
 }
