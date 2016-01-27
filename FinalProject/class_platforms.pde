@@ -1,9 +1,9 @@
-class platform {
+class Platform {
   //declare variables
   PVector loc, size;
 
   //make a constructor
-  platform (int x, int y, int l, int w) {
+  Platform (int x, int y, int l, int w) {
     loc = new PVector(x, y);
     size = new PVector(l, w);
   }

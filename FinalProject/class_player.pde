@@ -1,4 +1,4 @@
-class player {
+class Player {
   //declare variables
   boolean left, right, jumping, falling, facingright, bounceBack, lefthit, righthit;
   PVector loc, vel, g;
@@ -7,7 +7,7 @@ class player {
   PImage pic;
 
   //make constructor
-  player(int x, int y) {  
+  Player(int x, int y) {  
     loc = new PVector(x, y);
     vel = new PVector(5, -20);
     g = new PVector(0, 1);
@@ -67,19 +67,19 @@ class player {
     }
   }
 
-  void platformControls (platform platform) {
-    if (jumping && vel.y > 0 && platform.loc.x < loc.x + l && loc.x < platform.loc.x + platform.size.x && loc.y + w > platform.loc.y && loc.y + w < platform.loc.y + platform.size.y) {
+  void platformControls (Platform pl) {
+    if (jumping && vel.y > 0 && pl.loc.x < loc.x + l && loc.x < pl.loc.x + pl.size.x && loc.y + w > pl.loc.y && loc.y + w < pl.loc.y + pl.size.y) {
       vel.add(g);
       loc.y += vel.y;
-      if (loc.y > platform.loc.y - w) {
-        loc.y = platform.loc.y - w;
+      if (loc.y > pl.loc.y - w) {
+        loc.y = pl.loc.y - w;
         vel.y = origJumpSpeed;
         jumping = false;
         vel.y = origJumpSpeed;
       }
     }
-    if (loc.y + w == platform.loc.y) {
-      if (platform.loc.x == loc.x + l || loc.x == platform.loc.x + platform.size.x) {
+    if (loc.y + w == pl.loc.y) {
+      if (pl.loc.x == loc.x + l || loc.x == pl.loc.x + pl.size.x) {
         vel.y = 0;
         jumping = true;
       }

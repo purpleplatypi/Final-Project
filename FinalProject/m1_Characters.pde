@@ -5,22 +5,22 @@ void characters() {
     image(mrN, 350, 50, 200, 200);
     image(valley, 650, 50, 200, 200);
     image(liu, 950, 50, 200, 200);  
-    //image(kipp, 50, 300, 200, 200);
+    image(faceKipp, 50, 300, 200, 200);
     image(mcmenamin, 950, 300, 200, 200);
     fill(255);
     rect(600, 725, 100, 50);
-    fill(r1, g1, b1);
+    fill(c1);
     rect(600, 500, 400, 100);
-    fill(r2, g2, b2);
+    fill(c2);
     rect(600, 600, 400, 100);
     fill(0);
     textMode(CENTER);
     textSize(50);
-    text("Select YOUR Teacher", 350, 400);
-    text(p1text, 420, 500);
-    text(p2text, 420, 600);
+    text("Select YOUR Teacher", width/2, 400);
+    text(p1text, width/2, 500);
+    text(p2text, width/2, 600);
     textSize(30);
-    text("Back", 565, 730);
+    text("Back", width/2, 730);
     if (mousePressed) {
       if (mouseX >550 && mouseX < 650  && mouseY > 700 && mouseY < 750) {  //back button for bios
         mode=0;
@@ -64,33 +64,29 @@ void characters() {
   }
 
   if (mode==12) {
-    r1 = 0;
-    g1 = 0;
-    b1 = 0;
-    r2 = 255;
-    g2 = 255;
-    b2 = 255;
+    c1 = 0;
+    c2 = 255;
     background(255);
     image(sansi, 50, 50, 200, 200);
     image(mrN, 350, 50, 200, 200);
     image(valley, 650, 50, 200, 200);
     image(liu, 950, 50, 200, 200);  
-    //image(kipp, 50, 300, 200, 200);
+    image(faceKipp, 50, 300, 200, 200);
     image(mcmenamin, 950, 300, 200, 200);
     fill(255);
     rect(600, 725, 100, 50);
-    fill(r1, g1, b1);
+    fill(c1);
     rect(600, 500, 400, 100);
-    fill(r2, g2, b2);
+    fill(c2);
     rect(600, 600, 400, 100);
     fill(0);
     textMode(CENTER);
     textSize(50);
-    text("Select YOUR Teacher", 350, 400);
-    text(p1text, 420, 500);
-    text(p2text, 420, 600);
+    text("Select YOUR Teacher", width/2, 400);
+    text(p1text, width/2, 500);
+    text(p2text, width/2, 600);
     textSize(30);
-    text("Back", 565, 730);
+    text("Back", width/2, 730);
     if (mousePressed) {
       if (mouseX >950 && mouseX < 1050  && mouseY > 700 && mouseY < 750) {  //back button for bios
         mode=1;
