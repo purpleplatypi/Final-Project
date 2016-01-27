@@ -87,6 +87,18 @@ void draw() {
   gameOver();
   if (esc) {     //IF Z IS PRESSED THIS IS THE WAY TO GET BACK TO THE HOME SCREEN FROM ANYWHERE!!! 
     mode = 0;
+    h1.health=300;
+    h2.health=300;
+    p1text = "P1 Click Here";
+    p2text = "P2 Click Here";
+    h1.c = color(0, 255, 0);
+    h2.c = color(0, 255, 0);
+    c1 = 255;
+    if (mousePressed) {
+      if (mouseX >450 && mouseX < 750 && mouseY > 400 && mouseY < 500) { // start button
+        mode = 1;
+      }
+    }
   }
 }
 

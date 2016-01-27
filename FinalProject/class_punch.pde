@@ -13,7 +13,7 @@ class Punch {
   }
 
   void display() { 
-    fill(0,t);
+    fill(0, t);
     noStroke();
     ellipse(loc.x, loc.y, diam, diam);
   }
@@ -27,15 +27,14 @@ class Punch {
         t = 255;
         loc.sub(vel);
       }
-      if (frameCount%3 ==0) {
+      if (frameCount%5 ==0) {
         punch = false;
       }
     } else if (p.facingright) {
       t = 0;
-      loc.set(p.loc.x + p.l - 5, p.loc.y + p.w/2);
-    } else if(!p.facingright){
-      t = 0;
-      loc.set(p.loc.x, p.loc.y + p.w/2);
+      loc.set(p.loc.x + p.l - 7, p.loc.y + p.w/2);
+    } else if (!p.facingright) {
+      loc.set(p.loc.x + 7, p.loc.y + p.w/2);
     }
   }
   boolean isInContactWithLeft(Player p) { 

@@ -10,22 +10,22 @@ void characters() {
     fill(255);
     rect(600, 725, 100, 50);
     fill(c1);
-    rect(600, 500, 400, 100);
+    rect(600, 550, 400, 100);
     fill(c2);
-    rect(600, 600, 400, 100);
+    rect(600, 650, 400, 100);
     fill(0);
     textMode(CENTER);
     textSize(50);
     text("Select YOUR Teacher", width/2, 400);
-    text(p1text, width/2, 500);
-    text(p2text, width/2, 600);
+    text(p1text, width/2, 550);
+    text(p2text, width/2, 650);
     textSize(30);
     text("Back", width/2, 730);
     if (mousePressed) {
       if (mouseX >550 && mouseX < 650  && mouseY > 700 && mouseY < 750) {  //back button for bios
         mode=0;
       }
-      if (mouseX> 300 && mouseX < 900 && 450 < mouseY && mouseY< 550) {
+      if (mouseX> 300 && mouseX < 900 && 500 < mouseY && mouseY< 600) {
         p1text = "Choose teacher";
       }
       if (p1text == "Choose teacher") {
@@ -76,22 +76,22 @@ void characters() {
     fill(255);
     rect(600, 725, 100, 50);
     fill(c1);
-    rect(600, 500, 400, 100);
+    rect(600, 550, 400, 100);
     fill(c2);
-    rect(600, 600, 400, 100);
+    rect(600, 650, 400, 100);
     fill(0);
     textMode(CENTER);
     textSize(50);
     text("Select YOUR Teacher", width/2, 400);
-    text(p1text, width/2, 500);
-    text(p2text, width/2, 600);
+    text(p1text, width/2, 550);
+    text(p2text, width/2, 650);
     textSize(30);
     text("Back", width/2, 730);
     if (mousePressed) {
       if (mouseX >950 && mouseX < 1050  && mouseY > 700 && mouseY < 750) {  //back button for bios
         mode=1;
       }
-      if (mouseX> 300 && mouseX < 900 && 550 < mouseY && mouseY< 650) {
+      if (mouseX> 300 && mouseX < 900 && 600 < mouseY && mouseY< 700) {
         p2text = "Choose teacher";
       }
       if (p2text == "Choose teacher") {
