@@ -96,13 +96,11 @@ void draw() {
     h1.c = color(0, 255, 0);
     h2.c = color(0, 255, 0);
     c1 = 255;
-    if (mousePressed) {
-      if (mouseX >450 && mouseX < 750 && mouseY > 400 && mouseY < 500) { // start button
-        mode = 1;
-      }
-    }
+    c2 = 0;
+    stroke(0);
   }
 }
+
 
 
 void keyPressed() {

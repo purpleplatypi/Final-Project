@@ -29,6 +29,7 @@ void characters() {
         p1text = "Choose teacher";
       }
       if (p1text == "Choose teacher") {
+        p1.facingright = true;
         //********* Mr. Sanservino's Stuff **********//
         if (mouseX >50 && mouseX < 250 && mouseY > 50 && mouseY < 250) { //sansis charcter button P1
           p1.pic = faceSan;
