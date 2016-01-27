@@ -12,7 +12,7 @@ class punch {
     t = 0;
   }
 
-  void display() { //displaying hitbox
+  void display() { 
     fill(0,t);
     noStroke();
     ellipse(loc.x, loc.y, diam, diam);
