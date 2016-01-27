@@ -12,7 +12,6 @@ void game() {
      land on it
      ******************/
     background(gamebackground);
-    //file.play();
     fill(255);
     textSize(50);
     text("Player 1", 200, 50);

@@ -1,5 +1,6 @@
-//import processing.sound.*;
-//SoundFile file;
+import ddf.minim.*;
+Minim m;
+AudioPlayer s1;
 
 //declare variables///
 Player p1, p2;
@@ -21,6 +22,8 @@ PImage faceSan, faceVal, faceKipp, faceLiu, faceMc, faceMrN, arrow, wasd, school
 void setup() {
   textMode(CENTER);
   //initialize variables
+  m = new Minim(this);
+  s1 = m.loadFile("fightmusic.mp3", 1024);
   undy = false;
   scf = 400;
   wai = 400;
@@ -77,6 +80,7 @@ void setup() {
 }
 
 void draw() {
+  s1.play();
   startScreen();
   characters();
   instructions();

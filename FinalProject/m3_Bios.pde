@@ -7,11 +7,11 @@ void bios() {
     tint(255, 255); 
     rect(150, 150, 200, 200);
     image(sansi, 50, 50, 200, 200);
-    image(mrN, 300, 50, 200, 200);
-    image(valley, 550, 50, 200, 200);
-    image(liu, 50, 300, 200, 200);  
-    image(faceKipp, 300, 300, 200, 200);
-    image(mcmenamin, 550, 300, 200, 200);
+    image(mrN, 350, 50, 200, 200);
+    image(valley, 650, 50, 200, 200);
+    image(liu, 950, 50, 200, 200);  
+    image(faceKipp, 50, 300, 200, 200);
+    image(mcmenamin, 950, 300, 200, 200);
     fill(255);
     rect(400, 725, 100, 50);
     textMode(CENTER);
@@ -27,32 +27,25 @@ void bios() {
         mode=6;
       }
       //***** MR N'S STUFF **********/
-      if (mouseX >300 && mouseX < 500 && mouseY > 50 && mouseY < 250) { //MR.N's bio button
+      if (mouseX >350 && mouseX < 550 && mouseY > 50 && mouseY < 250) { //MR.N's bio button
         mode=7;
       }
       //***************** Mrs. Valley's Stuff *****************//
-      if (mouseX >550 && mouseX < 750 && mouseY > 50 && mouseY < 250) { //Mrs. Valley bio button
+      if (mouseX >650 && mouseX < 850 && mouseY > 50 && mouseY < 250) { //Mrs. Valley bio button
         mode=8;
       }
       //************** Mr.Liu's Stuff ******************//
-      if (mouseX >50 && mouseX < 250 && mouseY > 300 && mouseY < 500) { //Mr.Liu's  bio button
+      if (mouseX >950 && mouseX < 1150 && mouseY > 50 && mouseY < 250) { //Mr.Liu's  bio button
         mode=9;
       }
       //************************ Mrs. Kipp's Stuff ****************************/
-      if (mouseX >300 && mouseX < 500 && mouseY > 300 && mouseY < 500) { //Mrs. Monroy's bio button
+      if (mouseX >50 && mouseX < 250 && mouseY > 300 && mouseY < 500) { //Mrs. Monroy's bio button
         mode=10;
       }
       //**************** Mr.mcmenamin's Stuff *********************//
-      if (mouseX >550 && mouseX < 750 && mouseY > 300 && mouseY < 500) { //Mr.mcmenamin's bio button
+      if (mouseX >950 && mouseX < 1150 && mouseY > 300 && mouseY < 500) { //Mr.mcmenamin's bio button
         mode=11;
       }
-      //**************************Mrs. Kipp's Stuff**************//
-      if (mousePressed && mouseX >600 && mouseX < 700  && mouseY > 700 && mouseY < 750) {  //back button for Mrs. Monroy's bio
-        mode=12;
-      }
-    }
-    if (mousePressed && mouseX >550 && mouseX < 650  && mouseY > 700 && mouseY < 750  && mode==3) { 
-      mode=0;
     }
   }
 
