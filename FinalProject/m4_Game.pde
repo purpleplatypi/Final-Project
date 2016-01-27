@@ -80,7 +80,7 @@ void game() {
         h1.update();
       }
     }
-    if (p1.loc.dist(p2.loc) <= p1.l) {
+    if (p1.loc.dist(p2.loc) <= p1.l + 5) {
       if (p1.facingright) {
         if (!p2.facingright&&p1.loc.x < p2.loc.x) {
           p1.loc.x -= p1.vel.x;
