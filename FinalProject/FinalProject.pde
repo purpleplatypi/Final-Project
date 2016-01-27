@@ -33,10 +33,8 @@ void setup() {
   sansi = loadImage("sansi.jpg");
   backing = loadImage("magnet.jpg");
   mrN= loadImage ("MR.ChefN.png");
-  // kippback = 
   valley=loadImage("valleynatior.png");
   valleyback=loadImage("valleynatior.jpg");
-  //kipp = 
   mcmenamin= loadImage("macman.png");
   gamebackground= loadImage("gamebackground.jpg");
   liu= loadImage("liu.JPG");
