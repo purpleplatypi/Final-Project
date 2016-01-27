@@ -3,10 +3,8 @@ void bios() {
     textAlign(CENTER);
     background(255);
     tint(255, 200); 
-
     image(backing, 0, 0, width, height);
     tint(255, 255); 
-
     rect(150, 150, 200, 200);
     image(sansi, 50, 50, 200, 200);
     image(mrN, 300, 50, 200, 200);
@@ -53,12 +51,9 @@ void bios() {
       if (mousePressed && mouseX >600 && mouseX < 700  && mouseY > 700 && mouseY < 750) {  //back button for Mrs. Monroy's bio
         mode=12;
       }
-<<<<<<< HEAD
-=======
     }
     if (mousePressed && mouseX >550 && mouseX < 650  && mouseY > 700 && mouseY < 750  && mode==3) { 
       mode=0;
->>>>>>> refs/remotes/origin/development
     }
   }
 
@@ -173,18 +168,6 @@ void bios() {
   //}
 
   if (mode==11) {
-<<<<<<< HEAD
-    fill(0);
-    textSize(100);
-    image(mcstage, 0, 0, 1200, 800);
-    rect(width/2, 700, width, 200);
-    fill(255);
-    text("Mr.McMenamin:", width/2, 100);
-    textSize(25);
-    textLeading(30);
-    String McM = "Joseph McMeniman,was the lead singer of his world (not really) renowned band the\n ''JAMBULANCE'' until the other members were permentantly incapacitated due to\nunknown causes. Ever since his guitar slinging days McMenamin has become a\nteacher of history and weilds a military-grade gavel affectionately named\nOMNIPOTENCE OF JUSTICE.";
-    text(McM, width/2, 650);
-=======
     fill(0);
     textSize(50);
     image(mcstage, 0, 0, 1200, 800);
@@ -197,26 +180,6 @@ void bios() {
     text(McM, 25, 650);
     rect(1150, 725, 100, 50);
     textMode(CENTER);
-    textSize(30);
-    fill(0);
-    text("Back", 1145, 730);
-    if (mousePressed && mouseX >1100 && mouseX < 1200  && mouseY > 700 && mouseY < 750) {  //back button for Mr.mcmenamin's bio
-      mode=3;
-    }
-  }
-  if (mode==10) {   
-    image(Kippback, 0, 0, 1200, 800);
-    fill(0);
-    textSize(50);
-    rect(width/2, 700, width, 200);
-    fill(255);
-    text("Mrs. Kipp:", 25, 625);
-    textSize(25);
-    textLeading(30);
-    String McM = "Mary Kipp, during her pre-teaching career, Mrs. Kipp used the alias ‘Rendering “phantom section” AUGI’ to ride with the infamous biker gang “The Free Association AutoCADDERs” feared for their high stakes carjackings. Kipp went off the grid in the early 90s and reappeared as the sophomore teacher of technology. Armed with a weaponized CNC router, Kipp remains on the FBI’s most wanted list.";
->>>>>>> refs/remotes/origin/development
-    rect(1150, 725, 100, 50);
-    textAlign(CENTER);
     textSize(30);
     fill(0);
     text("Back", 1145, 730);

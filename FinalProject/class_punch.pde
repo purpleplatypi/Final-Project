@@ -13,11 +13,7 @@ class punch {
   }
 
   void display() { 
-<<<<<<< HEAD
-    fill(0, t);
-=======
     fill(0,t);
->>>>>>> refs/remotes/origin/development
     noStroke();
     ellipse(loc.x, loc.y, diam, diam);
   }

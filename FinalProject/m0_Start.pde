@@ -33,20 +33,10 @@ void startScreen() {
       }
       if (mouseX >450 && mouseX < 750 && mouseY > 600 && mouseY < 700) {  //instr button
         mode =  2;
-<<<<<<< HEAD
-      }      
+      } 
       if (mouseX >0 && mouseX < 150 && mouseY > 600 && mouseY < 800) {
         undy = true;
       }
     }
-=======
-      }
-
-      
-      if (mouseX >0 && mouseX < 150 && mouseY > 600 && mouseY < 800) {
-        undy = true;
-      }
-    } 
->>>>>>> refs/remotes/origin/development
   }
 }

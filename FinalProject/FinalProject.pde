@@ -3,7 +3,7 @@
 
 //declare variables///
 player p1, p2;
-platform a, b, c, d, e, f, g, h, i, j, k, l;
+platform a, b, c, d, e, f, g;
 punch punch1, punch2;
 health h1, h2;
 animation a1, a2;
@@ -19,10 +19,7 @@ PImage faceSan, faceVal, faceKipp, faceLiu, faceMc, faceMrN, arrow, wasd, school
 
 
 void setup() {
-<<<<<<< HEAD
   textMode(CENTER);
-=======
->>>>>>> refs/remotes/origin/development
   //initialize variables
   undy = false;
   scf = 400;
@@ -86,10 +83,6 @@ void setup() {
 }
 
 void draw() {
-<<<<<<< HEAD
-
-=======
->>>>>>> refs/remotes/origin/development
   startScreen();
   characters();
   instructions();

@@ -1,6 +1,5 @@
 void characters() {
   if (mode==1) {
-
     background(255);
     image(sansi, 50, 50, 200, 200);
     image(mrN, 350, 50, 200, 200);
