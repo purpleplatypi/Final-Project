@@ -3,7 +3,7 @@
 
 //declare variables///
 player p1, p2;
-platform a, b, c, d, e, f, g, h, i, j, k, l;
+platform a, b, c, d, e, f, g;
 punch punch1, punch2;
 health h1, h2;
 animation a1, a2;
@@ -19,6 +19,7 @@ PImage faceSan, faceVal, faceKipp, faceLiu, faceMc, faceMrN, arrow, wasd, school
 
 
 void setup() {
+  textMode(CENTER);
   //initialize variables
   undy = false;
   scf = 400;
