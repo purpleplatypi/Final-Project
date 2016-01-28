@@ -1,6 +1,7 @@
 class Punch {
   //declare variables
   PVector loc, vel;
+  PImage right, left;
   int diam, t;
   boolean punch;
 
@@ -8,14 +9,22 @@ class Punch {
   Punch() {
     loc = new PVector();
     vel = new PVector(5, 0);
-    diam = 10;     //size
+    right = loadImage("punchright.png");
+    left = loadImage("punchleft.png"); 
+    diam = 20;     //size
     t = 0;
   }
 
-  void display() { 
-    fill(0, t);
-    noStroke();
-    ellipse(loc.x, loc.y, diam, diam);
+  void display(Player p) { 
+    //fill(0, t);
+    //noStroke();
+    //ellipse(loc.x, loc.y, diam, diam);
+    tint(255,t);
+    if (p.facingright) {
+      image(right, loc.x, loc.y, diam, diam);
+    } else if (!p.facingright) {
+      image(left, loc.x, loc.y, diam, diam);
+    }
   }
 
   void update(Player p) {
@@ -32,9 +41,10 @@ class Punch {
       }
     } else if (p.facingright) {
       t = 0;
-      loc.set(p.loc.x + p.l - 7, p.loc.y + p.w/2);
+      loc.set(p.loc.x + p.l - 7, p.loc.y + p.w/2 - 5);
     } else if (!p.facingright) {
-      loc.set(p.loc.x + 7, p.loc.y + p.w/2);
+      t=0;
+      loc.set(p.loc.x + 7, p.loc.y + p.w/2 - 5);
     }
   }
   boolean isInContactWithLeft(Player p) { 

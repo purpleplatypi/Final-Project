@@ -20,11 +20,13 @@ class Player {
   //write methods
   void display() {
     noFill();
+    noStroke();
     rectMode(CORNER);
     rect(loc.x, loc.y, l, w);
   }
 
   void face() {
+    tint(255,255);
     image(pic, loc.x + 5, loc.y -10, 50, 50);
   }
 

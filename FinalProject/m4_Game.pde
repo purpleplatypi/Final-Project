@@ -19,7 +19,7 @@ void game() {
     a1.display(p1);
     a2.display(p2);
     p1.display();
-    punch1.display();
+    punch1.display(p1);
     punch1.update(p1);
     p1.move();
     p1.restrict();
@@ -31,7 +31,7 @@ void game() {
     p1.platformControls(f);
     p1.platformControls(g);
     p2.display();
-    punch2.display();
+    punch2.display(p2);
     punch2.update(p2);
     p2.move();
     p2.restrict();

@@ -17,6 +17,7 @@ void instructions() {
     textSize(35);
     text("GOAL: Eliminate the opposition...at all costs!", width/2, height/2);
     text("Press ''s'' or the down key to attack", width/2, height/1.5); 
+    text("Press ''z'' to reset game", width/2, height/1.3);
     fill(255);
     rect(100, 725, 100, 50);
     textMode(CENTER);

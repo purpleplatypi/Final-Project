@@ -24,6 +24,7 @@ class Animation {
   }
   //write methods
   void display(Player p) {
+    tint(255,255);
     if (p.facingright) {
       if (p.right ) {
         frame = (frame+1) % imageCount;
