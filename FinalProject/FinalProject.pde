@@ -1,20 +1,13 @@
-//import processing.sound.*;
-//SoundFile file;
+import ddf.minim.*;
+Minim m;
+AudioPlayer s1;
 
 //declare variables///
-<<<<<<< HEAD
 Player p1, p2;
 Platform a, b, c, d, e, f, g;
 Punch punch1, punch2;
 Health h1, h2;
 Animation a1, a2;
-=======
-player p1, p2;
-platform a, b, c, d, e, f, g;
-punch punch1, punch2;
-health h1, h2;
-animation a1, a2;
->>>>>>> origin/development
 int mode = 0;
 float scf, wai;
 boolean esc, undy;
@@ -29,6 +22,8 @@ PImage faceSan, faceVal, faceKipp, faceLiu, faceMc, faceMrN, arrow, wasd, school
 void setup() {
   textMode(CENTER);
   //initialize variables
+  m = new Minim(this);
+  s1 = m.loadFile("fightmusic.mp3", 1024);
   undy = false;
   scf = 400;
   wai = 400;
@@ -41,10 +36,8 @@ void setup() {
   sansi = loadImage("sansi.jpg");
   backing = loadImage("magnet.jpg");
   mrN= loadImage ("MR.ChefN.png");
-  // kippback = 
   valley=loadImage("valleynatior.png");
   valleyback=loadImage("valleynatior.jpg");
-  //kipp = 
   mcmenamin= loadImage("macman.png");
   gamebackground= loadImage("gamebackground.jpg");
   liu= loadImage("liu.JPG");
@@ -87,6 +80,7 @@ void setup() {
 }
 
 void draw() {
+  s1.play();
   startScreen();
   characters();
   instructions();
@@ -95,8 +89,18 @@ void draw() {
   gameOver();
   if (esc) {     //IF Z IS PRESSED THIS IS THE WAY TO GET BACK TO THE HOME SCREEN FROM ANYWHERE!!! 
     mode = 0;
+    h1.health=300;
+    h2.health=300;
+    p1text = "P1 Click Here";
+    p2text = "P2 Click Here";
+    h1.c = color(0, 255, 0);
+    h2.c = color(0, 255, 0);
+    c1 = 255;
+    c2 = 0;
+    stroke(0);
   }
 }
+
 
 
 void keyPressed() {

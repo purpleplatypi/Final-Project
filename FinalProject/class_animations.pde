@@ -27,16 +27,16 @@ class Animation {
     if (p.facingright) {
       if (p.right ) {
         frame = (frame+1) % imageCount;
-        image(right[frame], p.loc.x - 5, p.loc.y);
+        image(right[frame], p.loc.x, p.loc.y);
       } else {
         image(stationaryright, p.loc.x, p.loc.y);
       }
     } else {
       if (p.left) {
         frame = (frame+1) % imageCount;
-        image(left[frame], p.loc.x, p.loc.y);
+        image(left[frame], p.loc.x + 5, p.loc.y);
       } else {
-        image(stationaryleft, p.loc.x, p.loc.y);
+        image(stationaryleft, p.loc.x + 5, p.loc.y);
       }
     }
   }

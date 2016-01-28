@@ -2,58 +2,50 @@ void bios() {
   if (mode ==3) {
     textAlign(CENTER);
     background(255);
-    tint(255, 200); 
+    tint(255, 150); 
     image(backing, 0, 0, width, height);
     tint(255, 255); 
     rect(150, 150, 200, 200);
     image(sansi, 50, 50, 200, 200);
-    image(mrN, 300, 50, 200, 200);
-    image(valley, 550, 50, 200, 200);
-    image(liu, 50, 300, 200, 200);  
-    image(faceKipp, 300, 300, 200, 200);
-    image(mcmenamin, 550, 300, 200, 200);
+    image(mrN, 350, 50, 200, 200);
+    image(valley, 650, 50, 200, 200);
+    image(liu, 950, 50, 200, 200);  
+    image(faceKipp, 50, 300, 200, 200);
+    image(mcmenamin, 950, 300, 200, 200);
     fill(255);
-    rect(600, 725, 100, 50);
+    rect(400, 725, 100, 50);
     textMode(CENTER);
     textSize(30);
     fill(0);
-    text("Back", width/2, 735);
-    if (mousePressed && mouseX >550 && mouseX < 650  && mouseY > 700 && mouseY < 750  && mode==3) { 
-      mode=0;
-    }
+    text("Back", width/3, 735);
     if (mousePressed) {
-
+      if (mouseX > 350 && mouseX < 450  && mouseY > 700 && mouseY < 750) { 
+        mode=0;
+      }
       //********* Mr. Sanservino's Stuff **********//
       if (mouseX >50 && mouseX < 250 && mouseY > 50 && mouseY < 250) { //sansis bio button
         mode=6;
       }
       //***** MR N'S STUFF **********/
-      if (mouseX >300 && mouseX < 500 && mouseY > 50 && mouseY < 250) { //MR.N's bio button
+      if (mouseX >350 && mouseX < 550 && mouseY > 50 && mouseY < 250) { //MR.N's bio button
         mode=7;
       }
       //***************** Mrs. Valley's Stuff *****************//
-      if (mouseX >550 && mouseX < 750 && mouseY > 50 && mouseY < 250) { //Mrs. Valley bio button
+      if (mouseX >650 && mouseX < 850 && mouseY > 50 && mouseY < 250) { //Mrs. Valley bio button
         mode=8;
       }
       //************** Mr.Liu's Stuff ******************//
-      if (mouseX >50 && mouseX < 250 && mouseY > 300 && mouseY < 500) { //Mr.Liu's  bio button
+      if (mouseX >950 && mouseX < 1150 && mouseY > 50 && mouseY < 250) { //Mr.Liu's  bio button
         mode=9;
       }
       //************************ Mrs. Kipp's Stuff ****************************/
-      if (mouseX >300 && mouseX < 500 && mouseY > 300 && mouseY < 500) { //Mrs. Monroy's bio button
+      if (mouseX >50 && mouseX < 250 && mouseY > 300 && mouseY < 500) { //Mrs. Monroy's bio button
         mode=10;
       }
       //**************** Mr.mcmenamin's Stuff *********************//
-      if (mouseX >550 && mouseX < 750 && mouseY > 300 && mouseY < 500) { //Mr.mcmenamin's bio button
+      if (mouseX >950 && mouseX < 1150 && mouseY > 300 && mouseY < 500) { //Mr.mcmenamin's bio button
         mode=11;
       }
-      //**************************Mrs. Kipp's Stuff**************//
-      if (mousePressed && mouseX >600 && mouseX < 700  && mouseY > 700 && mouseY < 750) {  //back button for Mrs. Monroy's bio
-        mode=12;
-      }
-    }
-    if (mousePressed && mouseX >550 && mouseX < 650  && mouseY > 700 && mouseY < 750  && mode==3) { 
-      mode=0;
     }
   }
 
@@ -148,42 +140,6 @@ void bios() {
   } 
 
   if (mode==10) {   
-    image(Kippback, 0, 0, 1200, 800);
-    fill(0);
-    textSize(50);
-    rect(width/2, 700, width, 200);
-    fill(255);
-    text("Mrs. Kipp:", 25, 625);
-    textSize(25);
-    textLeading(30);
-    String Kipp = "Mary Kipp, during her pre-teaching career, Mrs. Kipp used the alias ‘Rendering “phantom section” AUGI’ to ride with the infamous biker gang “The Free Association AutoCADDERs” feared for their high stakes carjackings. Kipp went off the grid in the early 90s and reappeared as the sophomore teacher of technology. Armed with a weaponized CNC router, Kipp remains on the FBI’s most wanted list.";
-    text(Kipp, 25, 650);
-    rect(1150, 725, 100, 50);
-    textMode(CENTER);
-    textSize(30);
-    fill(0);
-    text("Back", 1145, 730);
-    if (mousePressed && mouseX >1100 && mouseX < 1200  && mouseY > 700 && mouseY < 750) {  //back button for Mr.mcmenamin's bio
-      mode=3;
-    }
-  }
-<<<<<<< HEAD
-
-  if (mode==11) {
-    fill(0);
-    textSize(50);
-    image(mcstage, 0, 0, 1200, 800);
-    rect(width/2, 700, width, 200);
-    fill(255);
-    text("Mr.McMenamin:", 25, 625);
-    textSize(25);
-    textLeading(30);
-    String McM = "Joseph McMeniman,was the lead singer of his world (not really) renowned band the\n ''JAMBULANCE'' until the other members were permentantly incapacitated due to\nunknown causes. Ever since his guitar slinging days McMenamin has become a\nteacher of history and weilds a military-grade gavel affectionately named\nOMNIPOTENCE OF JUSTICE.";
-    text(McM, 25, 650);
-    rect(1150, 725, 100, 50);
-    textMode(CENTER);
-=======
-  if (mode==10) {   
     textAlign(LEFT);
     image(Kippback, 0, 0, 1200, 800);
     fill(0);
@@ -196,12 +152,33 @@ void bios() {
     String Kipp = "Mary Kipp, during her pre-teaching career,\nused the alias 'Phantom Section' \nto ride with the infamous biker gang “The Free Association AutoCADDERs” \nfeared for their high stakes carjackings. \nKipp went off the grid in the early 90's. \nShe reappeared as the sophomore teacher of technology at MHS. \nArmed with a weaponized CNC router, Kipp remains on the FBI’s most wanted list.";
     rect(1150, 755, 100, 50);
     text(Kipp, 25, 600);
->>>>>>> origin/development
     textSize(30);
     textAlign(LEFT);
     fill(0);
     text("Back", 1110, height-35);
     if (mousePressed && mouseX >1100 && mouseX < 1200  && mouseY > 700 && mouseY < 765) {  //back button for Mrs kipp's bio
+      mode=3;
+    }
+  }
+
+  if (mode==11) {
+    textAlign(LEFT);
+    fill(0);
+    textSize(50);
+    image(mcstage, 0, 0, 1200, 800);
+    rect(width/2, 700, width, 200);
+    fill(255);
+    text("Mr.McMenamin:", 25, 650);
+    textSize(25);
+    textLeading(30);
+    String McM = "Joseph McMeniman,was the lead singer of his world (not really) renowned band the\n ''JAMBULANCE'' until the other members were permentantly incapacitated due to\nunknown causes. Ever since his guitar slinging days McMenamin has become a\nteacher of history and weilds a military-grade gavel affectionately named\nOMNIPOTENCE OF JUSTICE.";
+    text(McM, 25, 675);
+    rect(1150, 725, 100, 50);
+    textSize(30);
+    textMode(CENTER);
+    fill(0);
+    text("Back", 1110, height-60);
+    if (mousePressed && mouseX >1100 && mouseX < 1200  && mouseY > 700 && mouseY < 750) {  //back button for Mr.mcmenamin's bio
       mode=3;
     }
   }

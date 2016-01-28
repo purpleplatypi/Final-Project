@@ -11,10 +11,7 @@ void game() {
      if on top of platforms
      land on it
      ******************/
-    background(200);
-    //file.play();
-    //image(school, 0,0, width, height);
-    //image(gamebackground,0,0,1200,800);
+    background(gamebackground);
     fill(255);
     textSize(50);
     text("Player 1", 200, 50);
@@ -80,7 +77,7 @@ void game() {
         h1.update();
       }
     }
-    if (p1.loc.dist(p2.loc) <= p1.l) {
+    if (p1.loc.dist(p2.loc) <= p1.l + 5) {
       if (p1.facingright) {
         if (!p2.facingright&&p1.loc.x < p2.loc.x) {
           p1.loc.x -= p1.vel.x;

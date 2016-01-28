@@ -20,7 +20,6 @@ class Player {
   //write methods
   void display() {
     noFill();
-    //stroke(0);
     rectMode(CORNER);
     rect(loc.x, loc.y, l, w);
   }
