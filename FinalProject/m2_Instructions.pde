@@ -4,10 +4,10 @@ void instructions() {
       mode=0;
     }
     background(255);
-    tint(255, 200); 
+    tint(255, 100); 
     image(lockerroom, 0, 0, width, height);
     tint(255, 255); 
-    fill(255);
+    fill(0);
     textSize(50);
     text("Player 1", 200, 100);
     text("Player 2", 925, 100);

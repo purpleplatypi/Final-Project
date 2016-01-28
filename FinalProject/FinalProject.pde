@@ -31,7 +31,6 @@ void setup() {
   textFont(font);
   textAlign(LEFT);
   size(1200, 800);
-  //file = new SoundFile(this, "fightmusic.mp3");
   start= loadImage("start.png");
   sansi = loadImage("sansi.jpg");
   backing = loadImage("magnet.jpg");
@@ -56,7 +55,6 @@ void setup() {
   faceMrN = loadImage("FaceMrN.png");
   arrow= loadImage("arrow keys.png");
   wasd = loadImage("wasd.png");
-  school = loadImage("bridge.jpg");
   Kippback = loadImage("Kippback.png");
   c1 = 255;
   c2 = 0;
