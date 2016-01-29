@@ -15,11 +15,11 @@ void startScreen() {
     textSize(50);
     text("BIOS", width/2, height/2 + 200 );
     if (undy) { //boolean for the undy easter egg
-      if (scf<1000) { // if he is smaller than 1000 times original
-        scf +=100; // make him bigger by 100, move him by 100
+      if (scf<1000) {     // if he is smaller than 1000 times original
+        scf +=100;       // make him bigger by 100, move him by 100
         wai -= 100;
       } else {
-        scf +=500; //make him bigger by 500 move him by 500 
+        scf +=500;     //make him bigger by 500 move him by 500 
         wai -= 500;
       }
     }

@@ -25,11 +25,11 @@ void characters() {
       if (mouseX >550 && mouseX < 650  && mouseY > 700 && mouseY < 750) {  //back button for bios
         mode=0;
       }
-      if (mouseX> 300 && mouseX < 900 && 500 < mouseY && mouseY< 600) {
+      if (mouseX> 300 && mouseX < 900 && 500 < mouseY && mouseY< 600) {    // acts as a buffer for the selection screen
         p1text = "Choose teacher";
       }
       if (p1text == "Choose teacher") {
-        p1.facingright = true;
+        p1.facingright = true;    //make it so player 1 faces right when the game starts
         //********* Mr. Sanservino's Stuff **********//
         if (mouseX >50 && mouseX < 250 && mouseY > 50 && mouseY < 250) { //sansis charcter button P1
           p1.pic = faceSan;
@@ -64,6 +64,7 @@ void characters() {
     }
   }
 
+  //selection for player 2
   if (mode==12) {
     c1 = 0;
     c2 = 255;

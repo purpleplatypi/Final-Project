@@ -1,8 +1,8 @@
-import ddf.minim.*;
+import ddf.minim.*;    //import minim library for sound
+
+//declare variables and classes
 Minim m;
 AudioPlayer s1;
-
-//declare variables///
 Player p1, p2;
 Platform a, b, c, d, e, f, g;
 Punch punch1, punch2;
@@ -20,7 +20,6 @@ PImage faceSan, faceVal, faceKipp, faceLiu, faceMc, faceMrN, arrow, wasd, school
 
 
 void setup() {
-  textMode(CENTER);
   //initialize variables
   m = new Minim(this);
   s1 = m.loadFile("fightmusic.mp3", 1024);
@@ -29,6 +28,7 @@ void setup() {
   wai = 400;
   font = createFont("Arial Rounded MT Bold", 48);
   textFont(font);
+  textMode(CENTER);
   textAlign(LEFT);
   size(1200, 800);
   start= loadImage("start.png");
@@ -78,14 +78,15 @@ void setup() {
 }
 
 void draw() {
-  s1.play();
+  s1.play();    //plays song
+  //void functions to run different parts of the game
   startScreen();
   characters();
   instructions();
   bios();
   game();
   gameOver();
-  if (esc) {     //IF Z IS PRESSED THIS IS THE WAY TO GET BACK TO THE HOME SCREEN FROM ANYWHERE!!! 
+  if (esc) {         //if esc is true, reset all game variables and return to home screen
     mode = 0;
     h1.health=300;
     h2.health=300;
@@ -99,8 +100,7 @@ void draw() {
   }
 }
 
-
-
+//controls key functions
 void keyPressed() {
   if (key == 'a' || key == 'A') {
     p1.left = true;
@@ -130,7 +130,6 @@ void keyPressed() {
     esc = true;
   }
 }
-
 void keyReleased() {
   if (key == 'a' || key == 'A') {
     p1.left = false;
