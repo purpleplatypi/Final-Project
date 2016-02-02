@@ -5,30 +5,31 @@ void characters() {
     image(mrN, 350, 50, 200, 200);
     image(valley, 650, 50, 200, 200);
     image(liu, 950, 50, 200, 200);  
-    //image(kipp, 50, 300, 200, 200);
+    image(faceKipp, 50, 300, 200, 200);
     image(mcmenamin, 950, 300, 200, 200);
     fill(255);
     rect(600, 725, 100, 50);
-    fill(r1, g1, b1);
-    rect(600, 500, 400, 100);
-    fill(r2, g2, b2);
-    rect(600, 600, 400, 100);
+    fill(c1);
+    rect(600, 550, 400, 100);
+    fill(c2);
+    rect(600, 650, 400, 100);
     fill(0);
     textMode(CENTER);
     textSize(50);
     text("Select YOUR Teacher", width/2, 400);
-    text(p1text, width/2, 500);
-    text(p2text, width/2, 600);
+    text(p1text, width/2, 550);
+    text(p2text, width/2, 650);
     textSize(30);
     text("Back", width/2, 730);
     if (mousePressed) {
       if (mouseX >550 && mouseX < 650  && mouseY > 700 && mouseY < 750) {  //back button for bios
         mode=0;
       }
-      if (mouseX> 300 && mouseX < 900 && 450 < mouseY && mouseY< 550) {
+      if (mouseX> 300 && mouseX < 900 && 500 < mouseY && mouseY< 600) {    // acts as a buffer for the selection screen
         p1text = "Choose teacher";
       }
       if (p1text == "Choose teacher") {
+        p1.facingright = true;    //make it so player 1 faces right when the game starts
         //********* Mr. Sanservino's Stuff **********//
         if (mouseX >50 && mouseX < 250 && mouseY > 50 && mouseY < 250) { //sansis charcter button P1
           p1.pic = faceSan;
@@ -63,39 +64,36 @@ void characters() {
     }
   }
 
+  //selection for player 2
   if (mode==12) {
-    r1 = 0;
-    g1 = 0;
-    b1 = 0;
-    r2 = 255;
-    g2 = 255;
-    b2 = 255;
+    c1 = 0;
+    c2 = 255;
     background(255);
     image(sansi, 50, 50, 200, 200);
     image(mrN, 350, 50, 200, 200);
     image(valley, 650, 50, 200, 200);
     image(liu, 950, 50, 200, 200);  
-    //image(kipp, 50, 300, 200, 200);
+    image(faceKipp, 50, 300, 200, 200);
     image(mcmenamin, 950, 300, 200, 200);
     fill(255);
     rect(600, 725, 100, 50);
-    fill(r1, g1, b1);
-    rect(600, 500, 400, 100);
-    fill(r2, g2, b2);
-    rect(600, 600, 400, 100);
+    fill(c1);
+    rect(600, 550, 400, 100);
+    fill(c2);
+    rect(600, 650, 400, 100);
     fill(0);
     textMode(CENTER);
     textSize(50);
     text("Select YOUR Teacher", width/2, 400);
-    text(p1text, width/2, 500);
-    text(p2text, width/2, 600);
+    text(p1text, width/2, 550);
+    text(p2text, width/2, 650);
     textSize(30);
     text("Back", width/2, 730);
     if (mousePressed) {
       if (mouseX >950 && mouseX < 1050  && mouseY > 700 && mouseY < 750) {  //back button for bios
         mode=1;
       }
-      if (mouseX> 300 && mouseX < 900 && 550 < mouseY && mouseY< 650) {
+      if (mouseX> 300 && mouseX < 900 && 600 < mouseY && mouseY< 700) {
         p2text = "Choose teacher";
       }
       if (p2text == "Choose teacher") {
